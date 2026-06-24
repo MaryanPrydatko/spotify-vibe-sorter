@@ -8,6 +8,7 @@ import {
 import { getEngine } from "../engine/factory.js";
 import { getProgress } from "../engine/progress.js";
 import { IncompleteClassificationError } from "../operations/sort.js";
+import { isRateLimited } from "../spotify/client.js";
 import { readJsonBody, sendError, sendHtml, sendJson } from "./http.js";
 import type { Router } from "./router.js";
 
@@ -17,6 +18,13 @@ function sendEngineError(res: import("node:http").ServerResponse, err: unknown):
     sendError(res, 401, err.message);
   } else if (err instanceof IncompleteClassificationError) {
     sendError(res, 409, err.message, { result: { ...err.result, assignments: undefined } });
+  } else if (isRateLimited(err)) {
+    sendError(
+      res,
+      429,
+      "Spotify has temporarily rate-limited playlist access (too many requests in a short " +
+        "window). This resets automatically — please try again later.",
+    );
   } else {
     sendError(res, 500, err instanceof Error ? err.message : "Engine error");
   }

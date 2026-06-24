@@ -1,6 +1,7 @@
 import { withBackup, type SnapshotReader } from "../backup/snapshot.js";
 import { UNSORTED } from "../classify/buckets.js";
 import type { ClassificationResult } from "../classify/engine.js";
+import { isForbiddenOrNotFound, isRateLimited } from "../spotify/client.js";
 import type { PlaylistSummary } from "../spotify/types.js";
 
 /**
@@ -89,7 +90,15 @@ export async function sortLibrary(
   return withBackup(
     { reader: ctx.backupReader, dir: ctx.backupDir, now: ctx.now },
     async () => {
-      const existing = await ctx.listPlaylists();
+      // Supersede our own prior output so re-runs replace rather than duplicate. If the
+      // listing is rate-limited we skip cleanup (a first run has nothing to clean, and a
+      // later un-limited run self-heals by removing any duplicates it then finds).
+      let existing: PlaylistSummary[] = [];
+      try {
+        existing = await ctx.listPlaylists();
+      } catch (err) {
+        if (!isRateLimited(err) && !isForbiddenOrNotFound(err)) throw err;
+      }
       const prior = existing.filter(isToolPlaylist);
       for (const p of prior) {
         await ctx.writer.unfollow(p.id);

@@ -1,7 +1,7 @@
 import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { paths } from "../config/paths.js";
-import { isForbiddenOrNotFound } from "../spotify/client.js";
+import { isForbiddenOrNotFound, isRateLimited } from "../spotify/client.js";
 import type { PlaylistSummary, Track } from "../spotify/types.js";
 
 export interface PlaylistSnapshot {
@@ -33,7 +33,15 @@ export async function takeSnapshot(
   const dir = opts.dir ?? paths.backupsDir;
   const now = opts.now ?? Date.now();
 
-  const summaries = await reader.listPlaylists();
+  // If the playlist listing is rate-limited, back up Liked Songs only rather than failing —
+  // sort only *creates* playlists (it never edits the owner's existing ones), so a
+  // Liked-Songs backup still covers what a degraded sort could affect.
+  let summaries: PlaylistSummary[] = [];
+  try {
+    summaries = await reader.listPlaylists();
+  } catch (err) {
+    if (!isRateLimited(err) && !isForbiddenOrNotFound(err)) throw err;
+  }
   const playlists: PlaylistSnapshot[] = [];
   for (const p of summaries) {
     let tracks: Track[];
