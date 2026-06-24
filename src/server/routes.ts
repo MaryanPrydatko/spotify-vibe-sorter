@@ -1,5 +1,5 @@
 import { authFlow } from "../auth/connect.js";
-import { isConnected, NotConnectedError } from "../auth/tokenStore.js";
+import { clearTokens, isConnected, NotConnectedError } from "../auth/tokenStore.js";
 import {
   loadBucketConfig,
   saveBucketConfig,
@@ -51,6 +51,12 @@ export function registerApiRoutes(router: Router): void {
     } catch (err) {
       sendError(res, 400, err instanceof Error ? err.message : "Cannot start connect");
     }
+  });
+
+  // Log out: forget the stored Spotify token (reversible by reconnecting).
+  router.post("/api/disconnect", async (_req, res) => {
+    await clearTokens();
+    sendJson(res, 200, { ok: true });
   });
 
   router.get("/callback", async (_req, res, url) => {

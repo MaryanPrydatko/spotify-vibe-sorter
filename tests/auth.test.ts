@@ -5,7 +5,9 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { AuthFlow } from "../src/auth/connect.js";
 import { challengeFromVerifier, type TokenResponse } from "../src/auth/oauth.js";
 import {
+  clearTokens,
   getValidAccessToken,
+  isConnected,
   loadTokens,
   saveTokens,
   toStored,
@@ -87,6 +89,14 @@ describe("U2 token store", () => {
     const { writeFile } = await import("node:fs/promises");
     await writeFile(tokenFile, "{ not json");
     expect(await loadTokens(tokenFile)).toBeNull();
+  });
+
+  it("clearTokens logs out (isConnected flips to false) and is safe when absent", async () => {
+    await saveTokens(toStored(fakeTokenResponse()), tokenFile);
+    expect(await isConnected(tokenFile)).toBe(true);
+    await clearTokens(tokenFile);
+    expect(await isConnected(tokenFile)).toBe(false);
+    await clearTokens(tokenFile); // idempotent — no throw when the file is already gone
   });
 
   it("refreshes and persists an expired access token", async () => {

@@ -78,17 +78,22 @@ async function withProgress<T>(
 
 async function renderConnect(): Promise<void> {
   app.innerHTML = "";
-  const btn = el(`<button class="pill">Connect Spotify</button>`);
+  const intro = el(
+    `<p class="status" style="margin:0 0 20px;max-width:34em">Sign in with Spotify to sort your library and reveal your music personality. The app reads your playlists and liked songs and can create/edit playlists you choose — everything stays on your machine, nothing is shared.</p>`,
+  );
+  const btn = el(`<button class="pill">Sign in with Spotify</button>`);
   const msg = el(`<p class="status" style="margin-top:14px"></p>`);
   btn.addEventListener("click", async () => {
+    btn.setAttribute("disabled", "true");
     try {
       const { authorizeUrl } = await api<{ authorizeUrl: string }>("/api/connect");
       window.location.href = authorizeUrl;
     } catch (err) {
+      btn.removeAttribute("disabled");
       note(msg, (err as Error).message);
     }
   });
-  app.append(btn, msg);
+  app.append(intro, btn, msg);
 }
 
 async function renderDashboard(): Promise<void> {
@@ -171,7 +176,24 @@ async function renderDashboard(): Promise<void> {
   const actions = el(`<div class="actions"></div>`);
   actions.append(saveBtn, sortBtn, profileBtn, manageBtn);
 
+  const authBar = el(
+    `<div class="authbar"><span class="authdot"></span><span>Connected to Spotify</span><span class="spacer"></span></div>`,
+  );
+  const disconnectBtn = el(`<button class="btn btn--sm btn--ghost">Disconnect</button>`);
+  disconnectBtn.addEventListener("click", async () => {
+    (disconnectBtn as HTMLButtonElement).disabled = true;
+    try {
+      await api("/api/disconnect", { method: "POST" });
+      await renderConnect();
+    } catch (err) {
+      (disconnectBtn as HTMLButtonElement).disabled = false;
+      note(status, (err as Error).message);
+    }
+  });
+  authBar.append(disconnectBtn);
+
   app.append(
+    authBar,
     el(`<label class="field-label">Your vibe buckets — one per line</label>`),
     bucketsBox,
     actions,
