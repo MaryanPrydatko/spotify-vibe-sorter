@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { isForbiddenOrNotFound, SpotifyClient } from "../src/spotify/client.js";
+import { isForbiddenOrNotFound, isRateLimited, SpotifyClient } from "../src/spotify/client.js";
 import { SpotifyLibrary } from "../src/spotify/library.js";
 import { SpotifyPlaylists } from "../src/spotify/playlists.js";
 
@@ -72,6 +72,30 @@ describe("U3 rate-limit handling", () => {
     expect(isForbiddenOrNotFound(new Error("GET /x failed (404)"))).toBe(true);
     expect(isForbiddenOrNotFound(new Error("GET /x failed (500)"))).toBe(false);
     expect(isForbiddenOrNotFound("not an error")).toBe(false);
+  });
+
+  it("does NOT sleep for an absurd Retry-After — throws a rate-limit error instead", async () => {
+    // Spotify can return Retry-After of hours after sustained load; blocking that long
+    // would freeze the app. We bail out clearly instead.
+    const fetchImpl = vi.fn(async () =>
+      json({ error: "rate" }, 429, { "retry-after": "82529" }),
+    ) as unknown as typeof fetch;
+    const sleep = vi.fn(async () => {});
+    const client = new SpotifyClient({
+      getToken: async () => "tok",
+      fetchImpl,
+      sleep,
+      maxRetryAfterMs: 60_000,
+    });
+    await expect(client.request("GET", "/me/playlists")).rejects.toThrow(/rate limited \(429\)/);
+    expect(sleep).not.toHaveBeenCalled(); // never waited
+    expect((fetchImpl as ReturnType<typeof vi.fn>).mock.calls.length).toBe(1); // no pointless retries
+  });
+
+  it("isRateLimited matches the 429 error and nothing else", () => {
+    expect(isRateLimited(new Error("Spotify GET /me/playlists rate limited (429); retry after 82529s"))).toBe(true);
+    expect(isRateLimited(new Error("GET /x failed (403)"))).toBe(false);
+    expect(isRateLimited("nope")).toBe(false);
   });
 });
 

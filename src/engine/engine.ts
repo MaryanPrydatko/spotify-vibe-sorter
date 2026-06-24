@@ -22,9 +22,10 @@ import {
   type SortWriter,
 } from "../operations/sort.js";
 import type { ClassifiableTrack } from "../classify/engine.js";
-import { isForbiddenOrNotFound } from "../spotify/client.js";
-import type { Track } from "../spotify/types.js";
+import { isForbiddenOrNotFound, isRateLimited } from "../spotify/client.js";
+import type { PlaylistSummary, Track } from "../spotify/types.js";
 import { mapWithConcurrency } from "../util/concurrency.js";
+import { endProgress, startProgress, updateProgress } from "./progress.js";
 
 /** Read surface the engine needs from Spotify — satisfied by SpotifyLibrary. */
 export interface LibraryReader extends SnapshotReader {
@@ -54,28 +55,48 @@ interface LoadedLibrary {
 }
 
 /**
- * Read the entire library once and build everything the downstream stages need: the
+ * Read the user's own library once and build everything the downstream stages need: the
  * classifiable tracks, the aggregate tracks, a uri lookup, and per-playlist membership
  * (including Liked Songs) for the correlation matrix.
  *
- * Playlist track lists are read in parallel (each is independent), and unreadable
- * editorial/algorithmic playlists are skipped. Genres are deliberately NOT fetched per
- * artist from Spotify — that endpoint is rate-limited to ~180/min (minutes of waiting on a
- * large library) and is itself deprecated. The model infers genre/vibe from name + artist
- * instead, which is what it's good at and removes thousands of slow calls.
+ * Only the user's OWN playlists (plus Liked Songs) are read — followed playlists are other
+ * people's curation, irrelevant to "your music personality", mostly unreadable for
+ * third-party apps anyway, and some are enormous (one huge followed playlist would stall
+ * reading for minutes). Empty playlists are skipped too. Track lists are read in parallel;
+ * an owned playlist that still errors (403/404) is skipped defensively. Genres are
+ * deliberately NOT fetched per artist from Spotify — that endpoint is rate-limited and
+ * deprecated; the model infers genre/vibe from name + artist instead.
  */
 export async function loadLibrary(
   library: LibraryReader,
   log: ProgressLog = () => {},
 ): Promise<LoadedLibrary> {
-  const playlists = await library.listPlaylists();
-  log(`Reading tracks from ${playlists.length} playlists…`);
+  const userId = await library.currentUserId();
+  // If the playlist listing is unavailable (e.g. Spotify rate-limits /me/playlists after
+  // heavy use), don't fail or hang — degrade to Liked Songs so the user still gets a result.
+  let allPlaylists: PlaylistSummary[] = [];
+  try {
+    allPlaylists = await library.listPlaylists();
+  } catch (err) {
+    if (isRateLimited(err) || isForbiddenOrNotFound(err)) {
+      log("Couldn't read your playlists right now (Spotify rate limit) — using Liked Songs only.");
+    } else {
+      throw err;
+    }
+  }
+  const mine = allPlaylists.filter((p) => p.ownerId === userId && p.trackCount > 0);
+  if (mine.length) {
+    log(
+      `Reading ${mine.length} of your playlists` +
+        ` (skipping ${allPlaylists.length - mine.length} followed/empty)…`,
+    );
+  }
 
-  const perPlaylist = await mapWithConcurrency(playlists, 6, async (p) => {
+  const perPlaylist = await mapWithConcurrency(mine, 6, async (p) => {
     try {
       return { p, tracks: await library.listPlaylistTracks(p.id) };
     } catch (err) {
-      if (isForbiddenOrNotFound(err)) return null; // editorial/algorithmic — skip
+      if (isForbiddenOrNotFound(err)) return null; // unreadable — skip defensively
       throw err;
     }
   });
@@ -104,7 +125,7 @@ export async function loadLibrary(
   log(`Loaded ${all.length} unique tracks across ${memberships.length} playlists.`);
 
   return {
-    userId: await library.currentUserId(),
+    userId,
     classifiable: all.map((t) => ({
       id: t.id,
       name: t.name,
@@ -135,7 +156,12 @@ export interface ProfileResult {
 export class Engine {
   constructor(private readonly deps: EngineDeps) {}
 
-  private readonly log: ProgressLog = (m) => console.log(`[engine] ${m}`);
+  // Log to the server console and mirror the line into the progress store so the
+  // browser (polling /api/progress) shows the same phase messages live.
+  private readonly log: ProgressLog = (m) => {
+    console.log(`[engine] ${m}`);
+    updateProgress({ message: m });
+  };
 
   status(): Promise<boolean> {
     return this.deps.isConnected();
@@ -149,6 +175,8 @@ export class Engine {
       config,
       cache: this.deps.classificationCache,
       log: this.log,
+      onProgress: (done, total) =>
+        updateProgress({ phase: "classifying", done, total }),
     });
     await this.deps.classificationCache?.save();
     return classification;
@@ -156,31 +184,43 @@ export class Engine {
 
   /** Read → classify → create vibe playlists (refuses on an incomplete classification). */
   async sort(): Promise<SortResult> {
-    const loaded = await loadLibrary(this.deps.library, this.log);
-    const classification = await this.classify(loaded);
-    const ctx: SortContext = {
-      userId: loaded.userId,
-      writer: this.deps.writer,
-      listPlaylists: () => this.deps.library.listPlaylists(),
-      backupReader: this.deps.library,
-      backupDir: this.deps.backupDir,
-    };
-    return sortLibrary(classification, loaded.uriById, ctx);
+    startProgress("reading", "Reading your library…");
+    try {
+      const loaded = await loadLibrary(this.deps.library, this.log);
+      const classification = await this.classify(loaded);
+      updateProgress({ phase: "finishing", message: "Creating your vibe playlists…" });
+      const ctx: SortContext = {
+        userId: loaded.userId,
+        writer: this.deps.writer,
+        listPlaylists: () => this.deps.library.listPlaylists(),
+        backupReader: this.deps.library,
+        backupDir: this.deps.backupDir,
+      };
+      return await sortLibrary(classification, loaded.uriById, ctx);
+    } finally {
+      endProgress();
+    }
   }
 
   /** Read → classify → aggregate → analyze the music personality. */
   async profile(): Promise<ProfileResult> {
-    const loaded = await loadLibrary(this.deps.library, this.log);
-    const classification = await this.classify(loaded);
-    const aggregate = computeAggregate({
-      tracks: loaded.aggregateTracks,
-      assignments: classification.assignments,
-      playlists: loaded.memberships,
-    });
-    const profile = await analyzePersonality(aggregate, {
-      provider: this.deps.analysisProvider,
-      cache: this.deps.analysisCache,
-    });
-    return { aggregate, profile, complete: classification.complete };
+    startProgress("reading", "Reading your library…");
+    try {
+      const loaded = await loadLibrary(this.deps.library, this.log);
+      const classification = await this.classify(loaded);
+      updateProgress({ phase: "finishing", message: "Finding your correlations…" });
+      const aggregate = computeAggregate({
+        tracks: loaded.aggregateTracks,
+        assignments: classification.assignments,
+        playlists: loaded.memberships,
+      });
+      const profile = await analyzePersonality(aggregate, {
+        provider: this.deps.analysisProvider,
+        cache: this.deps.analysisCache,
+      });
+      return { aggregate, profile, complete: classification.complete };
+    } finally {
+      endProgress();
+    }
   }
 }

@@ -20,16 +20,34 @@ function wrap(text: string, maxChars: number, maxLines: number): string[] {
   const words = text.split(/\s+/);
   const lines: string[] = [];
   let line = "";
-  for (const w of words) {
+  let truncated = false;
+  for (let i = 0; i < words.length; i++) {
+    const w = words[i] as string;
     if ((line + " " + w).trim().length > maxChars) {
       if (line) lines.push(line.trim());
       line = w;
-      if (lines.length === maxLines - 1) break;
+      if (lines.length === maxLines - 1) {
+        // No more line budget — keep filling the last line, then mark if words remain.
+        for (i++; i < words.length; i++) {
+          const nxt = words[i] as string;
+          if ((line + " " + nxt).trim().length > maxChars) {
+            truncated = true;
+            break;
+          }
+          line = (line + " " + nxt).trim();
+        }
+        break;
+      }
     } else {
       line = (line + " " + w).trim();
     }
   }
   if (line && lines.length < maxLines) lines.push(line.trim());
+  // If we dropped words, make the cut look intentional rather than mid-thought.
+  if (truncated && lines.length) {
+    const last = lines.length - 1;
+    lines[last] = `${(lines[last] as string).replace(/[.,;:\s]+$/, "")}…`;
+  }
   return lines;
 }
 

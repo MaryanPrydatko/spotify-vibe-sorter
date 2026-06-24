@@ -23,6 +23,61 @@ function note(target: HTMLElement, message: string, ok = false): void {
   target.innerHTML = `<span style="color:${ok ? "#1db954" : "#9aa0aa"}">${message}</span>`;
 }
 
+interface Progress {
+  active: boolean;
+  phase: string;
+  message: string;
+  done: number;
+  total: number;
+}
+
+/** Render the live progress line + a thin bar (only when batch counts are known). */
+function renderProgress(target: HTMLElement, p: Progress): void {
+  const pct = p.total > 0 ? Math.round((p.done / p.total) * 100) : null;
+  const label =
+    (p.message || "Working…") +
+    (pct !== null ? `  ·  ${p.done}/${p.total} batches (${pct}%)` : "");
+  const bar =
+    pct === null
+      ? ""
+      : `<div style="margin-top:8px;height:6px;background:#23262f;border-radius:999px;overflow:hidden">` +
+        `<div style="height:100%;width:${pct}%;background:#1db954;transition:width .3s"></div></div>`;
+  target.innerHTML =
+    `<div style="color:#9aa0aa;display:flex;align-items:center;gap:8px">` +
+    `<span class="spinner"></span><span>${label}</span></div>${bar}`;
+}
+
+/**
+ * Run a long job while polling /api/progress so the user sees live movement instead of
+ * a frozen spinner. Returns the job's result; always stops polling and re-enables buttons.
+ */
+async function withProgress<T>(
+  status: HTMLElement,
+  buttons: HTMLElement[],
+  run: () => Promise<T>,
+): Promise<T> {
+  let polling = true;
+  buttons.forEach((b) => ((b as HTMLButtonElement).disabled = true));
+  const poll = async (): Promise<void> => {
+    while (polling) {
+      try {
+        const p = await api<Progress>("/api/progress");
+        if (polling) renderProgress(status, p);
+      } catch {
+        /* ignore transient poll errors */
+      }
+      await new Promise((r) => setTimeout(r, 900));
+    }
+  };
+  void poll();
+  try {
+    return await run();
+  } finally {
+    polling = false;
+    buttons.forEach((b) => ((b as HTMLButtonElement).disabled = false));
+  }
+}
+
 async function renderConnect(): Promise<void> {
   app.innerHTML = "";
   const btn = el(`<button style="background:#1db954;border:0;color:#06210f;font-weight:700;padding:12px 20px;border-radius:999px;cursor:pointer">Connect Spotify</button>`);
@@ -76,12 +131,15 @@ async function renderDashboard(): Promise<void> {
     }
   });
 
+  const allButtons = [saveBtn, sortBtn, profileBtn];
+
   sortBtn.addEventListener("click", async () => {
-    note(status, "Sorting… reading your library and classifying — this can take a few minutes.");
+    output.innerHTML = "";
     try {
-      const result = await api<{ created: { bucket: string }[]; removedPrior: number }>(
-        "/api/sort",
-        { method: "POST" },
+      const result = await withProgress(status, allButtons, () =>
+        api<{ created: { bucket: string }[]; removedPrior: number }>("/api/sort", {
+          method: "POST",
+        }),
       );
       note(
         status,
@@ -94,12 +152,11 @@ async function renderDashboard(): Promise<void> {
   });
 
   profileBtn.addEventListener("click", async () => {
-    note(status, "Analyzing your whole library…");
+    output.innerHTML = "";
     try {
-      const { aggregate, profile } = await api<{
-        aggregate: LibraryAggregate;
-        profile: PersonalityProfile;
-      }>("/api/profile");
+      const { aggregate, profile } = await withProgress(status, allButtons, () =>
+        api<{ aggregate: LibraryAggregate; profile: PersonalityProfile }>("/api/profile"),
+      );
       note(status, "");
       renderCard(output, { aggregate, profile });
     } catch (err) {

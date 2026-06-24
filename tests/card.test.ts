@@ -41,4 +41,14 @@ describe("U8 card", () => {
     });
     expect(svg).toContain("Rock &amp; Roll &lt;Legend&gt;");
   });
+
+  it("ends an over-long summary with an ellipsis instead of a mid-word cut", () => {
+    const longSummary =
+      "Your library looks like a four-room emotional apartment: crying in one, " +
+      "singing in another, guitars in the third, and a strobe light in the fourth bedroom.";
+    const svg = buildCardSvg({ profile: { ...profile, summary: longSummary }, aggregate });
+    expect(svg).toContain("…");
+    // The dropped tail ("bedroom.") must not appear verbatim.
+    expect(svg).not.toContain("fourth bedroom");
+  });
 });

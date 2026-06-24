@@ -11,6 +11,12 @@ export interface SpotifyClientOptions {
   maxRetries?: number;
   /** Per-request timeout in ms; a stalled connection aborts and retries instead of hanging. */
   timeoutMs?: number;
+  /**
+   * Cap on how long a single 429 `Retry-After` is honored. Spotify can return enormous
+   * values (hours) after sustained load; we must never block the app that long. Past this
+   * cap we throw a clear rate-limit error so the caller can degrade or inform the user.
+   */
+  maxRetryAfterMs?: number;
   /** Injectable for tests so backoff doesn't actually wait. */
   sleep?: (ms: number) => Promise<void>;
 }
@@ -34,6 +40,7 @@ export class SpotifyClient {
   private readonly baseUrl: string;
   private readonly maxRetries: number;
   private readonly timeoutMs: number;
+  private readonly maxRetryAfterMs: number;
   private readonly sleep: (ms: number) => Promise<void>;
 
   constructor(opts: SpotifyClientOptions = {}) {
@@ -42,6 +49,7 @@ export class SpotifyClient {
     this.baseUrl = opts.baseUrl ?? API_BASE;
     this.maxRetries = opts.maxRetries ?? 3;
     this.timeoutMs = opts.timeoutMs ?? 20_000;
+    this.maxRetryAfterMs = opts.maxRetryAfterMs ?? 60_000;
     this.sleep = opts.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
   }
 
@@ -86,9 +94,15 @@ export class SpotifyClient {
           : new Error(`Spotify ${method} ${path} failed`);
       }
 
-      if (res.status === 429 && attempt < this.maxRetries) {
-        const retryAfter = Number(res.headers.get("retry-after") ?? "1");
-        await this.sleep(Math.max(0, retryAfter) * 1000);
+      if (res.status === 429) {
+        const retryAfterMs = Math.max(0, Number(res.headers.get("retry-after") ?? "1")) * 1000;
+        // Bail out clearly rather than blocking for minutes/hours, or once retries are spent.
+        if (retryAfterMs > this.maxRetryAfterMs || attempt >= this.maxRetries) {
+          throw new Error(
+            `Spotify ${method} ${path} rate limited (429); retry after ${Math.round(retryAfterMs / 1000)}s`,
+          );
+        }
+        await this.sleep(retryAfterMs);
         continue;
       }
       if (res.status >= 500 && res.status < 600 && attempt < this.maxRetries) {
@@ -132,4 +146,9 @@ export class SpotifyClient {
  */
 export function isForbiddenOrNotFound(err: unknown): boolean {
   return err instanceof Error && /\((403|404)\)/.test(err.message);
+}
+
+/** True for a 429 rate-limit error (raised once Retry-After exceeds the cap or retries run out). */
+export function isRateLimited(err: unknown): boolean {
+  return err instanceof Error && /rate limited \(429\)/.test(err.message);
 }

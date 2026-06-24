@@ -48,7 +48,9 @@ export class OpenAiAnalysisProvider implements AnalysisProvider {
             role: "system",
             content:
               "You are a witty music critic. From the listener's library summary, return JSON " +
-              '{"archetype":"<short fun label>","summary":"<2-3 sentences>","correlations":["<insight>"]}. ' +
+              '{"archetype":"<short fun label, max 24 chars>","summary":"<1-2 punchy COMPLETE sentences, max 140 chars>",' +
+              '"correlations":["<one COMPLETE sentence, max 90 chars>"]}. ' +
+              "The text is printed on a small share card, so never exceed the limits and never end mid-thought. " +
               "Ground every correlation ONLY in the playlistBucketMatrix — do not invent patterns.",
           },
           { role: "user", content: JSON.stringify(aggregate) },

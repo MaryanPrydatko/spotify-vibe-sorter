@@ -32,6 +32,8 @@ export interface ClassifyOptions {
   /** bucket name -> example tracks the owner tagged (for subjective buckets). */
   examplesByBucket?: Record<string, TrackForLlm[]>;
   log?: (message: string) => void;
+  /** Called after each batch settles with (completed, totalBatches) for live progress. */
+  onProgress?: (done: number, total: number) => void;
 }
 
 function toLlmTrack(t: ClassifiableTrack): TrackForLlm {
@@ -55,9 +57,10 @@ export async function classifyLibrary(
   opts: ClassifyOptions,
 ): Promise<ClassificationResult> {
   const cache = opts.cache ?? new ClassificationCache();
-  const batchSize = opts.batchSize ?? 80;
-  const concurrency = opts.concurrency ?? 4;
+  const batchSize = opts.batchSize ?? 120;
+  const concurrency = opts.concurrency ?? 8;
   const log = opts.log ?? (() => {});
+  const onProgress = opts.onProgress ?? (() => {});
   const assignments = new Map<string, string>();
 
   const uncached: ClassifiableTrack[] = [];
@@ -88,9 +91,11 @@ export async function classifyLibrary(
         examples: opts.examplesByBucket ?? {},
       });
       log(`  classified batch ${++done}/${batches.length}`);
+      onProgress(done, batches.length);
       return { batch, result: result as Record<string, string> | null };
     } catch {
       log(`  batch ${++done}/${batches.length} failed`);
+      onProgress(done, batches.length);
       return { batch, result: null as Record<string, string> | null };
     }
   });

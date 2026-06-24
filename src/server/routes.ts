@@ -6,6 +6,7 @@ import {
   type BucketConfig,
 } from "../classify/buckets.js";
 import { getEngine } from "../engine/factory.js";
+import { getProgress } from "../engine/progress.js";
 import { IncompleteClassificationError } from "../operations/sort.js";
 import { readJsonBody, sendError, sendHtml, sendJson } from "./http.js";
 import type { Router } from "./router.js";
@@ -28,6 +29,11 @@ export function registerApiRoutes(router: Router): void {
 
   router.get("/api/status", async (_req, res) => {
     sendJson(res, 200, { connected: await isConnected() });
+  });
+
+  // Live progress for the in-flight sort/profile job; the browser polls this.
+  router.get("/api/progress", (_req, res) => {
+    sendJson(res, 200, getProgress());
   });
 
   // --- Connect (U2) ---

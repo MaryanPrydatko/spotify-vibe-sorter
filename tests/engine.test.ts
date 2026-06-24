@@ -98,15 +98,22 @@ describe("U8 engine integration (mocked externals)", () => {
     expect(profile.correlations[0]).toContain("rock");
   });
 
-  it("skips 403 (editorial) playlists and still completes", async () => {
+  it("reads only the user's own playlists and skips a 403 on one of them", async () => {
+    const requested: string[] = [];
     const library: LibraryReader = {
       currentUserId: async () => "user-1",
       listPlaylists: async () => [
         { id: "p1", name: "Mine", description: "", ownerId: "user-1", snapshotId: "s", trackCount: 2 },
-        { id: "p2", name: "Discover Weekly", description: "", ownerId: "spotify", snapshotId: "s", trackCount: 30 },
+        // owned but unreadable (403) -> skipped defensively
+        { id: "p2", name: "Mine too", description: "", ownerId: "user-1", snapshotId: "s", trackCount: 30 },
+        // followed (not mine) -> filtered out before any read
+        { id: "p3", name: "Someone else's", description: "", ownerId: "other", snapshotId: "s", trackCount: 99 },
+        // empty -> filtered out
+        { id: "p4", name: "Empty", description: "", ownerId: "user-1", snapshotId: "s", trackCount: 0 },
       ],
       listPlaylistTracks: async (id) => {
-        if (id === "p2") throw new Error("Spotify GET /playlists/p2/tracks failed (403): Forbidden");
+        requested.push(id);
+        if (id === "p2") throw new Error("Spotify GET /playlists/p2/items failed (403): Forbidden");
         return [track("t1"), track("t2")];
       },
       listLikedTracks: async () => [],
@@ -124,6 +131,35 @@ describe("U8 engine integration (mocked externals)", () => {
 
     const { aggregate, complete } = await engine.profile();
     expect(complete).toBe(true);
-    expect(aggregate.sortedTracks).toBe(2); // p2 skipped, only p1's tracks counted
+    expect(aggregate.sortedTracks).toBe(2); // only p1's tracks counted
+    // p3 (not owned) and p4 (empty) are never even requested; p2 is requested but 403s.
+    expect(requested.sort()).toEqual(["p1", "p2"]);
+  });
+
+  it("degrades to Liked Songs when the playlist listing is rate-limited", async () => {
+    const library: LibraryReader = {
+      currentUserId: async () => "user-1",
+      listPlaylists: async () => {
+        throw new Error("Spotify GET /me/playlists rate limited (429); retry after 82529s");
+      },
+      listPlaylistTracks: async () => {
+        throw new Error("should not be called");
+      },
+      listLikedTracks: async () => [track("t1"), track("t2"), track("t3")],
+    };
+    const engine = new Engine({
+      library,
+      writer: { create: async () => ({ id: "x" }), addTracks: async () => {}, unfollow: async () => {} },
+      classifyProvider: everythingRock,
+      analysisProvider: fakeAnalysis,
+      loadConfig: async () => ({ buckets: [{ name: "rock" }] }),
+      isConnected: async () => true,
+      classificationCache: new ClassificationCache(),
+      backupDir,
+    });
+
+    const { aggregate, complete } = await engine.profile();
+    expect(complete).toBe(true);
+    expect(aggregate.sortedTracks).toBe(3); // the 3 liked songs still classified
   });
 });
