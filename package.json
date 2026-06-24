@@ -15,7 +15,6 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@spotify/web-api-ts-sdk": "^1.2.0",
     "openai": "^4.77.0"
   },
   "devDependencies": {
