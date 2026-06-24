@@ -12,11 +12,15 @@ function chunk<T>(items: T[], size: number): T[][] {
 export class SpotifyPlaylists {
   constructor(private readonly client: SpotifyClient) {}
 
+  // Spotify migrated the playlist-mutation endpoints (the legacy `/users/{id}/playlists`
+  // and `/playlists/{id}/tracks` routes now 403 for third-party apps). The current routes
+  // are `POST /me/playlists` and the `/playlists/{id}/items` family. Removal also changed
+  // body shape from `{ tracks: [{ uri }] }` to `{ items: [{ uri }] }`.
   async create(
-    userId: string,
+    _userId: string,
     opts: { name: string; description?: string; isPublic?: boolean },
   ): Promise<{ id: string }> {
-    return this.client.request<{ id: string }>("POST", `/users/${userId}/playlists`, {
+    return this.client.request<{ id: string }>("POST", `/me/playlists`, {
       body: {
         name: opts.name,
         description: opts.description ?? "",
@@ -28,7 +32,7 @@ export class SpotifyPlaylists {
   /** Add track URIs in batches of 100 (Spotify's per-request limit). */
   async addTracks(playlistId: string, uris: string[]): Promise<void> {
     for (const batch of chunk(uris, MAX_TRACKS_PER_REQUEST)) {
-      await this.client.request("POST", `/playlists/${playlistId}/tracks`, {
+      await this.client.request("POST", `/playlists/${playlistId}/items`, {
         body: { uris: batch },
       });
     }
@@ -36,8 +40,8 @@ export class SpotifyPlaylists {
 
   async removeTracks(playlistId: string, uris: string[]): Promise<void> {
     for (const batch of chunk(uris, MAX_TRACKS_PER_REQUEST)) {
-      await this.client.request("DELETE", `/playlists/${playlistId}/tracks`, {
-        body: { tracks: batch.map((uri) => ({ uri })) },
+      await this.client.request("DELETE", `/playlists/${playlistId}/items`, {
+        body: { items: batch.map((uri) => ({ uri })) },
       });
     }
   }
@@ -45,7 +49,7 @@ export class SpotifyPlaylists {
   /** Replace the playlist's contents (also used for reorder), batching past the first 100. */
   async replaceTracks(playlistId: string, uris: string[]): Promise<void> {
     const [first = [], ...rest] = chunk(uris, MAX_TRACKS_PER_REQUEST);
-    await this.client.request("PUT", `/playlists/${playlistId}/tracks`, {
+    await this.client.request("PUT", `/playlists/${playlistId}/items`, {
       body: { uris: first },
     });
     for (const batch of rest) {

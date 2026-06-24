@@ -21,7 +21,16 @@ interface RawPlaylist {
   description: string | null;
   owner?: { id: string };
   snapshot_id?: string;
+  // Spotify renamed the playlist track-paging field from `tracks` to `items`
+  // (to cover episodes/audiobooks). Read both so older shapes still work.
+  items?: { total: number };
   tracks?: { total: number };
+}
+
+/** A playlist item entry. Spotify renamed the track field from `track` to `item`. */
+interface RawPlaylistItem {
+  item?: RawTrack | null;
+  track?: RawTrack | null;
 }
 
 function normalizeTrack(raw: RawTrack | null): Track | null {
@@ -60,17 +69,19 @@ export class SpotifyLibrary {
         description: p.description ?? "",
         ownerId: p.owner?.id ?? "",
         snapshotId: p.snapshot_id ?? "",
-        trackCount: p.tracks?.total ?? 0,
+        trackCount: p.items?.total ?? p.tracks?.total ?? 0,
       }));
   }
 
   async listPlaylistTracks(playlistId: string): Promise<Track[]> {
-    const raw = await this.client.getAllPages<{ track: RawTrack | null } | null>(
-      `/playlists/${playlistId}/tracks`,
+    // Read via `/playlists/{id}/items` — Spotify now 403s the legacy `/tracks`
+    // sub-endpoint for third-party apps, while `/items` returns the same data.
+    const raw = await this.client.getAllPages<RawPlaylistItem | null>(
+      `/playlists/${playlistId}/items`,
       { limit: 100 },
     );
     return raw
-      .map((i) => normalizeTrack(i?.track ?? null))
+      .map((i) => normalizeTrack(i?.item ?? i?.track ?? null))
       .filter((t): t is Track => t !== null);
   }
 

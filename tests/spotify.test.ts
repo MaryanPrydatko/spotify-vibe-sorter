@@ -125,18 +125,59 @@ describe("U3 library reads", () => {
     expect(playlists.map((p) => p.id)).toEqual(["p1", "p2"]); // null entry dropped
     expect(playlists.find((p) => p.id === "p2")?.trackCount).toBe(0); // missing tracks -> 0
   });
+
+  it("reads the new `/items` endpoint and the renamed `item` field", async () => {
+    // Spotify migrated `/playlists/{id}/tracks` (now 403) to `/playlists/{id}/items`,
+    // and renamed each entry's `track` field to `item`.
+    let requestedUrl = "";
+    const fetchImpl = vi.fn(async (input: RequestInfo | URL) => {
+      requestedUrl = String(input);
+      return json({
+        items: [
+          { item: { id: "t1", uri: "spotify:track:t1", name: "Song", artists: [], album: { name: "A" } } },
+          { item: null },
+        ],
+        next: null,
+        total: 2,
+      });
+    }) as unknown as typeof fetch;
+
+    const tracks = await new SpotifyLibrary(clientWith(fetchImpl)).listPlaylistTracks("p1");
+    expect(requestedUrl).toContain("/playlists/p1/items");
+    expect(tracks.map((t) => t.id)).toEqual(["t1"]);
+  });
+
+  it("reads trackCount from the renamed `items.total` field", async () => {
+    const fetchImpl = vi.fn(async () =>
+      json({
+        items: [{ id: "p1", name: "New", description: "", owner: { id: "u" }, snapshot_id: "s", items: { total: 7 } }],
+        next: null,
+        total: 1,
+      }),
+    ) as unknown as typeof fetch;
+    const playlists = await new SpotifyLibrary(clientWith(fetchImpl)).listPlaylists();
+    expect(playlists[0]?.trackCount).toBe(7);
+  });
 });
 
 describe("U3 playlist writes", () => {
-  it("creates a playlist and returns its id", async () => {
-    const fetchImpl = vi.fn(async () => json({ id: "new-pl" }, 201)) as unknown as typeof fetch;
+  it("creates a playlist via the `/me/playlists` endpoint", async () => {
+    // The legacy `/users/{id}/playlists` now 403s; create goes through `/me/playlists`.
+    let url = "";
+    const fetchImpl = vi.fn(async (input: RequestInfo | URL) => {
+      url = String(input);
+      return json({ id: "new-pl" }, 201);
+    }) as unknown as typeof fetch;
     const pl = new SpotifyPlaylists(clientWith(fetchImpl));
     expect((await pl.create("user-1", { name: "Techno" })).id).toBe("new-pl");
+    expect(url).toContain("/me/playlists");
   });
 
-  it("batches track additions in groups of 100", async () => {
+  it("adds tracks via `/items` in groups of 100", async () => {
     const bodies: number[] = [];
-    const fetchImpl = vi.fn(async (_input: RequestInfo | URL, init?: RequestInit) => {
+    let url = "";
+    const fetchImpl = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+      url = String(input);
       const parsed = JSON.parse(String(init?.body)) as { uris: string[] };
       bodies.push(parsed.uris.length);
       return json({ snapshot_id: "s" });
@@ -145,5 +186,20 @@ describe("U3 playlist writes", () => {
     const uris = Array.from({ length: 150 }, (_, i) => `spotify:track:${i}`);
     await new SpotifyPlaylists(clientWith(fetchImpl)).addTracks("p1", uris);
     expect(bodies).toEqual([100, 50]);
+    expect(url).toContain("/playlists/p1/items");
+  });
+
+  it("removes tracks via `DELETE /items` with the `items` body shape", async () => {
+    let url = "";
+    let body: { items?: { uri: string }[] } = {};
+    const fetchImpl = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+      url = String(input);
+      body = JSON.parse(String(init?.body));
+      return json({ snapshot_id: "s" });
+    }) as unknown as typeof fetch;
+
+    await new SpotifyPlaylists(clientWith(fetchImpl)).removeTracks("p1", ["spotify:track:a"]);
+    expect(url).toContain("/playlists/p1/items");
+    expect(body.items).toEqual([{ uri: "spotify:track:a" }]);
   });
 });
