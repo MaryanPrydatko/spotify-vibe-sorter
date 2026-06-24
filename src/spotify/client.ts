@@ -107,3 +107,12 @@ export class SpotifyClient {
     return items;
   }
 }
+
+/**
+ * True for "expected, skippable" Spotify errors: 403 (e.g. editorial/algorithmic playlists
+ * third-party apps can't read) and 404 (unavailable). Real failures (network, 5xx) are NOT
+ * skippable — callers should let those abort so a backup is never silently incomplete.
+ */
+export function isForbiddenOrNotFound(err: unknown): boolean {
+  return err instanceof Error && /\((403|404)\)/.test(err.message);
+}

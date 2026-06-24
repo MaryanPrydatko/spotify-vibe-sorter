@@ -1,6 +1,7 @@
 import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { paths } from "../config/paths.js";
+import { isForbiddenOrNotFound } from "../spotify/client.js";
 import type { PlaylistSummary, Track } from "../spotify/types.js";
 
 export interface PlaylistSnapshot {
@@ -35,7 +36,15 @@ export async function takeSnapshot(
   const summaries = await reader.listPlaylists();
   const playlists: PlaylistSnapshot[] = [];
   for (const p of summaries) {
-    const tracks = await reader.listPlaylistTracks(p.id);
+    let tracks: Track[];
+    try {
+      tracks = await reader.listPlaylistTracks(p.id);
+    } catch (err) {
+      // Skip playlists we're not allowed to read (editorial/algorithmic); abort on real errors
+      // so a backup is never silently incomplete.
+      if (isForbiddenOrNotFound(err)) continue;
+      throw err;
+    }
     playlists.push({
       id: p.id,
       name: p.name,

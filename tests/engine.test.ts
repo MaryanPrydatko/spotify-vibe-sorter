@@ -98,4 +98,34 @@ describe("U8 engine integration (mocked externals)", () => {
     expect(profile.archetype).toBe("Vibe Lord");
     expect(profile.correlations[0]).toContain("rock");
   });
+
+  it("skips 403 (editorial) playlists and still completes", async () => {
+    const library: LibraryReader = {
+      currentUserId: async () => "user-1",
+      listPlaylists: async () => [
+        { id: "p1", name: "Mine", description: "", ownerId: "user-1", snapshotId: "s", trackCount: 2 },
+        { id: "p2", name: "Discover Weekly", description: "", ownerId: "spotify", snapshotId: "s", trackCount: 30 },
+      ],
+      listPlaylistTracks: async (id) => {
+        if (id === "p2") throw new Error("Spotify GET /playlists/p2/tracks failed (403): Forbidden");
+        return [track("t1"), track("t2")];
+      },
+      listLikedTracks: async () => [],
+      fetchArtistGenres: async (ids) => new Map(ids.map((i) => [i, ["pop"]])),
+    };
+    const engine = new Engine({
+      library,
+      writer: { create: async () => ({ id: "x" }), addTracks: async () => {}, unfollow: async () => {} },
+      classifyProvider: everythingRock,
+      analysisProvider: fakeAnalysis,
+      loadConfig: async () => ({ buckets: [{ name: "rock" }] }),
+      isConnected: async () => true,
+      classificationCache: new ClassificationCache(),
+      backupDir,
+    });
+
+    const { aggregate, complete } = await engine.profile();
+    expect(complete).toBe(true);
+    expect(aggregate.sortedTracks).toBe(2); // p2 skipped, only p1's tracks counted
+  });
 });

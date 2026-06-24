@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { SpotifyClient } from "../src/spotify/client.js";
+import { isForbiddenOrNotFound, SpotifyClient } from "../src/spotify/client.js";
 import { SpotifyLibrary } from "../src/spotify/library.js";
 import { SpotifyPlaylists } from "../src/spotify/playlists.js";
 
@@ -65,6 +65,13 @@ describe("U3 rate-limit handling", () => {
       json({ error: "bad" }, 403),
     ) as unknown as typeof fetch;
     await expect(clientWith(fetchImpl).request("GET", "/me")).rejects.toThrow(/403/);
+  });
+
+  it("classifies only 403/404 as skippable", () => {
+    expect(isForbiddenOrNotFound(new Error("GET /x failed (403): Forbidden"))).toBe(true);
+    expect(isForbiddenOrNotFound(new Error("GET /x failed (404)"))).toBe(true);
+    expect(isForbiddenOrNotFound(new Error("GET /x failed (500)"))).toBe(false);
+    expect(isForbiddenOrNotFound("not an error")).toBe(false);
   });
 });
 

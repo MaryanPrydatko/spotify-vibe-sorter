@@ -22,6 +22,7 @@ import {
   type SortWriter,
 } from "../operations/sort.js";
 import type { ClassifiableTrack } from "../classify/engine.js";
+import { isForbiddenOrNotFound } from "../spotify/client.js";
 import type { Track } from "../spotify/types.js";
 
 /** Read surface the engine needs from Spotify — satisfied by SpotifyLibrary. */
@@ -61,7 +62,15 @@ export async function loadLibrary(library: LibraryReader): Promise<LoadedLibrary
   const memberships: PlaylistMembership[] = [];
 
   for (const p of playlists) {
-    const tracks = await library.listPlaylistTracks(p.id);
+    let tracks: Track[];
+    try {
+      tracks = await library.listPlaylistTracks(p.id);
+    } catch (err) {
+      // Editorial/algorithmic playlists (Discover Weekly, Daily Mixes, etc.) return 403 to
+      // third-party apps. They aren't the owner's to sort — skip and keep going.
+      if (isForbiddenOrNotFound(err)) continue;
+      throw err;
+    }
     memberships.push({
       playlistId: p.id,
       playlistName: p.name,
