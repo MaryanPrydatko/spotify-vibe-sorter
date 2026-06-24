@@ -8,6 +8,7 @@ import { SpotifyClient } from "../spotify/client.js";
 import { SpotifyLibrary } from "../spotify/library.js";
 import { SpotifyPlaylists } from "../spotify/playlists.js";
 import { Engine } from "./engine.js";
+import { LibraryCache } from "./libraryCache.js";
 
 /** Wire the engine with real Spotify + OpenAI collaborators from the environment. */
 export function buildEngine(): Engine {
@@ -17,12 +18,14 @@ export function buildEngine(): Engine {
   return new Engine({
     library,
     writer: playlists,
+    manageWriter: playlists,
     classifyProvider: new OpenAiProvider(),
     analysisProvider: new OpenAiAnalysisProvider(),
     loadConfig: () => loadBucketConfig(),
     isConnected: () => isConnected(),
     classificationCache: new ClassificationCache(paths.classificationCacheFile),
     analysisCache: new AnalysisCache(paths.analysisCacheFile),
+    libraryCache: new LibraryCache(paths.libraryCacheFile),
     backupDir: paths.backupsDir,
   });
 }

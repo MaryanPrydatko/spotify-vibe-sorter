@@ -103,10 +103,12 @@ async function renderDashboard(): Promise<void> {
   const saveBtn = el(`<button class="btn">Save buckets</button>`);
   const sortBtn = el(`<button class="btn">Sort my library</button>`);
   const profileBtn = el(`<button class="btn">Reveal my music personality</button>`);
+  const manageBtn = el(`<button class="btn">Manage my playlists</button>`);
   const status = el(`<p class="status"></p>`);
   const output = el(`<div></div>`);
+  const manageArea = el(`<div></div>`);
 
-  for (const b of [saveBtn, sortBtn, profileBtn]) {
+  for (const b of [saveBtn, sortBtn, profileBtn, manageBtn]) {
     b.setAttribute(
       "style",
       "background:#23262f;border:1px solid #262932;color:#e8e9ed;padding:10px 16px;border-radius:8px;cursor:pointer;margin:8px 8px 0 0",
@@ -131,7 +133,17 @@ async function renderDashboard(): Promise<void> {
     }
   });
 
-  const allButtons = [saveBtn, sortBtn, profileBtn];
+  const allButtons = [saveBtn, sortBtn, profileBtn, manageBtn];
+
+  let manageOpen = false;
+  manageBtn.addEventListener("click", async () => {
+    manageOpen = !manageOpen;
+    if (!manageOpen) {
+      manageArea.innerHTML = "";
+      return;
+    }
+    await renderManage(manageArea);
+  });
 
   sortBtn.addEventListener("click", async () => {
     output.innerHTML = "";
@@ -171,8 +183,10 @@ async function renderDashboard(): Promise<void> {
     saveBtn,
     sortBtn,
     profileBtn,
+    manageBtn,
     status,
     output,
+    manageArea,
   );
 }
 
@@ -185,6 +199,154 @@ function renderCard(target: HTMLElement, data: CardData): void {
   );
   download.addEventListener("click", () => void exportCardPng(data));
   target.append(preview, download);
+}
+
+// --- Playlist management ---
+
+interface PlaylistInfo {
+  id: string;
+  name: string;
+  trackCount: number;
+  isTool: boolean;
+}
+
+function escapeAttr(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function smallBtn(label: string, variant: "default" | "danger" | "accent" = "default"): HTMLButtonElement {
+  const bg = variant === "danger" ? "#3a1d22" : variant === "accent" ? "#1db954" : "#23262f";
+  const bd = variant === "danger" ? "#5b2630" : "#262932";
+  const fg = variant === "accent" ? "#06210f" : "#e8e9ed";
+  const b = el(`<button>${label}</button>`) as HTMLButtonElement;
+  b.setAttribute(
+    "style",
+    `background:${bg};border:1px solid ${bd};color:${fg};padding:6px 12px;border-radius:7px;cursor:pointer;font-size:13px;margin-left:6px`,
+  );
+  return b;
+}
+
+/** Render the user's playlists with backup-guarded delete / rename and a restore button. */
+async function renderManage(area: HTMLElement): Promise<void> {
+  area.innerHTML = `<p class="status" style="margin-top:18px">Loading your playlists…</p>`;
+  let playlists: PlaylistInfo[];
+  try {
+    ({ playlists } = await api<{ playlists: PlaylistInfo[] }>("/api/playlists"));
+  } catch (err) {
+    area.innerHTML = `<p class="status" style="margin-top:18px;color:#e0a04a">${escapeAttr((err as Error).message)}</p>`;
+    return;
+  }
+
+  area.innerHTML = "";
+  const header = el(
+    `<div style="margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:12px">` +
+      `<span class="status">Your playlists (${playlists.length}) — deletes are backed up first</span></div>`,
+  );
+  const restore = smallBtn("Restore last backup");
+  const headerMsg = el(`<p class="status" style="margin:6px 0 0"></p>`);
+  header.append(restore);
+  restore.addEventListener("click", async () => {
+    restore.disabled = true;
+    note(headerMsg, "Restoring from your last backup…");
+    try {
+      const r = await api<{ replaced: number; recreated: number }>("/api/restore", { method: "POST" });
+      note(headerMsg, `Restored: ${r.replaced} updated, ${r.recreated} re-created.`, true);
+      await renderManage(area);
+    } catch (err) {
+      note(headerMsg, (err as Error).message);
+      restore.disabled = false;
+    }
+  });
+
+  const list = el(`<div style="margin-top:10px"></div>`);
+  for (const p of playlists) {
+    list.append(playlistRow(p, area));
+  }
+  area.append(header, headerMsg, list);
+}
+
+function playlistRow(p: PlaylistInfo, area: HTMLElement): HTMLElement {
+  const row = el(
+    `<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid #1c1f26"></div>`,
+  );
+  const tag = p.isTool
+    ? ` <span style="color:#1db954;font-size:11px;border:1px solid #1db954;border-radius:999px;padding:1px 7px;margin-left:6px">vibe-sorter</span>`
+    : "";
+  const label = el(
+    `<div style="min-width:0;flex:1"><span style="color:#e8e9ed">${escapeAttr(p.name)}</span>${tag}` +
+      `<span class="status" style="margin-left:8px">${p.trackCount} tracks</span></div>`,
+  );
+  const actions = el(`<div style="flex:none;display:flex;align-items:center"></div>`);
+  const renameBtn = smallBtn("Rename");
+  const delBtn = smallBtn("Delete", "danger");
+  actions.append(renameBtn, delBtn);
+
+  // Inline rename — no blocking browser prompt.
+  renameBtn.addEventListener("click", () => {
+    const input = el(
+      `<input value="${escapeAttr(p.name)}" style="background:#0f1014;color:#e8e9ed;border:1px solid #262932;border-radius:7px;padding:6px 8px;font-size:13px;width:200px">`,
+    ) as HTMLInputElement;
+    const save = smallBtn("Save", "accent");
+    label.replaceWith(input);
+    renameBtn.replaceWith(save);
+    delBtn.remove();
+    input.focus();
+    save.addEventListener("click", async () => {
+      save.disabled = true;
+      try {
+        await api("/api/playlists/rename", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ id: p.id, name: input.value }),
+        });
+        await renderManage(area);
+      } catch (err) {
+        save.disabled = false;
+        input.insertAdjacentHTML(
+          "afterend",
+          `<span class="status" style="color:#e0a04a;margin-left:8px">${escapeAttr((err as Error).message)}</span>`,
+        );
+      }
+    });
+  });
+
+  // Two-step delete confirm — avoids a blocking confirm() dialog.
+  let armed = false;
+  let armTimer: ReturnType<typeof setTimeout> | undefined;
+  delBtn.addEventListener("click", async () => {
+    if (!armed) {
+      armed = true;
+      delBtn.textContent = "Confirm delete?";
+      armTimer = setTimeout(() => {
+        armed = false;
+        delBtn.textContent = "Delete";
+      }, 3500);
+      return;
+    }
+    if (armTimer) clearTimeout(armTimer);
+    delBtn.disabled = true;
+    delBtn.textContent = "Deleting…";
+    try {
+      await api("/api/playlists/delete", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id: p.id }),
+      });
+      row.replaceWith(
+        el(`<div class="status" style="padding:10px 0;border-top:1px solid #1c1f26">Deleted “${escapeAttr(p.name)}” — recoverable via Restore.</div>`),
+      );
+    } catch (err) {
+      delBtn.disabled = false;
+      delBtn.textContent = "Delete";
+      actions.insertAdjacentHTML(
+        "beforebegin",
+        `<span class="status" style="color:#e0a04a">${escapeAttr((err as Error).message)}</span>`,
+      );
+    }
+  });
+
+  row.append(label, actions);
+  return row;
 }
 
 async function main(): Promise<void> {

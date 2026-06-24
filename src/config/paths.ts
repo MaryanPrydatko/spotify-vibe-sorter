@@ -22,6 +22,8 @@ export const paths = {
   classificationCacheFile: join(DATA_DIR, "classification-cache.json"),
   /** Cached personality analysis result. */
   analysisCacheFile: join(DATA_DIR, "analysis-cache.json"),
+  /** Cached whole-library read, reused across sort/profile within a short TTL. */
+  libraryCacheFile: join(DATA_DIR, "library-cache.json"),
   /** Owner-defined vibe buckets and tagged example tracks. */
   bucketsFile: join(DATA_DIR, "buckets.json"),
 } as const;

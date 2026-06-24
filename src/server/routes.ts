@@ -106,4 +106,49 @@ export function registerApiRoutes(router: Router): void {
       sendEngineError(res, err);
     }
   });
+
+  // --- Playlist management ---
+  router.get("/api/playlists", async (_req, res) => {
+    try {
+      sendJson(res, 200, { playlists: await getEngine().listMyPlaylists() });
+    } catch (err) {
+      sendEngineError(res, err);
+    }
+  });
+
+  router.post("/api/playlists/delete", async (req, res) => {
+    const body = await readJsonBody<{ id?: string }>(req);
+    if (!body?.id) {
+      sendError(res, 400, "Expected { id }");
+      return;
+    }
+    try {
+      await getEngine().deleteMyPlaylist(body.id);
+      sendJson(res, 200, { ok: true });
+    } catch (err) {
+      sendEngineError(res, err);
+    }
+  });
+
+  router.post("/api/playlists/rename", async (req, res) => {
+    const body = await readJsonBody<{ id?: string; name?: string }>(req);
+    if (!body?.id || !body?.name) {
+      sendError(res, 400, "Expected { id, name }");
+      return;
+    }
+    try {
+      await getEngine().renameMyPlaylist(body.id, body.name);
+      sendJson(res, 200, { ok: true });
+    } catch (err) {
+      sendEngineError(res, err);
+    }
+  });
+
+  router.post("/api/restore", async (_req, res) => {
+    try {
+      sendJson(res, 200, await getEngine().restoreLatestBackup());
+    } catch (err) {
+      sendEngineError(res, err);
+    }
+  });
 }

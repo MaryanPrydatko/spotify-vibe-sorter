@@ -163,3 +163,60 @@ describe("U8 engine integration (mocked externals)", () => {
     expect(aggregate.sortedTracks).toBe(3); // the 3 liked songs still classified
   });
 });
+
+describe("playlist management (owner-guarded, backup-guarded)", () => {
+  const MARKER = "[vibe-sorter]";
+  function mgmtLibrary(): LibraryReader {
+    return {
+      currentUserId: async () => "user-1",
+      listPlaylists: async () => [
+        { id: "mine", name: "My Mix", description: "", ownerId: "user-1", snapshotId: "s", trackCount: 2 },
+        { id: "tool", name: "techno", description: `auto ${MARKER}`, ownerId: "user-1", snapshotId: "s", trackCount: 5 },
+        { id: "theirs", name: "Someone's", description: "", ownerId: "other", snapshotId: "s", trackCount: 9 },
+      ],
+      listPlaylistTracks: async () => [track("t1"), track("t2")],
+      listLikedTracks: async () => [track("t3")],
+    };
+  }
+  function makeManageEngine(writer: Record<string, ReturnType<typeof vi.fn>>): Engine {
+    const unfollow = writer.unfollow ?? vi.fn(async () => {});
+    return new Engine({
+      library: mgmtLibrary(),
+      writer: { create: async () => ({ id: "x" }), addTracks: async () => {}, unfollow },
+      manageWriter: writer as never,
+      classifyProvider: everythingRock,
+      analysisProvider: fakeAnalysis,
+      loadConfig: async () => ({ buckets: [{ name: "rock" }] }),
+      isConnected: async () => true,
+      backupDir,
+    });
+  }
+
+  it("lists only the user's own playlists and tags tool-created ones", async () => {
+    const engine = makeManageEngine({ unfollow: vi.fn(), updateDetails: vi.fn() });
+    const list = await engine.listMyPlaylists();
+    expect(list.map((p) => p.id).sort()).toEqual(["mine", "tool"]); // "theirs" excluded
+    expect(list.find((p) => p.id === "tool")?.isTool).toBe(true);
+    expect(list.find((p) => p.id === "mine")?.isTool).toBe(false);
+  });
+
+  it("deletes an owned playlist (after a backup) and refuses one you don't own", async () => {
+    const unfollow = vi.fn(async () => {});
+    const engine = makeManageEngine({ unfollow });
+    await engine.deleteMyPlaylist("mine");
+    expect(unfollow).toHaveBeenCalledWith("mine");
+
+    await expect(engine.deleteMyPlaylist("theirs")).rejects.toThrow(/only manage playlists you own/);
+    await expect(engine.deleteMyPlaylist("ghost")).rejects.toThrow(/not found/);
+    expect(unfollow).toHaveBeenCalledTimes(1); // the refusals never called the writer
+  });
+
+  it("renames an owned playlist and rejects an empty name", async () => {
+    const updateDetails = vi.fn(async () => {});
+    const engine = makeManageEngine({ unfollow: vi.fn(), updateDetails });
+    await engine.renameMyPlaylist("tool", "  fresh techno  ");
+    expect(updateDetails).toHaveBeenCalledWith("tool", { name: "fresh techno" });
+
+    await expect(engine.renameMyPlaylist("tool", "   ")).rejects.toThrow(/cannot be empty/);
+  });
+});

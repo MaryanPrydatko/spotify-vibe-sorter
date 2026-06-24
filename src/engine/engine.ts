@@ -5,7 +5,6 @@ import { classifyLibrary } from "../classify/engine.js";
 import type { LlmProvider } from "../classify/llm.js";
 import {
   computeAggregate,
-  type AggregateTrack,
   type LibraryAggregate,
   type PlaylistMembership,
 } from "../profile/aggregate.js";
@@ -16,16 +15,25 @@ import {
   type PersonalityProfile,
 } from "../profile/analyze.js";
 import {
+  isToolPlaylist,
   sortLibrary,
   type SortContext,
   type SortResult,
   type SortWriter,
 } from "../operations/sort.js";
-import type { ClassifiableTrack } from "../classify/engine.js";
+import {
+  deletePlaylist,
+  renamePlaylist,
+  type EditContext,
+  type EditWriter,
+} from "../operations/edit.js";
+import { latestSnapshot } from "../backup/snapshot.js";
+import { loadSnapshot, restoreSnapshot, type RestoreWriter } from "../backup/restore.js";
 import { isForbiddenOrNotFound, isRateLimited } from "../spotify/client.js";
 import type { PlaylistSummary, Track } from "../spotify/types.js";
 import { mapWithConcurrency } from "../util/concurrency.js";
 import { endProgress, startProgress, updateProgress } from "./progress.js";
+import { LibraryCache, type LoadedLibrary } from "./libraryCache.js";
 
 /** Read surface the engine needs from Spotify — satisfied by SpotifyLibrary. */
 export interface LibraryReader extends SnapshotReader {
@@ -34,6 +42,9 @@ export interface LibraryReader extends SnapshotReader {
 
 export type ProgressLog = (message: string) => void;
 
+/** Owner-triggered playlist edits + snapshot restore. Satisfied by SpotifyPlaylists. */
+export type ManageWriter = EditWriter & RestoreWriter;
+
 export interface EngineDeps {
   library: LibraryReader;
   writer: SortWriter;
@@ -41,17 +52,20 @@ export interface EngineDeps {
   analysisProvider: AnalysisProvider;
   loadConfig: () => Promise<BucketConfig>;
   isConnected: () => Promise<boolean>;
+  /** Write surface for the manage/restore endpoints (delete, rename, restore). */
+  manageWriter?: ManageWriter;
   classificationCache?: ClassificationCache;
   analysisCache?: AnalysisCache;
+  libraryCache?: LibraryCache;
   backupDir?: string;
 }
 
-interface LoadedLibrary {
-  userId: string;
-  classifiable: ClassifiableTrack[];
-  aggregateTracks: AggregateTrack[];
-  uriById: Map<string, string>;
-  memberships: PlaylistMembership[];
+export interface PlaylistInfo {
+  id: string;
+  name: string;
+  trackCount: number;
+  /** True if this playlist was created by the sorter (carries the marker). */
+  isTool: boolean;
 }
 
 /**
@@ -75,10 +89,12 @@ export async function loadLibrary(
   // If the playlist listing is unavailable (e.g. Spotify rate-limits /me/playlists after
   // heavy use), don't fail or hang — degrade to Liked Songs so the user still gets a result.
   let allPlaylists: PlaylistSummary[] = [];
+  let degraded = false;
   try {
     allPlaylists = await library.listPlaylists();
   } catch (err) {
     if (isRateLimited(err) || isForbiddenOrNotFound(err)) {
+      degraded = true;
       log("Couldn't read your playlists right now (Spotify rate limit) — using Liked Songs only.");
     } else {
       throw err;
@@ -143,6 +159,7 @@ export async function loadLibrary(
     })),
     uriById: new Map(all.map((t) => [t.id, t.uri])),
     memberships,
+    degraded,
   };
 }
 
@@ -167,6 +184,31 @@ export class Engine {
     return this.deps.isConnected();
   }
 
+  /**
+   * Load the library, reusing a fresh cached read when available. The expensive,
+   * rate-limit-prone playlist read then happens once and is shared by sort/profile;
+   * a complete read is cached, and mutations clear it via `invalidateLibrary`.
+   */
+  private async loadLibraryCached(): Promise<LoadedLibrary> {
+    const cache = this.deps.libraryCache;
+    if (cache) {
+      const userId = await this.deps.library.currentUserId();
+      const hit = await cache.get(userId);
+      if (hit) {
+        this.log(`Reusing your library from cache (${hit.classifiable.length} tracks).`);
+        return hit;
+      }
+    }
+    const loaded = await loadLibrary(this.deps.library, this.log);
+    await cache?.set(loaded);
+    return loaded;
+  }
+
+  /** Drop the cached library read after any playlist mutation. */
+  private async invalidateLibrary(): Promise<void> {
+    await this.deps.libraryCache?.clear();
+  }
+
   private async classify(loaded: LoadedLibrary) {
     await this.deps.classificationCache?.load();
     const config = await this.deps.loadConfig();
@@ -186,7 +228,7 @@ export class Engine {
   async sort(): Promise<SortResult> {
     startProgress("reading", "Reading your library…");
     try {
-      const loaded = await loadLibrary(this.deps.library, this.log);
+      const loaded = await this.loadLibraryCached();
       const classification = await this.classify(loaded);
       updateProgress({ phase: "finishing", message: "Creating your vibe playlists…" });
       const ctx: SortContext = {
@@ -196,7 +238,9 @@ export class Engine {
         backupReader: this.deps.library,
         backupDir: this.deps.backupDir,
       };
-      return await sortLibrary(classification, loaded.uriById, ctx);
+      const result = await sortLibrary(classification, loaded.uriById, ctx);
+      await this.invalidateLibrary(); // playlists changed — next read must be fresh
+      return result;
     } finally {
       endProgress();
     }
@@ -206,7 +250,7 @@ export class Engine {
   async profile(): Promise<ProfileResult> {
     startProgress("reading", "Reading your library…");
     try {
-      const loaded = await loadLibrary(this.deps.library, this.log);
+      const loaded = await this.loadLibraryCached();
       const classification = await this.classify(loaded);
       updateProgress({ phase: "finishing", message: "Finding your correlations…" });
       const aggregate = computeAggregate({
@@ -222,5 +266,77 @@ export class Engine {
     } finally {
       endProgress();
     }
+  }
+
+  // --- Playlist management (owner-triggered, backup-guarded) ---
+
+  private manageWriter(): ManageWriter {
+    const w = this.deps.manageWriter;
+    if (!w) throw new Error("Playlist management is not configured.");
+    return w;
+  }
+
+  private editContext(): EditContext {
+    return {
+      writer: this.manageWriter(),
+      backupReader: this.deps.library,
+      backupDir: this.deps.backupDir,
+    };
+  }
+
+  /** List the user's OWN playlists, tagging the ones this tool created. */
+  async listMyPlaylists(): Promise<PlaylistInfo[]> {
+    const userId = await this.deps.library.currentUserId();
+    const all = await this.deps.library.listPlaylists();
+    return all
+      .filter((p) => p.ownerId === userId)
+      .map((p) => ({
+        id: p.id,
+        name: p.name,
+        trackCount: p.trackCount,
+        isTool: isToolPlaylist(p),
+      }));
+  }
+
+  /** Resolve a playlist the user owns by id, or throw — guards every mutation below. */
+  private async requireOwned(id: string): Promise<PlaylistSummary> {
+    const userId = await this.deps.library.currentUserId();
+    const all = await this.deps.library.listPlaylists();
+    const target = all.find((p) => p.id === id);
+    if (!target) throw new Error("Playlist not found.");
+    if (target.ownerId !== userId) throw new Error("You can only manage playlists you own.");
+    return target;
+  }
+
+  /** Delete (unfollow) one of the user's own playlists, after a guaranteed backup. */
+  async deleteMyPlaylist(id: string): Promise<void> {
+    await this.requireOwned(id);
+    await deletePlaylist(id, this.editContext());
+    await this.invalidateLibrary();
+  }
+
+  /** Rename one of the user's own playlists, after a guaranteed backup. */
+  async renameMyPlaylist(id: string, name: string): Promise<void> {
+    const clean = name.trim();
+    if (!clean) throw new Error("New name cannot be empty.");
+    await this.requireOwned(id);
+    await renamePlaylist(id, clean, this.editContext());
+    await this.invalidateLibrary();
+  }
+
+  /** Restore the most recent backup — rebuilds playlist membership and re-creates deleted ones. */
+  async restoreLatestBackup(): Promise<{ replaced: number; recreated: number }> {
+    const latest = await latestSnapshot(this.deps.backupDir);
+    if (!latest) throw new Error("No backup found to restore from.");
+    const snapshot = await loadSnapshot(latest.path);
+    const userId = await this.deps.library.currentUserId();
+    const existingIds = new Set((await this.deps.library.listPlaylists()).map((p) => p.id));
+    const result = await restoreSnapshot(snapshot, {
+      userId,
+      writer: this.manageWriter(),
+      existingPlaylistIds: existingIds,
+    });
+    await this.invalidateLibrary();
+    return result;
   }
 }
