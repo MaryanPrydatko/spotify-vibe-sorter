@@ -1,7 +1,7 @@
 ---
 title: "feat: Spotify Vibe Sorter + Music Personality"
 type: feat
-status: active
+status: completed
 date: 2026-06-24
 origin: docs/brainstorms/spotify-vibe-sorter-requirements.md
 ---
