@@ -32,7 +32,6 @@ const fakeLibrary: LibraryReader = {
   ],
   listPlaylistTracks: async () => [track("t1"), track("t2")],
   listLikedTracks: async () => [track("t3")],
-  fetchArtistGenres: async (ids) => new Map(ids.map((id) => [id, ["pop"]])),
 };
 
 const everythingRock: LlmProvider = {
@@ -111,7 +110,6 @@ describe("U8 engine integration (mocked externals)", () => {
         return [track("t1"), track("t2")];
       },
       listLikedTracks: async () => [],
-      fetchArtistGenres: async (ids) => new Map(ids.map((i) => [i, ["pop"]])),
     };
     const engine = new Engine({
       library,

@@ -24,12 +24,14 @@ import {
 import type { ClassifiableTrack } from "../classify/engine.js";
 import { isForbiddenOrNotFound } from "../spotify/client.js";
 import type { Track } from "../spotify/types.js";
+import { mapWithConcurrency } from "../util/concurrency.js";
 
 /** Read surface the engine needs from Spotify — satisfied by SpotifyLibrary. */
 export interface LibraryReader extends SnapshotReader {
   currentUserId(): Promise<string>;
-  fetchArtistGenres(artistIds: string[]): Promise<Map<string, string[]>>;
 }
+
+export type ProgressLog = (message: string) => void;
 
 export interface EngineDeps {
   library: LibraryReader;
@@ -53,30 +55,41 @@ interface LoadedLibrary {
 
 /**
  * Read the entire library once and build everything the downstream stages need: the
- * classifiable tracks (with genres merged from each track's artists), the aggregate tracks,
- * a uri lookup, and per-playlist membership (including Liked Songs) for the correlation matrix.
+ * classifiable tracks, the aggregate tracks, a uri lookup, and per-playlist membership
+ * (including Liked Songs) for the correlation matrix.
+ *
+ * Playlist track lists are read in parallel (each is independent), and unreadable
+ * editorial/algorithmic playlists are skipped. Genres are deliberately NOT fetched per
+ * artist from Spotify — that endpoint is rate-limited to ~180/min (minutes of waiting on a
+ * large library) and is itself deprecated. The model infers genre/vibe from name + artist
+ * instead, which is what it's good at and removes thousands of slow calls.
  */
-export async function loadLibrary(library: LibraryReader): Promise<LoadedLibrary> {
+export async function loadLibrary(
+  library: LibraryReader,
+  log: ProgressLog = () => {},
+): Promise<LoadedLibrary> {
   const playlists = await library.listPlaylists();
-  const tracksById = new Map<string, Track>();
-  const memberships: PlaylistMembership[] = [];
+  log(`Reading tracks from ${playlists.length} playlists…`);
 
-  for (const p of playlists) {
-    let tracks: Track[];
+  const perPlaylist = await mapWithConcurrency(playlists, 6, async (p) => {
     try {
-      tracks = await library.listPlaylistTracks(p.id);
+      return { p, tracks: await library.listPlaylistTracks(p.id) };
     } catch (err) {
-      // Editorial/algorithmic playlists (Discover Weekly, Daily Mixes, etc.) return 403 to
-      // third-party apps. They aren't the owner's to sort — skip and keep going.
-      if (isForbiddenOrNotFound(err)) continue;
+      if (isForbiddenOrNotFound(err)) return null; // editorial/algorithmic — skip
       throw err;
     }
+  });
+
+  const tracksById = new Map<string, Track>();
+  const memberships: PlaylistMembership[] = [];
+  for (const entry of perPlaylist) {
+    if (!entry) continue;
     memberships.push({
-      playlistId: p.id,
-      playlistName: p.name,
-      trackIds: tracks.map((t) => t.id),
+      playlistId: entry.p.id,
+      playlistName: entry.p.name,
+      trackIds: entry.tracks.map((t) => t.id),
     });
-    for (const t of tracks) tracksById.set(t.id, t);
+    for (const t of entry.tracks) tracksById.set(t.id, t);
   }
 
   const liked = await library.listLikedTracks();
@@ -87,29 +100,23 @@ export async function loadLibrary(library: LibraryReader): Promise<LoadedLibrary
     trackIds: liked.map((t) => t.id),
   });
 
-  const artistIds = [
-    ...new Set([...tracksById.values()].flatMap((t) => t.artists.map((a) => a.id))),
-  ];
-  const genresByArtist = await library.fetchArtistGenres(artistIds);
-  const genresFor = (t: Track): string[] => [
-    ...new Set(t.artists.flatMap((a) => genresByArtist.get(a.id) ?? [])),
-  ];
-
   const all = [...tracksById.values()];
+  log(`Loaded ${all.length} unique tracks across ${memberships.length} playlists.`);
+
   return {
     userId: await library.currentUserId(),
     classifiable: all.map((t) => ({
       id: t.id,
       name: t.name,
       artists: t.artists,
-      genres: genresFor(t),
+      genres: [],
       popularity: t.popularity,
     })),
     aggregateTracks: all.map((t) => ({
       id: t.id,
       name: t.name,
       artists: t.artists,
-      genres: genresFor(t),
+      genres: [],
       popularity: t.popularity,
       releaseDate: t.releaseDate,
     })),
@@ -128,6 +135,8 @@ export interface ProfileResult {
 export class Engine {
   constructor(private readonly deps: EngineDeps) {}
 
+  private readonly log: ProgressLog = (m) => console.log(`[engine] ${m}`);
+
   status(): Promise<boolean> {
     return this.deps.isConnected();
   }
@@ -139,6 +148,7 @@ export class Engine {
       provider: this.deps.classifyProvider,
       config,
       cache: this.deps.classificationCache,
+      log: this.log,
     });
     await this.deps.classificationCache?.save();
     return classification;
@@ -146,7 +156,7 @@ export class Engine {
 
   /** Read → classify → create vibe playlists (refuses on an incomplete classification). */
   async sort(): Promise<SortResult> {
-    const loaded = await loadLibrary(this.deps.library);
+    const loaded = await loadLibrary(this.deps.library, this.log);
     const classification = await this.classify(loaded);
     const ctx: SortContext = {
       userId: loaded.userId,
@@ -160,7 +170,7 @@ export class Engine {
 
   /** Read → classify → aggregate → analyze the music personality. */
   async profile(): Promise<ProfileResult> {
-    const loaded = await loadLibrary(this.deps.library);
+    const loaded = await loadLibrary(this.deps.library, this.log);
     const classification = await this.classify(loaded);
     const aggregate = computeAggregate({
       tracks: loaded.aggregateTracks,

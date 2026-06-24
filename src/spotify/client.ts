@@ -9,6 +9,8 @@ export interface SpotifyClientOptions {
   fetchImpl?: FetchImpl;
   baseUrl?: string;
   maxRetries?: number;
+  /** Per-request timeout in ms; a stalled connection aborts and retries instead of hanging. */
+  timeoutMs?: number;
   /** Injectable for tests so backoff doesn't actually wait. */
   sleep?: (ms: number) => Promise<void>;
 }
@@ -31,6 +33,7 @@ export class SpotifyClient {
   private readonly fetchImpl: FetchImpl;
   private readonly baseUrl: string;
   private readonly maxRetries: number;
+  private readonly timeoutMs: number;
   private readonly sleep: (ms: number) => Promise<void>;
 
   constructor(opts: SpotifyClientOptions = {}) {
@@ -38,6 +41,7 @@ export class SpotifyClient {
     this.fetchImpl = opts.fetchImpl ?? fetch;
     this.baseUrl = opts.baseUrl ?? API_BASE;
     this.maxRetries = opts.maxRetries ?? 3;
+    this.timeoutMs = opts.timeoutMs ?? 20_000;
     this.sleep = opts.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
   }
 
@@ -60,14 +64,27 @@ export class SpotifyClient {
 
     for (let attempt = 0; ; attempt++) {
       const token = await this.getToken();
-      const res = await this.fetchImpl(url, {
-        method,
-        headers: {
-          authorization: `Bearer ${token}`,
-          ...(opts.body !== undefined ? { "content-type": "application/json" } : {}),
-        },
-        body: opts.body !== undefined ? JSON.stringify(opts.body) : undefined,
-      });
+      let res: Response;
+      try {
+        res = await this.fetchImpl(url, {
+          method,
+          headers: {
+            authorization: `Bearer ${token}`,
+            ...(opts.body !== undefined ? { "content-type": "application/json" } : {}),
+          },
+          body: opts.body !== undefined ? JSON.stringify(opts.body) : undefined,
+          signal: AbortSignal.timeout(this.timeoutMs),
+        });
+      } catch (err) {
+        // Network error or per-request timeout — retry with backoff, then surface it.
+        if (attempt < this.maxRetries) {
+          await this.sleep(500 * (attempt + 1));
+          continue;
+        }
+        throw err instanceof Error
+          ? new Error(`Spotify ${method} ${path} failed: ${err.message}`)
+          : new Error(`Spotify ${method} ${path} failed`);
+      }
 
       if (res.status === 429 && attempt < this.maxRetries) {
         const retryAfter = Number(res.headers.get("retry-after") ?? "1");

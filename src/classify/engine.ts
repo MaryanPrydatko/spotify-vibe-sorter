@@ -1,4 +1,5 @@
 import type { ArtistRef } from "../spotify/types.js";
+import { mapWithConcurrency } from "../util/concurrency.js";
 import { type BucketConfig, isKnownBucket, UNSORTED } from "./buckets.js";
 import { ClassificationCache } from "./cache.js";
 import type { LlmProvider, TrackForLlm } from "./llm.js";
@@ -26,8 +27,11 @@ export interface ClassifyOptions {
   config: BucketConfig;
   cache?: ClassificationCache;
   batchSize?: number;
+  /** How many LLM batches to run concurrently. */
+  concurrency?: number;
   /** bucket name -> example tracks the owner tagged (for subjective buckets). */
   examplesByBucket?: Record<string, TrackForLlm[]>;
+  log?: (message: string) => void;
 }
 
 function toLlmTrack(t: ClassifiableTrack): TrackForLlm {
@@ -51,7 +55,9 @@ export async function classifyLibrary(
   opts: ClassifyOptions,
 ): Promise<ClassificationResult> {
   const cache = opts.cache ?? new ClassificationCache();
-  const batchSize = opts.batchSize ?? 50;
+  const batchSize = opts.batchSize ?? 80;
+  const concurrency = opts.concurrency ?? 4;
+  const log = opts.log ?? (() => {});
   const assignments = new Map<string, string>();
 
   const uncached: ClassifiableTrack[] = [];
@@ -61,24 +67,46 @@ export async function classifyLibrary(
     else uncached.push(t);
   }
 
-  let failed = 0;
+  const batches: ClassifiableTrack[][] = [];
   for (let i = 0; i < uncached.length; i += batchSize) {
-    const batch = uncached.slice(i, i + batchSize);
+    batches.push(uncached.slice(i, i + batchSize));
+  }
+  if (uncached.length) {
+    log(
+      `Classifying ${uncached.length} tracks in ${batches.length} batch(es)` +
+        ` (${assignments.size} already cached)…`,
+    );
+  }
+
+  // Run batches concurrently — preserves cached progress; a failed batch is recorded as failed.
+  let done = 0;
+  const outcomes = await mapWithConcurrency(batches, concurrency, async (batch) => {
     try {
       const result = await opts.provider.classifyBatch({
         tracks: batch.map(toLlmTrack),
         buckets: opts.config.buckets,
         examples: opts.examplesByBucket ?? {},
       });
-      for (const t of batch) {
-        const raw = result[t.id];
-        // Coerce anything the model invents (or omits) to the safe fallback bucket.
-        const bucket = raw && isKnownBucket(opts.config, raw) ? raw : UNSORTED;
-        assignments.set(t.id, bucket);
-        cache.set(t.id, bucket);
-      }
+      log(`  classified batch ${++done}/${batches.length}`);
+      return { batch, result: result as Record<string, string> | null };
     } catch {
+      log(`  batch ${++done}/${batches.length} failed`);
+      return { batch, result: null as Record<string, string> | null };
+    }
+  });
+
+  let failed = 0;
+  for (const { batch, result } of outcomes) {
+    if (!result) {
       failed += batch.length; // preserve cached progress; mark this batch unclassified
+      continue;
+    }
+    for (const t of batch) {
+      const raw = result[t.id];
+      // Coerce anything the model invents (or omits) to the safe fallback bucket.
+      const bucket = raw && isKnownBucket(opts.config, raw) ? raw : UNSORTED;
+      assignments.set(t.id, bucket);
+      cache.set(t.id, bucket);
     }
   }
 
