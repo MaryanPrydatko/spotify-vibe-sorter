@@ -100,6 +100,24 @@ describe("U3 library reads", () => {
     const tracks = await new SpotifyLibrary(clientWith(fetchImpl)).listPlaylistTracks("p1");
     expect(tracks.map((t) => t.id)).toEqual(["t1"]);
   });
+
+  it("handles null playlist entries and missing fields defensively", async () => {
+    const fetchImpl = vi.fn(async () =>
+      json({
+        items: [
+          { id: "p1", name: "Real", description: null, owner: { id: "u" }, snapshot_id: "s", tracks: { total: 5 } },
+          null,
+          { id: "p2", name: null }, // missing owner / snapshot_id / tracks
+        ],
+        next: null,
+        total: 3,
+      }),
+    ) as unknown as typeof fetch;
+
+    const playlists = await new SpotifyLibrary(clientWith(fetchImpl)).listPlaylists();
+    expect(playlists.map((p) => p.id)).toEqual(["p1", "p2"]); // null entry dropped
+    expect(playlists.find((p) => p.id === "p2")?.trackCount).toBe(0); // missing tracks -> 0
+  });
 });
 
 describe("U3 playlist writes", () => {

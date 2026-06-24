@@ -17,11 +17,11 @@ interface RawTrack {
 }
 interface RawPlaylist {
   id: string;
-  name: string;
+  name: string | null;
   description: string | null;
-  owner: { id: string };
-  snapshot_id: string;
-  tracks: { total: number };
+  owner?: { id: string };
+  snapshot_id?: string;
+  tracks?: { total: number };
 }
 
 function normalizeTrack(raw: RawTrack | null): Track | null {
@@ -47,32 +47,41 @@ export class SpotifyLibrary {
   }
 
   async listPlaylists(): Promise<PlaylistSummary[]> {
-    const raw = await this.client.getAllPages<RawPlaylist>("/me/playlists", {
+    const raw = await this.client.getAllPages<RawPlaylist | null>("/me/playlists", {
       limit: 50,
     });
-    return raw.map((p) => ({
-      id: p.id,
-      name: p.name,
-      description: p.description ?? "",
-      ownerId: p.owner.id,
-      snapshotId: p.snapshot_id,
-      trackCount: p.tracks.total,
-    }));
+    // Spotify can return null entries (and reduced shapes for some followed playlists),
+    // so read every field defensively.
+    return raw
+      .filter((p): p is RawPlaylist => !!p && !!p.id)
+      .map((p) => ({
+        id: p.id,
+        name: p.name ?? "Untitled",
+        description: p.description ?? "",
+        ownerId: p.owner?.id ?? "",
+        snapshotId: p.snapshot_id ?? "",
+        trackCount: p.tracks?.total ?? 0,
+      }));
   }
 
   async listPlaylistTracks(playlistId: string): Promise<Track[]> {
-    const raw = await this.client.getAllPages<{ track: RawTrack | null }>(
+    const raw = await this.client.getAllPages<{ track: RawTrack | null } | null>(
       `/playlists/${playlistId}/tracks`,
       { limit: 100 },
     );
-    return raw.map((i) => normalizeTrack(i.track)).filter((t): t is Track => t !== null);
+    return raw
+      .map((i) => normalizeTrack(i?.track ?? null))
+      .filter((t): t is Track => t !== null);
   }
 
   async listLikedTracks(): Promise<Track[]> {
-    const raw = await this.client.getAllPages<{ track: RawTrack | null }>("/me/tracks", {
-      limit: 50,
-    });
-    return raw.map((i) => normalizeTrack(i.track)).filter((t): t is Track => t !== null);
+    const raw = await this.client.getAllPages<{ track: RawTrack | null } | null>(
+      "/me/tracks",
+      { limit: 50 },
+    );
+    return raw
+      .map((i) => normalizeTrack(i?.track ?? null))
+      .filter((t): t is Track => t !== null);
   }
 
   /**
