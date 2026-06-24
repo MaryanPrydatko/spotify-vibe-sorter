@@ -1,4 +1,5 @@
-import { readFile } from "node:fs/promises";
+import { readdir, readFile, stat } from "node:fs/promises";
+import { join } from "node:path";
 import type { ServerResponse } from "node:http";
 import { fileURLToPath } from "node:url";
 import { sendHtml, sendText } from "./http.js";
@@ -6,6 +7,22 @@ import { sendHtml, sendText } from "./http.js";
 const WEB_DIR = fileURLToPath(new URL("../web/", import.meta.url));
 
 let cachedBundle: string | null = null;
+let cachedSourceMtimeMs = 0;
+
+/** Newest mtime among the web client sources, so an edited bundle rebuilds without a restart. */
+async function webSourcesMtime(): Promise<number> {
+  try {
+    const files = await readdir(WEB_DIR);
+    const mtimes = await Promise.all(
+      files
+        .filter((f) => f.endsWith(".ts"))
+        .map(async (f) => (await stat(join(WEB_DIR, f))).mtimeMs),
+    );
+    return mtimes.length ? Math.max(...mtimes) : 0;
+  } catch {
+    return 0;
+  }
+}
 
 /** Serve the single-page shell. */
 export async function serveIndex(res: ServerResponse): Promise<void> {
@@ -19,7 +36,9 @@ export async function serveIndex(res: ServerResponse): Promise<void> {
  * than 500-ing, so the server still boots for API/test use.
  */
 export async function serveAppBundle(res: ServerResponse): Promise<void> {
-  if (cachedBundle === null) {
+  const sourceMtime = await webSourcesMtime();
+  if (cachedBundle === null || sourceMtime !== cachedSourceMtimeMs) {
+    cachedSourceMtimeMs = sourceMtime;
     try {
       const esbuild = await import("esbuild");
       const result = await esbuild.build({

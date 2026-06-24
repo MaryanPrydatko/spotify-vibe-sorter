@@ -4,41 +4,213 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Spotify Vibe Sorter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         color-scheme: dark;
-        --bg: #0f1014;
-        --panel: #181a20;
-        --fg: #e8e9ed;
-        --muted: #9aa0aa;
-        --accent: #1db954;
-        --border: #262932;
+        --bg: #08090c;
+        --bg-elev: #0e1014;
+        --panel: #121419;
+        --panel-2: #171a20;
+        --fg: #f4f5f7;
+        --muted: #8b919e;
+        --faint: #565c68;
+        --accent: #1ed760;
+        --accent-soft: rgba(30, 215, 96, 0.14);
+        --danger: #ff8a93;
+        --border: #23262e;
+        --border-soft: #1a1d23;
+        --radius: 16px;
+        --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
       }
       * { box-sizing: border-box; }
+      html { -webkit-font-smoothing: antialiased; }
       body {
         margin: 0;
-        font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        min-height: 100vh;
         background: var(--bg);
         color: var(--fg);
+        font-family: var(--font-mono);
+        font-size: 15px;
+        line-height: 1.55;
         display: flex;
-        min-height: 100vh;
         justify-content: center;
       }
+      /* Atmospheric green wash behind the hero — content, not decoration-as-content. */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(58% 42% at 50% -8%, rgba(30, 215, 96, 0.12), transparent 70%),
+          radial-gradient(40% 30% at 92% 4%, rgba(30, 215, 96, 0.05), transparent 70%);
+        pointer-events: none;
+        z-index: 0;
+      }
       main {
+        position: relative;
+        z-index: 1;
         width: 100%;
-        max-width: 720px;
-        padding: 48px 24px;
+        max-width: 740px;
+        padding: 72px 24px 96px;
       }
-      h1 { font-size: 28px; margin: 0 0 4px; }
-      .sub { color: var(--muted); margin: 0 0 32px; }
+
+      /* --- Hero --- */
+      .hero { margin-bottom: 30px; }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--muted);
+        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+      }
+      .eq { display: inline-flex; align-items: flex-end; gap: 2.5px; height: 15px; }
+      .eq i {
+        width: 3px;
+        background: var(--accent);
+        border-radius: 2px;
+        transform-origin: bottom;
+        box-shadow: 0 0 8px rgba(30, 215, 96, 0.55);
+        animation: eq 1.1s ease-in-out infinite;
+      }
+      .eq i:nth-child(1) { height: 45%; animation-delay: 0s; }
+      .eq i:nth-child(2) { height: 95%; animation-delay: 0.18s; }
+      .eq i:nth-child(3) { height: 62%; animation-delay: 0.36s; }
+      .eq i:nth-child(4) { height: 80%; animation-delay: 0.52s; }
+      h1 {
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: clamp(40px, 8vw, 66px);
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+        margin: 18px 0 0;
+        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.06s both;
+      }
+      h1 .accent {
+        color: var(--accent);
+        text-shadow: 0 0 36px rgba(30, 215, 96, 0.35);
+      }
+      .sub {
+        max-width: 30em;
+        color: var(--muted);
+        font-size: 14.5px;
+        margin: 18px 0 0;
+        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.12s both;
+      }
+
+      /* --- Panel --- */
       .panel {
-        background: var(--panel);
+        background: linear-gradient(180deg, var(--panel-2), var(--panel));
         border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 20px;
+        border-radius: var(--radius);
+        padding: 26px;
+        box-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.8);
+        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.18s both;
       }
-      .status { color: var(--muted); font-size: 14px; }
-      .ok { color: var(--accent); }
+
+      /* --- Form bits --- */
+      .field-label {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin-bottom: 10px;
+      }
+      .buckets {
+        width: 100%;
+        background: var(--bg-elev);
+        color: var(--fg);
+        border: 1px solid var(--border);
+        border-radius: 11px;
+        padding: 14px;
+        font-family: var(--font-mono);
+        font-size: 14px;
+        line-height: 1.7;
+        resize: vertical;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      .buckets:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--accent-soft);
+      }
+      .actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
+
+      /* --- Buttons --- */
+      .btn {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        color: var(--fg);
+        background: var(--panel-2);
+        border: 1px solid var(--border);
+        padding: 11px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.14s ease, border-color 0.14s ease, background 0.14s ease,
+          box-shadow 0.14s ease, opacity 0.14s ease;
+      }
+      .btn:hover:not(:disabled) { transform: translateY(-1px); border-color: #343a45; background: #1d212a; }
+      .btn:active:not(:disabled) { transform: translateY(0); }
+      .btn:disabled { opacity: 0.45; cursor: default; }
+      .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+      .btn--primary {
+        background: var(--accent);
+        color: #04130a;
+        border-color: transparent;
+        font-weight: 700;
+      }
+      .btn--primary:hover:not(:disabled) {
+        background: #28e269;
+        box-shadow: 0 10px 30px -8px rgba(30, 215, 96, 0.55);
+      }
+      .btn--danger { color: var(--danger); background: #1c1417; border-color: #46232a; }
+      .btn--danger:hover:not(:disabled) { background: #251619; border-color: #5e2b33; }
+      .btn--ghost { background: transparent; }
+      .btn--sm { padding: 7px 12px; font-size: 12px; border-radius: 8px; }
+      .pill {
+        background: var(--accent);
+        color: #04130a;
+        border: 0;
+        font-weight: 700;
+        font-family: var(--font-mono);
+        padding: 11px 20px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+      }
+      .pill:hover { transform: translateY(-1px); background: #28e269; box-shadow: 0 12px 32px -8px rgba(30, 215, 96, 0.6); }
+
+      /* --- Status / progress --- */
+      .status { color: var(--muted); font-size: 13px; }
+      .status--ok { color: var(--accent); }
+      .status--warn { color: #e0a04a; }
+      .progress-line { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
+      .progress-track {
+        margin-top: 10px;
+        height: 7px;
+        background: var(--border-soft);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent-soft), var(--accent));
+        border-radius: 999px;
+        box-shadow: 0 0 12px rgba(30, 215, 96, 0.5);
+        transition: width 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
       .spinner {
         display: inline-block;
         width: 14px;
@@ -49,17 +221,71 @@
         animation: spin 0.8s linear infinite;
         flex: none;
       }
+
+      /* --- Card reveal --- */
+      .card-wrap { margin-top: 24px; max-width: 380px; animation: reveal 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+      .card-wrap svg { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 28px 70px -28px rgba(0, 0, 0, 0.9); }
+
+      /* --- Manage --- */
+      .manage { margin-top: 26px; animation: rise 0.4s ease both; }
+      .manage-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .pl-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px 0;
+        border-top: 1px solid var(--border-soft);
+      }
+      .pl-name { color: var(--fg); }
+      .pl-tag {
+        color: var(--accent);
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        padding: 1px 8px;
+        margin-left: 8px;
+      }
+      .pl-meta { color: var(--faint); font-size: 12px; margin-left: 8px; }
+      .pl-input {
+        background: var(--bg-elev);
+        color: var(--fg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 6px 9px;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        width: 220px;
+      }
+      .pl-input:focus { outline: none; border-color: var(--accent); }
+
       @keyframes spin { to { transform: rotate(360deg); } }
-      button:disabled { opacity: 0.55; cursor: default; }
+      @keyframes eq { 0%, 100% { transform: scaleY(0.35); } 50% { transform: scaleY(1); } }
+      @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+      @keyframes reveal { from { opacity: 0; transform: translateY(16px) scale(0.97); } to { opacity: 1; transform: none; } }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before { animation: none !important; transition: none !important; }
+      }
     </style>
   </head>
   <body>
     <main>
-      <h1>Spotify Vibe Sorter</h1>
-      <p class="sub">Sort your scattered library into vibe playlists — and meet your music personality.</p>
-      <div class="panel">
+      <header class="hero">
+        <div class="brand">
+          <span class="eq"><i></i><i></i><i></i><i></i></span>
+          <span>Spotify Vibe Sorter</span>
+        </div>
+        <h1>Sort the chaos.<br /><span class="accent">Meet your sound.</span></h1>
+        <p class="sub">
+          Your liked songs and scattered playlists, auto-sorted into vibe buckets — plus a
+          shareable music personality pulled from what you actually listen to.
+        </p>
+      </header>
+      <section class="panel">
         <div id="app" class="status">Loading…</div>
-      </div>
+      </section>
     </main>
     <script type="module" src="/app.js"></script>
   </body>

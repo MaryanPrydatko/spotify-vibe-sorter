@@ -20,7 +20,7 @@ function el(html: string): HTMLElement {
 }
 
 function note(target: HTMLElement, message: string, ok = false): void {
-  target.innerHTML = `<span style="color:${ok ? "#1db954" : "#9aa0aa"}">${message}</span>`;
+  target.innerHTML = `<span class="${ok ? "status--ok" : "status"}">${message}</span>`;
 }
 
 interface Progress {
@@ -40,11 +40,9 @@ function renderProgress(target: HTMLElement, p: Progress): void {
   const bar =
     pct === null
       ? ""
-      : `<div style="margin-top:8px;height:6px;background:#23262f;border-radius:999px;overflow:hidden">` +
-        `<div style="height:100%;width:${pct}%;background:#1db954;transition:width .3s"></div></div>`;
+      : `<div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>`;
   target.innerHTML =
-    `<div style="color:#9aa0aa;display:flex;align-items:center;gap:8px">` +
-    `<span class="spinner"></span><span>${label}</span></div>${bar}`;
+    `<div class="progress-line"><span class="spinner"></span><span>${label}</span></div>${bar}`;
 }
 
 /**
@@ -80,8 +78,8 @@ async function withProgress<T>(
 
 async function renderConnect(): Promise<void> {
   app.innerHTML = "";
-  const btn = el(`<button style="background:#1db954;border:0;color:#06210f;font-weight:700;padding:12px 20px;border-radius:999px;cursor:pointer">Connect Spotify</button>`);
-  const msg = el(`<p class="status"></p>`);
+  const btn = el(`<button class="pill">Connect Spotify</button>`);
+  const msg = el(`<p class="status" style="margin-top:14px"></p>`);
   btn.addEventListener("click", async () => {
     try {
       const { authorizeUrl } = await api<{ authorizeUrl: string }>("/api/connect");
@@ -98,22 +96,15 @@ async function renderDashboard(): Promise<void> {
   const cfg = await api<{ buckets: { name: string }[] }>("/api/buckets");
 
   const bucketsBox = el(
-    `<textarea rows="6" style="width:100%;background:#0f1014;color:#e8e9ed;border:1px solid #262932;border-radius:8px;padding:10px;font:14px monospace">${cfg.buckets.map((b) => b.name).join("\n")}</textarea>`,
+    `<textarea rows="6" class="buckets">${cfg.buckets.map((b) => b.name).join("\n")}</textarea>`,
   ) as HTMLTextAreaElement;
   const saveBtn = el(`<button class="btn">Save buckets</button>`);
   const sortBtn = el(`<button class="btn">Sort my library</button>`);
-  const profileBtn = el(`<button class="btn">Reveal my music personality</button>`);
-  const manageBtn = el(`<button class="btn">Manage my playlists</button>`);
-  const status = el(`<p class="status"></p>`);
+  const profileBtn = el(`<button class="btn btn--primary">Reveal my music personality</button>`);
+  const manageBtn = el(`<button class="btn btn--ghost">Manage my playlists</button>`);
+  const status = el(`<p class="status" style="margin-top:16px"></p>`);
   const output = el(`<div></div>`);
   const manageArea = el(`<div></div>`);
-
-  for (const b of [saveBtn, sortBtn, profileBtn, manageBtn]) {
-    b.setAttribute(
-      "style",
-      "background:#23262f;border:1px solid #262932;color:#e8e9ed;padding:10px 16px;border-radius:8px;cursor:pointer;margin:8px 8px 0 0",
-    );
-  }
 
   saveBtn.addEventListener("click", async () => {
     const buckets = bucketsBox.value
@@ -140,6 +131,7 @@ async function renderDashboard(): Promise<void> {
     manageOpen = !manageOpen;
     if (!manageOpen) {
       manageArea.innerHTML = "";
+      manageArea.className = "";
       return;
     }
     await renderManage(manageArea);
@@ -176,14 +168,13 @@ async function renderDashboard(): Promise<void> {
     }
   });
 
+  const actions = el(`<div class="actions"></div>`);
+  actions.append(saveBtn, sortBtn, profileBtn, manageBtn);
+
   app.append(
-    el(`<label class="status">Your vibe buckets (one per line)</label>`),
+    el(`<label class="field-label">Your vibe buckets — one per line</label>`),
     bucketsBox,
-    el(`<div></div>`),
-    saveBtn,
-    sortBtn,
-    profileBtn,
-    manageBtn,
+    actions,
     status,
     output,
     manageArea,
@@ -192,11 +183,9 @@ async function renderDashboard(): Promise<void> {
 
 function renderCard(target: HTMLElement, data: CardData): void {
   target.innerHTML = "";
-  const preview = el(`<div style="max-width:360px;margin-top:20px"></div>`);
-  preview.innerHTML = buildCardSvg(data).replace("<svg", '<svg style="width:100%;height:auto;border-radius:12px"');
-  const download = el(
-    `<button style="margin-top:12px;background:#1db954;border:0;color:#06210f;font-weight:700;padding:10px 18px;border-radius:999px;cursor:pointer">Download card (PNG)</button>`,
-  );
+  const preview = el(`<div class="card-wrap"></div>`);
+  preview.innerHTML = buildCardSvg(data);
+  const download = el(`<button class="pill" style="margin-top:14px">Download card (PNG)</button>`);
   download.addEventListener("click", () => void exportCardPng(data));
   target.append(preview, download);
 }
@@ -215,32 +204,32 @@ function escapeAttr(s: string): string {
 }
 
 function smallBtn(label: string, variant: "default" | "danger" | "accent" = "default"): HTMLButtonElement {
-  const bg = variant === "danger" ? "#3a1d22" : variant === "accent" ? "#1db954" : "#23262f";
-  const bd = variant === "danger" ? "#5b2630" : "#262932";
-  const fg = variant === "accent" ? "#06210f" : "#e8e9ed";
-  const b = el(`<button>${label}</button>`) as HTMLButtonElement;
-  b.setAttribute(
-    "style",
-    `background:${bg};border:1px solid ${bd};color:${fg};padding:6px 12px;border-radius:7px;cursor:pointer;font-size:13px;margin-left:6px`,
-  );
+  const cls =
+    variant === "danger"
+      ? "btn btn--sm btn--danger"
+      : variant === "accent"
+        ? "btn btn--sm btn--primary"
+        : "btn btn--sm";
+  const b = el(`<button class="${cls}" style="margin-left:6px">${label}</button>`) as HTMLButtonElement;
   return b;
 }
 
 /** Render the user's playlists with backup-guarded delete / rename and a restore button. */
 async function renderManage(area: HTMLElement): Promise<void> {
-  area.innerHTML = `<p class="status" style="margin-top:18px">Loading your playlists…</p>`;
+  area.className = "manage";
+  area.innerHTML = `<p class="status">Loading your playlists…</p>`;
   let playlists: PlaylistInfo[];
   try {
     ({ playlists } = await api<{ playlists: PlaylistInfo[] }>("/api/playlists"));
   } catch (err) {
-    area.innerHTML = `<p class="status" style="margin-top:18px;color:#e0a04a">${escapeAttr((err as Error).message)}</p>`;
+    area.innerHTML = `<p class="status--warn">${escapeAttr((err as Error).message)}</p>`;
     return;
   }
 
   area.innerHTML = "";
   const header = el(
-    `<div style="margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:12px">` +
-      `<span class="status">Your playlists (${playlists.length}) — deletes are backed up first</span></div>`,
+    `<div class="manage-head"><span class="field-label" style="margin:0">` +
+      `Your playlists (${playlists.length}) · deletes are backed up first</span></div>`,
   );
   const restore = smallBtn("Restore last backup");
   const headerMsg = el(`<p class="status" style="margin:6px 0 0"></p>`);
@@ -258,7 +247,7 @@ async function renderManage(area: HTMLElement): Promise<void> {
     }
   });
 
-  const list = el(`<div style="margin-top:10px"></div>`);
+  const list = el(`<div style="margin-top:8px"></div>`);
   for (const p of playlists) {
     list.append(playlistRow(p, area));
   }
@@ -266,15 +255,11 @@ async function renderManage(area: HTMLElement): Promise<void> {
 }
 
 function playlistRow(p: PlaylistInfo, area: HTMLElement): HTMLElement {
-  const row = el(
-    `<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid #1c1f26"></div>`,
-  );
-  const tag = p.isTool
-    ? ` <span style="color:#1db954;font-size:11px;border:1px solid #1db954;border-radius:999px;padding:1px 7px;margin-left:6px">vibe-sorter</span>`
-    : "";
+  const row = el(`<div class="pl-row"></div>`);
+  const tag = p.isTool ? ` <span class="pl-tag">vibe-sorter</span>` : "";
   const label = el(
-    `<div style="min-width:0;flex:1"><span style="color:#e8e9ed">${escapeAttr(p.name)}</span>${tag}` +
-      `<span class="status" style="margin-left:8px">${p.trackCount} tracks</span></div>`,
+    `<div style="min-width:0;flex:1"><span class="pl-name">${escapeAttr(p.name)}</span>${tag}` +
+      `<span class="pl-meta">${p.trackCount} tracks</span></div>`,
   );
   const actions = el(`<div style="flex:none;display:flex;align-items:center"></div>`);
   const renameBtn = smallBtn("Rename");
@@ -283,9 +268,7 @@ function playlistRow(p: PlaylistInfo, area: HTMLElement): HTMLElement {
 
   // Inline rename — no blocking browser prompt.
   renameBtn.addEventListener("click", () => {
-    const input = el(
-      `<input value="${escapeAttr(p.name)}" style="background:#0f1014;color:#e8e9ed;border:1px solid #262932;border-radius:7px;padding:6px 8px;font-size:13px;width:200px">`,
-    ) as HTMLInputElement;
+    const input = el(`<input class="pl-input" value="${escapeAttr(p.name)}">`) as HTMLInputElement;
     const save = smallBtn("Save", "accent");
     label.replaceWith(input);
     renameBtn.replaceWith(save);
@@ -304,7 +287,7 @@ function playlistRow(p: PlaylistInfo, area: HTMLElement): HTMLElement {
         save.disabled = false;
         input.insertAdjacentHTML(
           "afterend",
-          `<span class="status" style="color:#e0a04a;margin-left:8px">${escapeAttr((err as Error).message)}</span>`,
+          `<span class="status--warn" style="margin-left:8px">${escapeAttr((err as Error).message)}</span>`,
         );
       }
     });
@@ -333,14 +316,14 @@ function playlistRow(p: PlaylistInfo, area: HTMLElement): HTMLElement {
         body: JSON.stringify({ id: p.id }),
       });
       row.replaceWith(
-        el(`<div class="status" style="padding:10px 0;border-top:1px solid #1c1f26">Deleted “${escapeAttr(p.name)}” — recoverable via Restore.</div>`),
+        el(`<div class="pl-row status">Deleted “${escapeAttr(p.name)}” — recoverable via Restore.</div>`),
       );
     } catch (err) {
       delBtn.disabled = false;
       delBtn.textContent = "Delete";
       actions.insertAdjacentHTML(
         "beforebegin",
-        `<span class="status" style="color:#e0a04a">${escapeAttr((err as Error).message)}</span>`,
+        `<span class="status--warn">${escapeAttr((err as Error).message)}</span>`,
       );
     }
   });
