@@ -10,6 +10,9 @@
   "scripts": {
     "dev": "tsx watch src/server/index.ts",
     "start": "tsx src/server/index.ts",
+    "vibe": "tsx src/cli.ts both",
+    "sort": "tsx src/cli.ts sort",
+    "profile": "tsx src/cli.ts profile",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
