@@ -97,6 +97,26 @@ describe("U3 rate-limit handling", () => {
     expect(isRateLimited(new Error("GET /x failed (403)"))).toBe(false);
     expect(isRateLimited("nope")).toBe(false);
   });
+
+  it("paces consecutive requests by minIntervalMs to avoid bursting Spotify", async () => {
+    // A burst of reads is what trips Spotify's rolling limit (and its multi-hour penalty),
+    // so the client spaces requests out. First goes immediately; each next waits one interval.
+    const sleeps: number[] = [];
+    const fetchImpl = vi.fn(async () => json({ ok: true })) as unknown as typeof fetch;
+    const client = new SpotifyClient({
+      getToken: async () => "tok",
+      fetchImpl,
+      minIntervalMs: 400,
+      now: () => 0, // frozen clock so the schedule is deterministic
+      sleep: async (ms) => {
+        sleeps.push(ms);
+      },
+    });
+    await client.request("GET", "/a");
+    await client.request("GET", "/b");
+    await client.request("GET", "/c");
+    expect(sleeps).toEqual([400, 800]);
+  });
 });
 
 describe("U3 library reads", () => {

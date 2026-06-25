@@ -17,8 +17,16 @@ export interface SpotifyClientOptions {
    * cap we throw a clear rate-limit error so the caller can degrade or inform the user.
    */
   maxRetryAfterMs?: number;
+  /**
+   * Minimum spacing between outgoing requests (ms). Spotify rate-limits on a short rolling
+   * window and punishes bursts with multi-hour cooldowns, so we self-pace well under its
+   * limit instead of firing a whole library read at once. Set 0 to disable (tests).
+   */
+  minIntervalMs?: number;
   /** Injectable for tests so backoff doesn't actually wait. */
   sleep?: (ms: number) => Promise<void>;
+  /** Injectable clock for deterministic pacing tests. */
+  now?: () => number;
 }
 
 const API_BASE = "https://api.spotify.com/v1";
@@ -41,7 +49,11 @@ export class SpotifyClient {
   private readonly maxRetries: number;
   private readonly timeoutMs: number;
   private readonly maxRetryAfterMs: number;
+  private readonly minIntervalMs: number;
   private readonly sleep: (ms: number) => Promise<void>;
+  private readonly now: () => number;
+  /** Earliest time the next request may go out — advanced atomically per request. */
+  private nextAllowedAt = 0;
 
   constructor(opts: SpotifyClientOptions = {}) {
     this.getToken = opts.getToken ?? (() => getValidAccessToken());
@@ -50,7 +62,22 @@ export class SpotifyClient {
     this.maxRetries = opts.maxRetries ?? 3;
     this.timeoutMs = opts.timeoutMs ?? 20_000;
     this.maxRetryAfterMs = opts.maxRetryAfterMs ?? 60_000;
+    this.minIntervalMs = opts.minIntervalMs ?? 400; // ~150 req/min, safely under Spotify's cap
     this.sleep = opts.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
+    this.now = opts.now ?? (() => Date.now());
+  }
+
+  /**
+   * Wait for this request's paced slot. Concurrent callers each claim a distinct slot
+   * (the increment is synchronous, so there is no race), serializing the burst to a steady
+   * rate without losing the convenience of issuing reads concurrently upstream.
+   */
+  private async pace(): Promise<void> {
+    if (this.minIntervalMs <= 0) return;
+    const now = this.now();
+    const slot = Math.max(now, this.nextAllowedAt);
+    this.nextAllowedAt = slot + this.minIntervalMs;
+    if (slot > now) await this.sleep(slot - now);
   }
 
   private buildUrl(path: string, query?: RequestOptions["query"]): string {
@@ -69,6 +96,7 @@ export class SpotifyClient {
     opts: RequestOptions = {},
   ): Promise<T> {
     const url = opts.absoluteUrl ?? this.buildUrl(path, opts.query);
+    await this.pace();
 
     for (let attempt = 0; ; attempt++) {
       const token = await this.getToken();
