@@ -1,0 +1,26 @@
+{
+  "playlist": "Sad art-rock / beautiful collapse (pattern)",
+  "targetUrl": "https://open.spotify.com/playlist/0ZjXy7RqqMX4kPaGJvpIfc",
+  "missing": [
+    {
+      "title": "Blow Out",
+      "artist": "Radiohead",
+      "album": "Pablo Honey",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Ґems"
+      ],
+      "count": 3
+    },
+    {
+      "title": "M",
+      "artist": "The Cure",
+      "album": "Seventeen Seconds",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    }
+  ]
+}

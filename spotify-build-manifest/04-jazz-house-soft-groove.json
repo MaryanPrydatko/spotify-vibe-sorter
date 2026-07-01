@@ -1,0 +1,725 @@
+{
+  "spotifyName": "Jazz-house / soft groove (pattern)",
+  "rules": [
+    "berlioz",
+    "afro house",
+    "rüfüs du sol",
+    "rufus du sol",
+    "hugel",
+    "moodymann",
+    "st germain",
+    "bonobo",
+    "kaytranada",
+    "fred again",
+    "keinemusik",
+    "moojo",
+    "ahmed spins",
+    "zakes bantwini"
+  ],
+  "count": 71,
+  "tracks": [
+    {
+      "title": "You Were Right",
+      "artist": "RÜFÜS DU SOL",
+      "album": "Bloom",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Qwe",
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 7
+    },
+    {
+      "title": "Delilah (pull me out of this)",
+      "artist": "Fred again.., Delilah Montagu",
+      "album": "Delilah (pull me out of this)",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Qwe",
+        "Chillout"
+      ],
+      "count": 6
+    },
+    {
+      "title": "Innerbloom",
+      "artist": "RÜFÜS DU SOL",
+      "album": "Bloom",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 6
+    },
+    {
+      "title": "Anchor Point",
+      "artist": "Ahmed Spins, Stevo Atambire",
+      "album": "Anchor Point EP",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Qwe",
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Osama",
+      "artist": "Zakes Bantwini, Kasango",
+      "album": "Osama",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Qwe",
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Dermot (see yourself in my eyes)",
+      "artist": "Fred again.., Dermot Kennedy",
+      "album": "Actual Life (April 14 - December 17 2020)",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Chillout",
+        "Tunes"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Les Gout",
+      "artist": "Rampa, chuala, Keinemusik",
+      "album": "Les Gout",
+      "sources": [
+        "Liked Songs",
+        "Qwe",
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Sundream",
+      "artist": "RÜFÜS DU SOL",
+      "album": "Atlas (Light / Dark Deluxe Edition)",
+      "sources": [
+        "Liked Songs",
+        "Holy house"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Treat You Better",
+      "artist": "RÜFÜS DU SOL",
+      "album": "SOLACE",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 4
+    },
+    {
+      "title": "jazz is for ordinary people",
+      "artist": "berlioz",
+      "album": "jazz is for ordinary people",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!"
+      ],
+      "count": 3
+    },
+    {
+      "title": "joycelyn's dance",
+      "artist": "berlioz",
+      "album": "something will happen",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!"
+      ],
+      "count": 3
+    },
+    {
+      "title": "something will happen",
+      "artist": "berlioz",
+      "album": "something will happen",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!"
+      ],
+      "count": 3
+    },
+    {
+      "title": "deep in it",
+      "artist": "berlioz, Ted Jasper",
+      "album": "deep in it",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!"
+      ],
+      "count": 3
+    },
+    {
+      "title": "miro",
+      "artist": "berlioz, Ted Jasper",
+      "album": "miro",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "!BERLIOZ!"
+      ],
+      "count": 3
+    },
+    {
+      "title": "nyc in 1940",
+      "artist": "berlioz, Ted Jasper",
+      "album": "nyc in 1940",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!",
+        "Chillout"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Kyle (i found you)",
+      "artist": "Fred again..",
+      "album": "Actual Life (April 14 - December 17 2020)",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Chillout"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Danielle (smile on my face)",
+      "artist": "Fred again.., 070 Shake",
+      "album": "Actual Life 3 (January 1 - September 9 2022)",
+      "sources": [
+        "Holy house",
+        "Qwe",
+        "Chillout"
+      ],
+      "count": 3
+    },
+    {
+      "title": "ten",
+      "artist": "Fred again.., Jozzy",
+      "album": "ten",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Chillout"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Marea (we’ve lost dancing)",
+      "artist": "Fred again.., The Blessed Madonna",
+      "album": "Marea (we’ve lost dancing)",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Chillout"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Underwater",
+      "artist": "RÜFÜS DU SOL",
+      "album": "SOLACE",
+      "sources": [
+        "Liked Songs",
+        "Holy house",
+        "Chillout"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Love Line (with Tinashe) - HUGEL Remix",
+      "artist": "Shift K3Y, Tinashe, HUGEL",
+      "album": "Love Line (with Tinashe) [HUGEL Remix]",
+      "sources": [
+        "Liked Songs",
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Discoteca",
+      "artist": "&ME, Rampa, Adam Port, Keinemusik, Sofie Royer",
+      "album": "Send Return",
+      "sources": [
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Reborn",
+      "artist": "Arodes, Moojo",
+      "album": "Healing EP",
+      "sources": [
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 2
+    },
+    {
+      "title": "hot house",
+      "artist": "berlioz",
+      "album": "jazz is for ordinary people",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!"
+      ],
+      "count": 2
+    },
+    {
+      "title": "ode to rahsaan",
+      "artist": "berlioz",
+      "album": "ode to rahsaan",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 2
+    },
+    {
+      "title": "r&r",
+      "artist": "berlioz",
+      "album": "jazz is for ordinary people",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!"
+      ],
+      "count": 2
+    },
+    {
+      "title": "wash my sins away",
+      "artist": "berlioz",
+      "album": "jazz is for ordinary people",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!"
+      ],
+      "count": 2
+    },
+    {
+      "title": "la danse",
+      "artist": "berlioz, Ted Jasper",
+      "album": "la danse",
+      "sources": [
+        "Liked Songs",
+        "!BERLIOZ!"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Billie (loving arms)",
+      "artist": "Fred again..",
+      "album": "Actual Life 2 (February 2 - October 15 2021)",
+      "sources": [
+        "Holy house",
+        "Chillout"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Faisal (envelops me)",
+      "artist": "Fred again..",
+      "album": "Actual Life 2 (February 2 - October 15 2021)",
+      "sources": [
+        "Liked Songs",
+        "Holy house"
+      ],
+      "count": 2
+    },
+    {
+      "title": "leavemealone",
+      "artist": "Fred again.., Baby Keem",
+      "album": "leavemealone",
+      "sources": [
+        "Liked Songs",
+        "Holy house"
+      ],
+      "count": 2
+    },
+    {
+      "title": "adore u",
+      "artist": "Fred again.., Obongjayar",
+      "album": "adore u",
+      "sources": [
+        "Liked Songs",
+        "Holy house"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Lights Out",
+      "artist": "Fred again.., Romy, HAAi",
+      "album": "USB",
+      "sources": [
+        "Liked Songs",
+        "Holy house"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Turn On The Lights again.. (feat. Future)",
+      "artist": "Fred again.., Swedish House Mafia, Future",
+      "album": "USB",
+      "sources": [
+        "Liked Songs",
+        "Chillout"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Bleu (better with time)",
+      "artist": "Fred again.., Yung Bleu",
+      "album": "Actual Life 3 (January 1 - September 9 2022)",
+      "sources": [
+        "Qwe",
+        "Chillout"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Can't Love Myself (feat. Mishaal & LPW)",
+      "artist": "HUGEL, Mishaal Tamer, LPW",
+      "album": "Can't Love Myself (feat. Mishaal & LPW)",
+      "sources": [
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Desperado feat. Eribertho Cruzado - Vocal Mix Edit",
+      "artist": "Moojo, Demayä, ARKADYAN, Eribertho Cruz Collazo",
+      "album": "Desperado",
+      "sources": [
+        "Chillout",
+        "Turn it up"
+      ],
+      "count": 2
+    },
+    {
+      "title": "On My Knees",
+      "artist": "RÜFÜS DU SOL",
+      "album": "Surrender",
+      "sources": [
+        "Liked Songs",
+        "Holy house"
+      ],
+      "count": 2
+    },
+    {
+      "title": "The Rapture Pt.III",
+      "artist": "&ME, Black Coffee, Keinemusik",
+      "album": "The Rapture Pt.III",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Before The Flood - Ankhoï Remix",
+      "artist": "&ME, Rampa, Adam Port, Keinemusik, Cubicolor, Ankhoï",
+      "album": "Send Return Remixes Pt. 3",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Dream (feat. Martina Camargo)",
+      "artist": "Adam Port, Theus Mago, Keinemusik, Martina Camargo",
+      "album": "The Dream (feat. Martina Camargo)",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Waves & Wavs",
+      "artist": "Ahmed Spins, Lizwi",
+      "album": "Anchor Point EP",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "ascension",
+      "artist": "berlioz",
+      "album": "open this wall",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 1
+    },
+    {
+      "title": "free fall",
+      "artist": "berlioz",
+      "album": "open this wall",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 1
+    },
+    {
+      "title": "hot slow",
+      "artist": "berlioz",
+      "album": "open this wall",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 1
+    },
+    {
+      "title": "indigo dream",
+      "artist": "berlioz",
+      "album": "open this wall",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 1
+    },
+    {
+      "title": "nytmp",
+      "artist": "berlioz",
+      "album": "open this wall",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 1
+    },
+    {
+      "title": "open this wall",
+      "artist": "berlioz",
+      "album": "open this wall",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 1
+    },
+    {
+      "title": "outro",
+      "artist": "berlioz",
+      "album": "open this wall",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 1
+    },
+    {
+      "title": "peace",
+      "artist": "berlioz",
+      "album": "open this wall",
+      "sources": [
+        "!BERLIOZ!"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Kong",
+      "artist": "Bonobo",
+      "album": "Black Sands",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Stay High (VIP) [feat. Julia Church]",
+      "artist": "Diplo, HUGEL, Julia Church",
+      "album": "Stay High (feat. Julia Church)",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Bleu (better with time)",
+      "artist": "Fred again..",
+      "album": "Bleu (better with time)",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Danielle (smile on my face)",
+      "artist": "Fred again..",
+      "album": "Danielle (smile on my face)",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hannah (the sun)",
+      "artist": "Fred again..",
+      "album": "Actual Life 2 (February 2 - October 15 2021)",
+      "sources": [
+        "Holy house"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Tanya (maybe life)",
+      "artist": "Fred again..",
+      "album": "Actual Life 2 (February 2 - October 15 2021)",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Clara (the night is dark)",
+      "artist": "Fred again.., Clara Ward",
+      "album": "Actual Life 3 (January 1 - September 9 2022)",
+      "sources": [
+        "Holy house"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Kammy (like i do)",
+      "artist": "Fred again.., kamille",
+      "album": "Actual Life 3 (January 1 - September 9 2022)",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "It's Not Right - Moojo Remix",
+      "artist": "Gianni Romano, Emanuele Esposito, Helen Tesfazghi, Moojo",
+      "album": "It’s Not Right (Moojo Remix)",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Aguila ft. Cumbiafrica",
+      "artist": "HUGEL, Westend, Cumbiafrica",
+      "album": "Aguila ft. Cumbiafrica",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Intimidated (feat. H.E.R.)",
+      "artist": "KAYTRANADA, H.E.R.",
+      "album": "Intimidated",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Asanda",
+      "artist": "Kususa, Argento Dust, Zakes Bantwini",
+      "album": "Asanda",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "No Time - RÜFÜS DU SOL Remix",
+      "artist": "Lastlings, RÜFÜS DU SOL",
+      "album": "No Time (RÜFÜS DU SOL Remix)",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "More Love - Rampa &ME Remix",
+      "artist": "Moderat, Keinemusik, Rampa, &ME",
+      "album": "More Love (Rampa &ME Remix)",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hate It Or Love It",
+      "artist": "Moojo, Bun Xapa",
+      "album": "Hate It Or Love It",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Toujours VIF",
+      "artist": "Moojo, Bun Xapa",
+      "album": "Hate It Or Love It",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "NGWINO",
+      "artist": "Moojo, Caiiro, Starving Yet Full",
+      "album": "NGWINO",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Secret ID",
+      "artist": "Moojo, Da Capo",
+      "album": "Secret ID",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Lotus",
+      "artist": "Moojo, Demayä",
+      "album": "Lotus",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Moth To A Flame (with The Weeknd, Moojo) - Moojo Remix",
+      "artist": "Swedish House Mafia, The Weeknd, Moojo",
+      "album": "Moth To A Flame (Moojo Remix)",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Abantu - Da Africa Deep Remix",
+      "artist": "Zakes Bantwini, Karyendasoul, Da Africa Deep, Nana Atta",
+      "album": "Abantu (Da Africa Deep Remix)",
+      "sources": [
+        "Afro house dump"
+      ],
+      "count": 1
+    }
+  ]
+}

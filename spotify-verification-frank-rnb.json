@@ -1,0 +1,385 @@
+{
+  "playlist": "Frank / Montell / wounded R&B (pattern)",
+  "manifest": 159,
+  "actual": 128,
+  "scrapedMin": 1,
+  "scrapedMax": 128,
+  "missing": [
+    {
+      "title": "Florida",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "frank and chill",
+        "Tralalelo Tralala",
+        "waves type playlist",
+        "Frank Ocean - Endless"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Hublots",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "frank and chill",
+        "Tralalelo Tralala",
+        "waves type playlist",
+        "Frank Ocean - Endless"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Mitsubishi Sony",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "frank and chill",
+        "Tralalelo Tralala",
+        "waves type playlist",
+        "Frank Ocean - Endless"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Rushes",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "frank and chill",
+        "Tralalelo Tralala",
+        "waves type playlist",
+        "Frank Ocean - Endless"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Sideways",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "frank and chill",
+        "Tralalelo Tralala",
+        "waves type playlist",
+        "Frank Ocean - Endless"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Wither",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "frank and chill",
+        "Tralalelo Tralala",
+        "waves type playlist",
+        "Frank Ocean - Endless"
+      ],
+      "count": 4
+    },
+    {
+      "title": "american wedding",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "frank and chill",
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 3
+    },
+    {
+      "title": "songs for women",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA",
+        "na klar"
+      ],
+      "count": 3
+    },
+    {
+      "title": "bitches talkin'",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "dust",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "goldeneye",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "lovecrimes",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "nature feels",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "soul calibur",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "strawberry swing",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "street fighter",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "there will be tears",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "we all try",
+      "artist": "frank ocean",
+      "album": "nostalgia/ultra",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - nostalgia, ULTRA"
+      ],
+      "count": 2
+    },
+    {
+      "title": "A Certain Way",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Alabama",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "At Your Best (You Are Love)",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Comme Des Garçons",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Higgs",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Honeybaby",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Impietas + Deathwish",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "In Here Somewhere",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Mine",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Rushes To",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Slide On Me",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Unity",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Xennons",
+      "artist": "Frank Ocean",
+      "album": "Endless",
+      "sources": [
+        "Tralalelo Tralala",
+        "Frank Ocean - Endless"
+      ],
+      "count": 2
+    },
+    {
+      "title": "The Dead Flag Blues",
+      "artist": "Godspeed You! Black Emperor",
+      "album": "F♯ A♯ ∞",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Hero",
+      "artist": "Frank Ocean, Mick Jones, Paul Simonon, Diplo",
+      "album": "Three Artists. One Song",
+      "sources": [
+        "Tralalelo Tralala"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Wonderful God (feat. Jonathan Ogden)",
+      "artist": "Montell Fish, Jonathan Ogden",
+      "album": "Bedroom Gospel",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    }
+  ],
+  "extra": [
+    {
+      "pos": 38,
+      "title": "Outside Tweaking (feat. Stunna Sandy)",
+      "artist": "Drake, Stunna Sandy",
+      "album": "MAID OF HONOUR",
+      "raw": "38\nOutside Tweaking (feat. Stunna Sandy)\nE\nDrake, Stunna Sandy\nMAID OF HONOUR\n10 minutes ago\n3:10"
+    },
+    {
+      "pos": 45,
+      "title": "American Wedding",
+      "artist": "jsthebg",
+      "album": "American Wedding",
+      "raw": "45\nAmerican Wedding\njsthebg\nAmerican Wedding\n9 minutes ago\n4:59"
+    },
+    {
+      "pos": 63,
+      "title": "No L's",
+      "artist": "Smino",
+      "album": "Luv 4 Rent",
+      "raw": "63\nNo L's\nE\nSmino\nLuv 4 Rent\n7 minutes ago\n2:55"
+    }
+  ],
+  "duplicates": []
+}

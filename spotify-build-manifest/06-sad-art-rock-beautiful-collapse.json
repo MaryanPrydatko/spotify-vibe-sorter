@@ -1,0 +1,1459 @@
+{
+  "spotifyName": "Sad art-rock / beautiful collapse (pattern)",
+  "rules": [
+    "radiohead",
+    "the smiths",
+    "jeff buckley",
+    "cocteau twins",
+    "slowdive",
+    "the cure",
+    "pixies",
+    "true love waits",
+    "nude",
+    "no surprises",
+    "let down"
+  ],
+  "count": 137,
+  "tracks": [
+    {
+      "title": "No Surprises",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "(:)",
+        "Bbbnnnllö",
+        "YO",
+        "fuck..",
+        "…",
+        "12"
+      ],
+      "count": 10
+    },
+    {
+      "title": "Nude",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "(:)",
+        "Bbbnnnllö",
+        "YO",
+        "Г",
+        "fuck.."
+      ],
+      "count": 10
+    },
+    {
+      "title": "Where Is My Mind? - 2007 Remaster",
+      "artist": "Pixies",
+      "album": "Surfer Rosa (2007 Remaster)",
+      "sources": [
+        "Liked Songs",
+        "Bbbnnnllö",
+        "CL",
+        "Г",
+        "m's top tracks",
+        "…",
+        "12",
+        "Na ja.."
+      ],
+      "count": 8
+    },
+    {
+      "title": "Creep",
+      "artist": "Radiohead",
+      "album": "Pablo Honey",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "fuck..",
+        "m's top tracks",
+        "…",
+        "Tunes",
+        "12",
+        "Na ja.."
+      ],
+      "count": 8
+    },
+    {
+      "title": "Let Down",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Ґems",
+        "fuck..",
+        "…",
+        "Na ja.."
+      ],
+      "count": 8
+    },
+    {
+      "title": "Weird Fishes / Arpeggi",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "(:)",
+        "YO",
+        "марян × talia",
+        "fuck..",
+        "…",
+        "Na ja.."
+      ],
+      "count": 8
+    },
+    {
+      "title": "There Is a Light That Never Goes Out - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Queen Is Dead",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "Bbbnnnllö",
+        "SORRY SORRY SPRRYYY",
+        "YO",
+        "m's top tracks",
+        "…",
+        "Tunes"
+      ],
+      "count": 8
+    },
+    {
+      "title": "Fake Plastic Trees",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "(:)",
+        "SORRY SORRY SPRRYYY",
+        "fuck.."
+      ],
+      "count": 7
+    },
+    {
+      "title": "How To Disappear Completely",
+      "artist": "Radiohead",
+      "album": "Kid A",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "(:)",
+        "YO",
+        "…"
+      ],
+      "count": 7
+    },
+    {
+      "title": "True Love Waits",
+      "artist": "Radiohead",
+      "album": "A Moon Shaped Pool",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "(:)",
+        "YO",
+        "fuck.."
+      ],
+      "count": 7
+    },
+    {
+      "title": "Videotape",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "YO",
+        "Г",
+        "fuck.."
+      ],
+      "count": 7
+    },
+    {
+      "title": "Friday I'm In Love",
+      "artist": "The Cure",
+      "album": "Wish",
+      "sources": [
+        "Liked Songs",
+        "SORRY SORRY SPRRYYY",
+        "Fl",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia",
+        "Mmmmmm"
+      ],
+      "count": 7
+    },
+    {
+      "title": "All I Need",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "(:)",
+        "YO",
+        "fuck..",
+        "…",
+        "Na ja.."
+      ],
+      "count": 6
+    },
+    {
+      "title": "Black Star",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "%^*+",
+        "fuck..",
+        "…",
+        "Tunes"
+      ],
+      "count": 6
+    },
+    {
+      "title": "Exit Music (For A Film)",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "(:)",
+        "Bbbnnnllö",
+        "fuck..",
+        "12"
+      ],
+      "count": 6
+    },
+    {
+      "title": "High and Dry",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "%^*+",
+        "fuck..",
+        "…",
+        "12"
+      ],
+      "count": 6
+    },
+    {
+      "title": "Bullet Proof ... I Wish I Was",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "YO",
+        "Ґems",
+        "fuck.."
+      ],
+      "count": 5
+    },
+    {
+      "title": "Just",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "fuck..",
+        "…",
+        "12"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Planet Telex",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Ґems",
+        "fuck..",
+        "Tunes"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Talk Show Host",
+      "artist": "Radiohead",
+      "album": "Street Spirit (Fade Out)",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Boys Don't Cry",
+      "artist": "The Cure",
+      "album": "Three Imaginary Boys",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "SORRY SORRY SPRRYYY",
+        "CL",
+        "…"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Back to the Old House - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Louder Than Bombs",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "Bbbnnnllö",
+        "…",
+        "Na ja.."
+      ],
+      "count": 5
+    },
+    {
+      "title": "This Charming Man - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Smiths",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "SORRY SORRY SPRRYYY",
+        "YO",
+        "…"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Heaven or Las Vegas",
+      "artist": "Cocteau Twins",
+      "album": "Heaven or Las Vegas",
+      "sources": [
+        "Liked Songs",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Bangers + Mash",
+      "artist": "Radiohead",
+      "album": "In Rainbows (Disk 2)",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Г",
+        "Ґems"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Daydreaming",
+      "artist": "Radiohead",
+      "album": "A Moon Shaped Pool",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "fuck.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Faust Arp",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Г",
+        "fuck.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "House Of Cards",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Bbbnnnllö",
+        "fuck.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Karma Police",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "…",
+        "12"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Reckoner",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Ґems",
+        "fuck.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "There, There",
+      "artist": "Radiohead",
+      "album": "Hail To the Thief",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 4
+    },
+    {
+      "title": "You",
+      "artist": "Radiohead",
+      "album": "Pablo Honey",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Ґems",
+        "12"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Souvlaki Space Station",
+      "artist": "Slowdive",
+      "album": "Souvlaki",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "Ґems",
+        "fuck.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Heaven Knows I'm Miserable Now - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "sources": [
+        "Liked Songs",
+        "Bbbnnnllö",
+        "YO",
+        "…"
+      ],
+      "count": 4
+    },
+    {
+      "title": "I Know It's Over - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Queen Is Dead",
+      "sources": [
+        "Bbbnnnllö",
+        "SORRY SORRY SPRRYYY",
+        "YO",
+        "…"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Please, Please, Please, Let Me Get What I Want - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "sources": [
+        "Liked Songs",
+        "YO",
+        "…",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Serpentskirt",
+      "artist": "Cocteau Twins",
+      "album": "Milk & Kisses",
+      "sources": [
+        "Liked Songs",
+        "Ґems",
+        "fuck.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "So Real",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "sources": [
+        "Liked Songs",
+        "YO",
+        "Г"
+      ],
+      "count": 3
+    },
+    {
+      "title": "15 Step",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "fuck.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Blow Out",
+      "artist": "Radiohead",
+      "album": "Pablo Honey",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Ґems"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Bodysnatchers",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "fuck.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Idioteque",
+      "artist": "Radiohead",
+      "album": "Kid A",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "fuck.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Jigsaw Falling Into Place",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "sources": [
+        "fuck..",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Knives Out",
+      "artist": "Radiohead",
+      "album": "Amnesiac",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Ґems"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Lucky",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "fuck.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Motion Picture Soundtrack",
+      "artist": "Radiohead",
+      "album": "Kid A",
+      "sources": [
+        "Liked Songs",
+        "(:)",
+        "YO"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Pyramid Song",
+      "artist": "Radiohead",
+      "album": "Amnesiac",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "fuck.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Spectre",
+      "artist": "Radiohead",
+      "album": "Spectre",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "(:)"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Subterranean Homesick Alien",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "YO"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Treefingers",
+      "artist": "Radiohead",
+      "album": "KID A MNESIA",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "radioh"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Just Like Heaven - Remastered 2006",
+      "artist": "The Cure",
+      "album": "Kiss Me Kiss Me Kiss Me (Remastered 2006)",
+      "sources": [
+        "Liked Songs",
+        "SORRY SORRY SPRRYYY",
+        "…"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Half a Person - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Louder Than Bombs",
+      "sources": [
+        "%^*+",
+        "na klar",
+        "Ґems"
+      ],
+      "count": 3
+    },
+    {
+      "title": "This Night Has Opened My Eyes - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "sources": [
+        "Bbbnnnllö",
+        "YO",
+        "…"
+      ],
+      "count": 3
+    },
+    {
+      "title": "She Will Destroy You",
+      "artist": "Cocteau Twins, Harold Budd",
+      "album": "The Moon and the Melodies",
+      "sources": [
+        "Liked Songs",
+        "fuck.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Last Goodbye",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "sources": [
+        "SORRY SORRY SPRRYYY",
+        "na klar"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Lover, You Should've Come Over",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "sources": [
+        "YO",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Vancouver",
+      "artist": "Jeff Buckley",
+      "album": "Sketches for My Sweetheart The Drunk (Expanded Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Ana",
+      "artist": "Pixies",
+      "album": "Bossanova",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Hey",
+      "artist": "Pixies",
+      "album": "Doolittle",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Is She Weird",
+      "artist": "Pixies",
+      "album": "Bossanova",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "2 + 2 = 5",
+      "artist": "Radiohead",
+      "album": "Hail To the Thief",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 2
+    },
+    {
+      "title": "4 Minute Warning",
+      "artist": "Radiohead",
+      "album": "In Rainbows (Disk 2)",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Climbing Up the Walls",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Give Up The Ghost",
+      "artist": "Radiohead",
+      "album": "The King Of Limbs",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Lift",
+      "artist": "Radiohead",
+      "album": "OK Computer OKNOTOK 1997 2017",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Paranoid Android",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "sources": [
+        "…",
+        "12"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Sail To The Moon",
+      "artist": "Radiohead",
+      "album": "Hail To the Thief",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Sulk",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 2
+    },
+    {
+      "title": "The Bends",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "Liked Songs",
+        "radioh"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Alison",
+      "artist": "Slowdive",
+      "album": "Souvlaki",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Here She Comes",
+      "artist": "Slowdive",
+      "album": "Souvlaki",
+      "sources": [
+        "Liked Songs",
+        "Г"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Machine Gun",
+      "artist": "Slowdive",
+      "album": "Souvlaki",
+      "sources": [
+        "Liked Songs",
+        "fuck.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Just Like Heaven",
+      "artist": "The Cure",
+      "album": "Kiss Me Kiss Me Kiss Me",
+      "sources": [
+        "(:)",
+        "na klar"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Asleep - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Louder Than Bombs",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Pretty Girls Make Graves - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Smiths",
+      "sources": [
+        "Liked Songs",
+        "YO"
+      ],
+      "count": 2
+    },
+    {
+      "title": "There Is a Light That Never Goes Out - Take 1",
+      "artist": "The Smiths",
+      "album": "There Is a Light That Never Goes Out (Take 1)",
+      "sources": [
+        "Liked Songs",
+        "YO"
+      ],
+      "count": 2
+    },
+    {
+      "title": "You've Got Everything Now - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Smiths",
+      "sources": [
+        "Liked Songs",
+        "YO"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Cico Buff",
+      "artist": "Cocteau Twins",
+      "album": "Blue Bell Knoll",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Pitch the Baby",
+      "artist": "Cocteau Twins",
+      "album": "Heaven or Las Vegas",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rilkean Heart",
+      "artist": "Cocteau Twins",
+      "album": "Milk & Kisses",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Why Do You Love Me? - 2024 Remaster",
+      "artist": "Cocteau Twins, Harold Budd",
+      "album": "The Moon and the Melodies (2024 Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Dream Brother",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Everybody Here Wants You",
+      "artist": "Jeff Buckley",
+      "album": "Sketches for My Sweetheart The Drunk (Expanded Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Forget Her - Studio Outtake - 1993",
+      "artist": "Jeff Buckley",
+      "album": "Grace (Legacy Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Grace",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hallelujah",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "I Know It's Over",
+      "artist": "Jeff Buckley",
+      "album": "You and I (Expanded Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Jewel Box",
+      "artist": "Jeff Buckley",
+      "album": "Sketches for My Sweetheart The Drunk (Expanded Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Mama, You Been on My Mind - Studio Outtake - 1993",
+      "artist": "Jeff Buckley",
+      "album": "Grace (Legacy Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Mojo Pin",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Opened Once",
+      "artist": "Jeff Buckley",
+      "album": "Sketches for My Sweetheart The Drunk (Expanded Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Satisfied Mind - Live at WFMU, East Orange, NJ - Oct 1992",
+      "artist": "Jeff Buckley",
+      "album": "Sketches for My Sweetheart The Drunk (Expanded Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Witches' Rave",
+      "artist": "Jeff Buckley",
+      "album": "Sketches for My Sweetheart The Drunk (Expanded Edition)",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Yard Of Blonde Girls",
+      "artist": "Jeff Buckley",
+      "album": "Sketches for My Sweetheart The Drunk (Expanded Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Your Flesh Is So Nice",
+      "artist": "Jeff Buckley",
+      "album": "Sketches for My Sweetheart The Drunk (Expanded Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "All I Think About Now",
+      "artist": "Pixies",
+      "album": "Head Carrier",
+      "sources": [
+        "…"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Debaser",
+      "artist": "Pixies",
+      "album": "Doolittle",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Gigantic",
+      "artist": "Pixies",
+      "album": "Death to the Pixies",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Here Comes Your Man",
+      "artist": "Pixies",
+      "album": "Doolittle",
+      "sources": [
+        "na klar"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Monkey Gone to Heaven",
+      "artist": "Pixies",
+      "album": "Doolittle",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Que Sera Sera",
+      "artist": "Pixies",
+      "album": "You're So Impatient",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Tame",
+      "artist": "Pixies",
+      "album": "Doolittle",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Velouria",
+      "artist": "Pixies",
+      "album": "Death to the Pixies",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Wave Of Mutilation",
+      "artist": "Pixies",
+      "album": "Doolittle",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Wave Of Mutilation - UK Surf",
+      "artist": "Pixies",
+      "album": "Complete B Sides",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Where Is My Mind?",
+      "artist": "Pixies",
+      "album": "Death to the Pixies",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Decks Dark",
+      "artist": "Radiohead",
+      "album": "A Moon Shaped Pool",
+      "sources": [
+        "radioh"
+      ],
+      "count": 1
+    },
+    {
+      "title": "India Rubber",
+      "artist": "Radiohead",
+      "album": "Fake Plastic Trees",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Lurgee",
+      "artist": "Radiohead",
+      "album": "Pablo Honey",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "My Iron Lung",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "sources": [
+        "…"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Optimistic",
+      "artist": "Radiohead",
+      "album": "Kid A",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "You And Whose Army?",
+      "artist": "Radiohead",
+      "album": "Amnesiac",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "kisses",
+      "artist": "Slowdive",
+      "album": "everything is alive",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "When the Sun Hits",
+      "artist": "Slowdive",
+      "album": "Souvlaki",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "joyride",
+      "artist": "The Crying Nudes",
+      "album": "joyride",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "A Forest",
+      "artist": "The Cure",
+      "album": "Seventeen Seconds",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "A Letter To Elise",
+      "artist": "The Cure",
+      "album": "Wish",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Catch - Remastered 2006",
+      "artist": "The Cure",
+      "album": "Kiss Me Kiss Me Kiss Me (Remastered 2006)",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Close To Me",
+      "artist": "The Cure",
+      "album": "The Head On The Door (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "High",
+      "artist": "The Cure",
+      "album": "Wish",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "How Beautiful You Are - 2006 Remaster",
+      "artist": "The Cure",
+      "album": "Kiss Me Kiss Me Kiss Me",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Inbetween Days",
+      "artist": "The Cure",
+      "album": "The Head On The Door",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Lovesong - 2010 Remaster",
+      "artist": "The Cure",
+      "album": "Disintegration (Deluxe Edition)",
+      "sources": [
+        "na klar"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Lovesong - Remastered",
+      "artist": "The Cure",
+      "album": "Disintegration (Deluxe Edition)",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Lullaby - Remastered",
+      "artist": "The Cure",
+      "album": "Disintegration (Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "M",
+      "artist": "The Cure",
+      "album": "Seventeen Seconds",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Pictures Of You - Remastered",
+      "artist": "The Cure",
+      "album": "Disintegration (Deluxe Edition)",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Plainsong - Remastered",
+      "artist": "The Cure",
+      "album": "Disintegration (Deluxe Edition)",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Last Day Of Summer",
+      "artist": "The Cure",
+      "album": "Bloodflowers",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Girl Afraid - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "How Soon Is Now? - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "sources": [
+        "fuck.."
+      ],
+      "count": 1
+    },
+    {
+      "title": "Panic - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Louder Than Bombs",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rubber Ring - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Louder Than Bombs",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Still Ill - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Smiths",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Unloveable - 2017 Master",
+      "artist": "The Smiths",
+      "album": "The Queen Is Dead (Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Well I Wonder - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Meat Is Murder",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "What Difference Does It Make? - John Peel Session 18/05/83",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    }
+  ]
+}

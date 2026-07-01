@@ -1,0 +1,3470 @@
+{
+  "spotifyName": "Classic riff rock / guitar mythology (pattern)",
+  "rules": [
+    "ac/dc",
+    "led zeppelin",
+    "pink floyd",
+    "black sabbath",
+    "jimi hendrix",
+    "bob dylan",
+    "the doors",
+    "rolling stones",
+    "fleetwood mac",
+    "oasis"
+  ],
+  "count": 362,
+  "tracks": [
+    {
+      "title": "Dreams - 2004 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours (Super Deluxe)",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "SORRY SORRY SPRRYYY",
+        "Fl",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 7
+    },
+    {
+      "title": "Everywhere - 2017 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Tango In the Night (Deluxe Edition)",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia",
+        "Mmmmmm",
+        "na klar"
+      ],
+      "count": 7
+    },
+    {
+      "title": "Landslide",
+      "artist": "Fleetwood Mac",
+      "album": "Fleetwood Mac",
+      "sources": [
+        "Liked Songs",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia",
+        "Whaaaa"
+      ],
+      "count": 5
+    },
+    {
+      "title": "All Along the Watchtower",
+      "artist": "Jimi Hendrix",
+      "album": "Electric Ladyland",
+      "sources": [
+        "Liked Songs",
+        "Hell ya",
+        "%^*+",
+        "Rockin n rollin",
+        "Mmmmmm"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Listen Up - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Sad Song",
+      "artist": "Oasis",
+      "album": "Definitely Maybe",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 5
+    },
+    {
+      "title": "Back In Black",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Demon Fire",
+      "artist": "AC/DC",
+      "album": "POWER UP",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Have a Drink on Me",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "It's a Long Way to the Top (If You Wanna Rock 'N' Roll)",
+      "artist": "AC/DC",
+      "album": "High Voltage",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Moneytalks",
+      "artist": "AC/DC",
+      "album": "The Razors Edge",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Rock N Roll Train",
+      "artist": "AC/DC",
+      "album": "Black Ice",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "T.N.T.",
+      "artist": "AC/DC",
+      "album": "High Voltage",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Who Made Who",
+      "artist": "AC/DC",
+      "album": "Who Made Who",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Paranoid - 2009 Remaster",
+      "artist": "Black Sabbath",
+      "album": "Paranoid",
+      "sources": [
+        "Liked Songs",
+        "(:)",
+        "Rockin n rollin",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Girl from the North Country",
+      "artist": "Bob Dylan",
+      "album": "The Freewheelin' Bob Dylan",
+      "sources": [
+        "Liked Songs",
+        "Hell ya",
+        "boB",
+        "(:)"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Like a Rolling Stone",
+      "artist": "Bob Dylan",
+      "album": "Highway 61 Revisited",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "boB",
+        "My playlist #80"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Song to Woody",
+      "artist": "Bob Dylan",
+      "album": "Bob Dylan",
+      "sources": [
+        "Liked Songs",
+        "Hell ya",
+        "boB",
+        "(:)"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Gypsy",
+      "artist": "Fleetwood Mac",
+      "album": "Greatest Hits",
+      "sources": [
+        "SORRY SORRY SPRRYYY",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 4
+    },
+    {
+      "title": "The Chain - 2004 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours (Super Deluxe)",
+      "sources": [
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Purple Haze",
+      "artist": "Jimi Hendrix",
+      "album": "Are You Experienced",
+      "sources": [
+        "Liked Songs",
+        "Hell ya",
+        "Rockin n rollin",
+        "Mmmmmm"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Live Forever",
+      "artist": "Oasis",
+      "album": "Definitely Maybe",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "SORRY SORRY SPRRYYY",
+        "na klar"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Wish You Were Here",
+      "artist": "Pink Floyd",
+      "album": "A Collection Of Great Dance Songs",
+      "sources": [
+        "Liked Songs",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Highway to Hell",
+      "artist": "AC/DC",
+      "album": "Highway to Hell",
+      "sources": [
+        "Liked Songs",
+        "AC FUCKING DC",
+        "Mmmmmm"
+      ],
+      "count": 3
+    },
+    {
+      "title": "If You Want Blood (You've Got It)",
+      "artist": "AC/DC",
+      "album": "Highway to Hell",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Let There Be Rock",
+      "artist": "AC/DC",
+      "album": "Let There Be Rock",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Riff Raff",
+      "artist": "AC/DC",
+      "album": "Powerage",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Rocker - Live at the Apollo Theatre, Glasgow, Scotland - April 1978",
+      "artist": "AC/DC",
+      "album": "If You Want Blood You've Got It (Live)",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Shot In The Dark",
+      "artist": "AC/DC",
+      "album": "POWER UP",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Thunderstruck",
+      "artist": "AC/DC",
+      "album": "The Razors Edge",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Touch Too Much",
+      "artist": "AC/DC",
+      "album": "Highway to Hell",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "What's Next to the Moon",
+      "artist": "AC/DC",
+      "album": "Powerage",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Whole Lotta Rosie",
+      "artist": "AC/DC",
+      "album": "Let There Be Rock",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Blowin' in the Wind",
+      "artist": "Bob Dylan",
+      "album": "The Freewheelin' Bob Dylan",
+      "sources": [
+        "Liked Songs",
+        "boB",
+        "(:)"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Don't Think Twice, It's All Right",
+      "artist": "Bob Dylan",
+      "album": "The Freewheelin' Bob Dylan",
+      "sources": [
+        "Liked Songs",
+        "boB",
+        "(:)"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Hurricane",
+      "artist": "Bob Dylan",
+      "album": "Desire",
+      "sources": [
+        "Liked Songs",
+        "boB",
+        "(:)"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Jokerman",
+      "artist": "Bob Dylan",
+      "album": "Infidels",
+      "sources": [
+        "Liked Songs",
+        "boB",
+        "(:)"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Knockin' On Heaven's Door",
+      "artist": "Bob Dylan",
+      "album": "Pat Garrett & Billy The Kid (Soundtrack From The Motion Picture)",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "boB"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Hypnotized",
+      "artist": "Fleetwood Mac",
+      "album": "Mystery to Me",
+      "sources": [
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Never Going Back Again - 2004 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours (Super Deluxe)",
+      "sources": [
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Rhiannon",
+      "artist": "Fleetwood Mac",
+      "album": "Fleetwood Mac",
+      "sources": [
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Thrown Down",
+      "artist": "Fleetwood Mac",
+      "album": "Say You Will",
+      "sources": [
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Don't Look Back in Anger - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Slide Away - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered) [Deluxe Edition Remastered]",
+      "sources": [
+        "Liked Songs",
+        "SORRY SORRY SPRRYYY",
+        "Ґems"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Wonderwall - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs",
+        "SORRY SORRY SPRRYYY",
+        "Mmmmmm"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Shine On You Crazy Diamond, Pts. 1-5 - 2011 Remaster",
+      "artist": "Pink Floyd",
+      "album": "Wish You Were Here (Remastered Version)",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "…"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Wish You Were Here - 2011 Remaster",
+      "artist": "Pink Floyd",
+      "album": "Wish You Were Here (Remastered Version)",
+      "sources": [
+        "Liked Songs",
+        "%^*+",
+        "…"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Dirty Deeds Done Dirt Cheap",
+      "artist": "AC/DC",
+      "album": "Dirty Deeds Done Dirt Cheap",
+      "sources": [
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Givin the Dog a Bone",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "Liked Songs",
+        "AC FUCKING DC"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Hells Bells",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Rock 'N' Roll Damnation",
+      "artist": "AC/DC",
+      "album": "Powerage",
+      "sources": [
+        "Liked Songs",
+        "AC FUCKING DC"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Shoot to Thrill",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "Rockin n rollin",
+        "AC FUCKING DC"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Shot Down in Flames",
+      "artist": "AC/DC",
+      "album": "Highway to Hell",
+      "sources": [
+        "Liked Songs",
+        "AC FUCKING DC"
+      ],
+      "count": 2
+    },
+    {
+      "title": "You Shook Me All Night Long",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "Liked Songs",
+        "AC FUCKING DC"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Children of the Grave - 2009 Remaster",
+      "artist": "Black Sabbath",
+      "album": "Master of Reality",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Heaven and Hell",
+      "artist": "Black Sabbath",
+      "album": "Heaven & Hell",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Iron Man",
+      "artist": "Black Sabbath",
+      "album": "Paranoid (2009 Remastered Version)",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Iron Man - 2009 Remaster",
+      "artist": "Black Sabbath",
+      "album": "Paranoid",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Paranoid",
+      "artist": "Black Sabbath",
+      "album": "Paranoid (2009 Remastered Version)",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "War Pigs",
+      "artist": "Black Sabbath",
+      "album": "Paranoid (2009 Remastered Version)",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "A Hard Rain's A-Gonna Fall",
+      "artist": "Bob Dylan",
+      "album": "The Freewheelin' Bob Dylan",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "All Along the Watchtower",
+      "artist": "Bob Dylan",
+      "album": "John Wesley Harding",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Ballad of a Thin Man",
+      "artist": "Bob Dylan",
+      "album": "Highway 61 Revisited",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Dignity",
+      "artist": "Bob Dylan",
+      "album": "Greatest Hits Volume 3",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Every Grain of Sand",
+      "artist": "Bob Dylan",
+      "album": "Shot Of Love",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Forever Young - Slow Version",
+      "artist": "Bob Dylan",
+      "album": "Planet Waves",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Gotta Serve Somebody",
+      "artist": "Bob Dylan",
+      "album": "Slow Train Coming",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Highway 61 Revisited",
+      "artist": "Bob Dylan",
+      "album": "Highway 61 Revisited",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "I Want You",
+      "artist": "Bob Dylan",
+      "album": "Blonde On Blonde",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "It's All Over Now, Baby Blue",
+      "artist": "Bob Dylan",
+      "album": "Bringing It All Back Home",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "It's Alright, Ma (I'm Only Bleeding)",
+      "artist": "Bob Dylan",
+      "album": "Bringing It All Back Home",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Lay, Lady, Lay",
+      "artist": "Bob Dylan",
+      "album": "Nashville Skyline",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Maggie's Farm",
+      "artist": "Bob Dylan",
+      "album": "Bringing It All Back Home",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Most of the Time",
+      "artist": "Bob Dylan",
+      "album": "Oh Mercy",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Mr. Tambourine Man",
+      "artist": "Bob Dylan",
+      "album": "Bringing It All Back Home",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "My Back Pages",
+      "artist": "Bob Dylan",
+      "album": "Another Side Of Bob Dylan",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Not Dark Yet",
+      "artist": "Bob Dylan",
+      "album": "Time Out Of Mind",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Positively 4th Street",
+      "artist": "Bob Dylan",
+      "album": "Bob Dylan's Greatest Hits",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Queen Jane Approximately",
+      "artist": "Bob Dylan",
+      "album": "Highway 61 Revisited",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Ring Them Bells",
+      "artist": "Bob Dylan",
+      "album": "Oh Mercy",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Simple Twist of Fate",
+      "artist": "Bob Dylan",
+      "album": "Blood On The Tracks",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "The Man in Me",
+      "artist": "Bob Dylan",
+      "album": "New Morning",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Tomorrow Is a Long Time - Live at Town Hall, New York, NY - April 1963",
+      "artist": "Bob Dylan",
+      "album": "Bob Dylan's Greatest Hits Volume II",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "It Ain't Me, Babe - Live at Philharmonic Hall, New York, NY - October 1964",
+      "artist": "Bob Dylan, Joan Baez",
+      "album": "The Bootleg Volume 6: Bob Dylan Live 1964 - Concert At Philharmonic Hall",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Girl from the North Country",
+      "artist": "Bob Dylan, Johnny Cash",
+      "album": "Nashville Skyline",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Big Love - 2017 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Tango In the Night (Deluxe Edition)",
+      "sources": [
+        "SORRY SORRY SPRRYYY",
+        "na klar"
+      ],
+      "count": 2
+    },
+    {
+      "title": "You Make Loving Fun - 2004 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours",
+      "sources": [
+        "SORRY SORRY SPRRYYY",
+        "na klar"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Angel",
+      "artist": "Jimi Hendrix",
+      "album": "The Cry of Love",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Bold as Love",
+      "artist": "Jimi Hendrix",
+      "album": "Axis: Bold As Love",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Castles Made of Sand",
+      "artist": "Jimi Hendrix",
+      "album": "Axis: Bold As Love",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Like A Rolling Stone - Live At Monterey",
+      "artist": "Jimi Hendrix",
+      "album": "Live At Monterey",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Rainy Day, Dream Away",
+      "artist": "Jimi Hendrix",
+      "album": "Electric Ladyland",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "The Wind Cries Mary",
+      "artist": "Jimi Hendrix",
+      "album": "Are You Experienced",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Voodoo Child (Slight Return)",
+      "artist": "Jimi Hendrix",
+      "album": "Electric Ladyland",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Babe I'm Gonna Leave You - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Rock and Roll - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin IV (Deluxe Edition)",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Stairway to Heaven - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin IV (Deluxe Edition)",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "When the Levee Breaks - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin IV (Deluxe Edition)",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Whole Lotta Love - 1990 Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin II (1994 Remaster)",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Acquiesce - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Be Here Now - Remastered",
+      "artist": "Oasis",
+      "album": "Be Here Now (Deluxe Remastered Edition)",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Cast No Shadow - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Champagne Supernova",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory?",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Hello - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Live Forever - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Slide Away",
+      "artist": "Oasis",
+      "album": "Definitely Maybe",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Stop Crying Your Heart Out",
+      "artist": "Oasis",
+      "album": "Heathen Chemistry",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Supersonic - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs",
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 2
+    },
+    {
+      "title": "The Masterplan - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Breathe (In The Air) - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Have a Cigar",
+      "artist": "Pink Floyd",
+      "album": "Wish You Were Here",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Shine On You Crazy Diamond, Pts. 6-9 - 2011 Remaster",
+      "artist": "Pink Floyd",
+      "album": "Wish You Were Here (Remastered Version)",
+      "sources": [
+        "Liked Songs",
+        "%^*+"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Beast Of Burden - Remastered 1994",
+      "artist": "The Rolling Stones",
+      "album": "Some Girls",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Gimme Shelter",
+      "artist": "The Rolling Stones",
+      "album": "Let It Bleed",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Jigsaw Puzzle - 50th Anniversary Edition",
+      "artist": "The Rolling Stones",
+      "album": "Beggars Banquet (50th Anniversary Edition)",
+      "sources": [
+        "Liked Songs",
+        "boB"
+      ],
+      "count": 2
+    },
+    {
+      "title": "You Can't Always Get What You Want",
+      "artist": "The Rolling Stones",
+      "album": "Let It Bleed",
+      "sources": [
+        "Liked Songs",
+        "Hell ya"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Anything Goes",
+      "artist": "AC/DC",
+      "album": "Black Ice",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Are You Ready",
+      "artist": "AC/DC",
+      "album": "The Razors Edge",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Back In Black - Live - 1991",
+      "artist": "AC/DC",
+      "album": "Live",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Ballbreaker",
+      "artist": "AC/DC",
+      "album": "Ballbreaker",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Big Balls",
+      "artist": "AC/DC",
+      "album": "Dirty Deeds Done Dirt Cheap",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Big Gun",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Big Jack",
+      "artist": "AC/DC",
+      "album": "Black Ice",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Big Jack - Live at River Plate Stadium, Buenos Aires, Argentina - December 2009",
+      "artist": "AC/DC",
+      "album": "Live at River Plate",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Black Ice",
+      "artist": "AC/DC",
+      "album": "Black Ice",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Boogie Man",
+      "artist": "AC/DC",
+      "album": "Ballbreaker",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Borrowed Time",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Chase the Ace",
+      "artist": "AC/DC",
+      "album": "Who Made Who",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Cover You in Oil",
+      "artist": "AC/DC",
+      "album": "Ballbreaker",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Danger",
+      "artist": "AC/DC",
+      "album": "Fly On the Wall",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Dirty Deeds Done Dirt Cheap - Live - 1991",
+      "artist": "AC/DC",
+      "album": "Live",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Dog Eat Dog",
+      "artist": "AC/DC",
+      "album": "Let There Be Rock",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Dog Eat Dog - Live Apollo Theatre, Glasgow, Apr. 30, 1978",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Emission Control",
+      "artist": "AC/DC",
+      "album": "Rock or Bust",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Flick of the Switch",
+      "artist": "AC/DC",
+      "album": "Flick of the Switch",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Fly on the Wall",
+      "artist": "AC/DC",
+      "album": "Fly On the Wall",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "For Those About to Rock (We Salute You)",
+      "artist": "AC/DC",
+      "album": "For Those About to Rock (We Salute You)",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "For Those About to Rock (We Salute You) - Live Tushino Airfield, Moscow, Sept. 28, 1991",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Girls Got Rhythm",
+      "artist": "AC/DC",
+      "album": "Highway to Hell",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Gone Shootin'",
+      "artist": "AC/DC",
+      "album": "Powerage",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Guns for Hire",
+      "artist": "AC/DC",
+      "album": "Flick of the Switch",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Guns for Hire - Live Joe Louis Arena, Detroit MI, Nov. 18, 1983",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hail Caesar",
+      "artist": "AC/DC",
+      "album": "Ballbreaker",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hard as a Rock",
+      "artist": "AC/DC",
+      "album": "Ballbreaker",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Heatseeker",
+      "artist": "AC/DC",
+      "album": "Blow Up Your Video",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Heatseeker - Live - 1991",
+      "artist": "AC/DC",
+      "album": "Live",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hell Ain't a Bad Place to Be",
+      "artist": "AC/DC",
+      "album": "Let There Be Rock",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hell Ain't a Bad Place to Be - Live at River Plate Stadium, Buenos Aires, Argentina - December 2009",
+      "artist": "AC/DC",
+      "album": "Live at River Plate",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hells Bells - Live - 1991",
+      "artist": "AC/DC",
+      "album": "Live",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hells Bells - Live Donington Park, Aug. 17, 1991",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "High Voltage",
+      "artist": "AC/DC",
+      "album": "High Voltage",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Highway to Hell - Live at the Pavillion de Paris, Paris, France - December 1979",
+      "artist": "AC/DC",
+      "album": "Bonfire",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Highway to Hell - Live Tushino Airfield, Moscow, Sept. 28, 1991",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Inject the Venom",
+      "artist": "AC/DC",
+      "album": "For Those About to Rock (We Salute You)",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Jailbreak",
+      "artist": "AC/DC",
+      "album": "'74 Jailbreak",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Let Me Put My Love Into You",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Let There Be Rock - Live at the Apollo Theatre, Glasgow, Scotland - April 1978",
+      "artist": "AC/DC",
+      "album": "If You Want Blood You've Got It (Live)",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Let There Be Rock - Live at the Pavillion de Paris, Paris, France - December 1979",
+      "artist": "AC/DC",
+      "album": "Bonfire",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Let's Get It Up",
+      "artist": "AC/DC",
+      "album": "For Those About to Rock (We Salute You)",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Mistress for Christmas",
+      "artist": "AC/DC",
+      "album": "The Razors Edge",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Moneytalks - Live - 1991",
+      "artist": "AC/DC",
+      "album": "Live",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Nervous Shakedown",
+      "artist": "AC/DC",
+      "album": "Flick of the Switch",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Play Ball",
+      "artist": "AC/DC",
+      "album": "Rock or Bust",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Problem Child",
+      "artist": "AC/DC",
+      "album": "Dirty Deeds Done Dirt Cheap",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Realize",
+      "artist": "AC/DC",
+      "album": "POWER UP",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Ride On",
+      "artist": "AC/DC",
+      "album": "Dirty Deeds Done Dirt Cheap",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rising Power",
+      "artist": "AC/DC",
+      "album": "Flick of the Switch",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rock 'N' Roll Damnation - Live at the Apollo Theatre, Glasgow, Scotland - April 1978",
+      "artist": "AC/DC",
+      "album": "If You Want Blood You've Got It (Live)",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rock and Roll Ain't Noise Pollution",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rock and Roll Ain't Noise Pollution - Live Joe Louis Arena, Detroit MI, Nov. 18, 1983",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rock N Roll Train - Live at River Plate Stadium, Buenos Aires, Argentina - December 2009",
+      "artist": "AC/DC",
+      "album": "Live at River Plate",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rock or Bust",
+      "artist": "AC/DC",
+      "album": "Rock or Bust",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rock the Blues Away",
+      "artist": "AC/DC",
+      "album": "Rock or Bust",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rock the House",
+      "artist": "AC/DC",
+      "album": "Rock or Bust",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Safe in New York City",
+      "artist": "AC/DC",
+      "album": "Stiff Upper Lip",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Satellite Blues",
+      "artist": "AC/DC",
+      "album": "Stiff Upper Lip",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Shake a Leg",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Shake Your Foundations",
+      "artist": "AC/DC",
+      "album": "Fly On the Wall",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Shot Down in Flames - Live at the Pavillion de Paris, Paris, France - December 1979",
+      "artist": "AC/DC",
+      "album": "Bonfire",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Show Business",
+      "artist": "AC/DC",
+      "album": "'74 Jailbreak",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Sin City",
+      "artist": "AC/DC",
+      "album": "Powerage",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Sin City - Live from \"Midnight Special\" - 1978",
+      "artist": "AC/DC",
+      "album": "Bonfire",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Sink the Pink",
+      "artist": "AC/DC",
+      "album": "Fly On the Wall",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Stiff Upper Lip",
+      "artist": "AC/DC",
+      "album": "Stiff Upper Lip",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "T.N.T. - Live Capital Center, Landover MD, Dec. 21, 1981",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "That's the Way I Wanna Rock 'N' Roll",
+      "artist": "AC/DC",
+      "album": "Blow Up Your Video",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Jack",
+      "artist": "AC/DC",
+      "album": "High Voltage",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Jack - Live at the Apollo Theatre, Glasgow, Scotland - April 1978",
+      "artist": "AC/DC",
+      "album": "If You Want Blood You've Got It (Live)",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "This House Is on Fire - Live Joe Louis Arena, Detroit MI, Nov. 18, 1983",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Thunderstruck - Live - 1991",
+      "artist": "AC/DC",
+      "album": "Live",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "War Machine",
+      "artist": "AC/DC",
+      "album": "Black Ice",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "What Do You Do for Money Honey",
+      "artist": "AC/DC",
+      "album": "Back In Black",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Whole Lotta Rosie - Live at the Pavillion de Paris, Paris, France - December 1979",
+      "artist": "AC/DC",
+      "album": "Bonfire",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Witch's Spell",
+      "artist": "AC/DC",
+      "album": "POWER UP",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "You Shook Me All Night Long - Live at River Plate Stadium, Buenos Aires, Argentina - December 2009",
+      "artist": "AC/DC",
+      "album": "Live at River Plate",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "You Shook Me All Night Long - Live Plaza De Toros De Las Ventas, Madrid, July 10, 1996",
+      "artist": "AC/DC",
+      "album": "Backtracks",
+      "sources": [
+        "AC FUCKING DC"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Black Sabbath - 2009 Remaster",
+      "artist": "Black Sabbath",
+      "album": "Black Sabbath",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Iron Man (2012 Remaster)",
+      "artist": "Black Sabbath",
+      "album": "Paranoid",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "N.I.B.",
+      "artist": "Black Sabbath",
+      "album": "Black Sabbath (2009 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "N.I.B. - 2009 Remaster",
+      "artist": "Black Sabbath",
+      "album": "Black Sabbath",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "War Pigs - 2009 Remaster",
+      "artist": "Black Sabbath",
+      "album": "Paranoid",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "It Ain't Me Babe",
+      "artist": "Bob Dylan",
+      "album": "Another Side Of Bob Dylan",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Go Your Own Way - 2004 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Rumours",
+      "sources": [
+        "Mmmmmm"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Isn't It Midnight - 2017 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Tango In the Night (Deluxe Edition)",
+      "sources": [
+        "SORRY SORRY SPRRYYY"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Only over You - 2016 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Mirage (Deluxe Edition)",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Sara - 2015 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Tusk (Deluxe Edition)",
+      "sources": [
+        "na klar"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Seven Wonders - 2017 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Tango In the Night (Deluxe Edition)",
+      "sources": [
+        "na klar"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Silver Girl",
+      "artist": "Fleetwood Mac",
+      "album": "Say You Will",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Sisters of the Moon - 2015 Remaster",
+      "artist": "Fleetwood Mac",
+      "album": "Tusk (Deluxe Edition)",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hey Joe",
+      "artist": "Jimi Hendrix",
+      "album": "Are You Experienced",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Little Wing",
+      "artist": "Jimi Hendrix",
+      "album": "Axis: Bold As Love",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "All My Love - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "In Through the out Door (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Babe I'm Gonna Leave You - 1990 Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin",
+      "sources": [
+        "%^*+"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Black Dog - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin IV (Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Black Mountain Side - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Bring It on Home - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin II (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "D'yer Mak'er - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Houses of the Holy (Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Dazed and Confused - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Friends - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin III (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Going to California - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin IV (Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Good Times Bad Times - 1993 Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin",
+      "sources": [
+        "(:)"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Good Times Bad Times - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hey, Hey, What Can I Do - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Coda (Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Immigrant Song - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin III (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Kashmir - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Physical Graffiti (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "No Quarter - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Houses of the Holy (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Out on the Tiles - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin III (Remaster)",
+      "sources": [
+        "(:)"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Since I've Been Loving You - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin III (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Tea for One - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Presence (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Lemon Song - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin II (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Rain Song - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Houses of the Holy (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Whole Lotta Love - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin II (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "You Shook Me - 1993 Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "You Shook Me - Remaster",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin (Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Call Me Ishmael",
+      "artist": "Madcat",
+      "album": "The Doors of Perception",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "(It's Good) To Be Free - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Alive - 8 Track Demo",
+      "artist": "Oasis",
+      "album": "Shakermaker",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Alive - Remastered Demo",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "All Around the World",
+      "artist": "Oasis",
+      "album": "Be Here Now",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Bonehead's Bank Holiday - Demo",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Bonehead's Bank Holiday - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Born On A Different Cloud",
+      "artist": "Oasis",
+      "album": "Heathen Chemistry",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Bring It On Down - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Deluxe Edition Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Champagne Supernova - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Champagne Supernova (Brendan Lynch Mix) - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Cigarettes & Alcohol",
+      "artist": "Oasis",
+      "album": "Definitely Maybe",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Cigarettes & Alcohol - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Cloudburst - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Cum On Feel the Noize - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "D'Yer Wanna Be a Spaceman? - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "D'You Know What I Mean? - Remastered",
+      "artist": "Oasis",
+      "album": "Be Here Now (Deluxe Remastered Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Digsy's Dinner - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Don't Go Away",
+      "artist": "Oasis",
+      "album": "Be Here Now",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Fade Away",
+      "artist": "Oasis",
+      "album": "Help",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Fade Away - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Falling Down",
+      "artist": "Oasis",
+      "album": "Dig Out Your Soul",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Fuckin' in the Bushes",
+      "artist": "Oasis",
+      "album": "Standing On The Shoulder Of Giants",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Gas Panic!",
+      "artist": "Oasis",
+      "album": "Standing On The Shoulder Of Giants",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Go Let It Out",
+      "artist": "Oasis",
+      "album": "Standing On The Shoulder Of Giants",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Half The World Away",
+      "artist": "Oasis",
+      "album": "The Masterplan",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Half the World Away - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Headshrinker - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hey Now - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "I Am the Walrus - Remastered Live Glasgow Cathouse June '94",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "I'm Outta Time",
+      "artist": "Oasis",
+      "album": "Dig Out Your Soul",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "It's Better People - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Let There Be Love",
+      "artist": "Oasis",
+      "album": "Don't Believe The Truth",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Lyla",
+      "artist": "Oasis",
+      "album": "Don't Believe The Truth",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Magic Pie - Remastered",
+      "artist": "Oasis",
+      "album": "Be Here Now (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Married With Children",
+      "artist": "Oasis",
+      "album": "Definitely Maybe",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Married with Children - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Morning Glory",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory?",
+      "sources": [
+        "na klar"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Morning Glory - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "My Big Mouth",
+      "artist": "Oasis",
+      "album": "Be Here Now",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Rockin' Chair",
+      "artist": "Oasis",
+      "album": "The Masterplan",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Roll with It - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Sad Song - Mauldeth Road West Demo, Nov' 92",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (30th Anniversary)",
+      "sources": [
+        "марян × talia"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Shakermaker",
+      "artist": "Oasis",
+      "album": "Shakermaker",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "She's Electric - Demo",
+      "artist": "Oasis",
+      "album": "(What's the Story) Morning Glory? [Remastered Deluxe Edition]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "She's Electric - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Some Might Say - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Some Might Say (Live at Knebworth, 11 August '96)",
+      "artist": "Oasis",
+      "album": "Knebworth 1996 (Live)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Songbird",
+      "artist": "Oasis",
+      "album": "Heathen Chemistry",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Stand by Me - Remastered",
+      "artist": "Oasis",
+      "album": "Be Here Now (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Stay Young - Remastered",
+      "artist": "Oasis",
+      "album": "Be Here Now (Remastered)",
+      "sources": [
+        "марян × talia"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Strange Thing - Demo",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Sunday Morning Call",
+      "artist": "Oasis",
+      "album": "Standing On The Shoulder Of Giants",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Supersonic",
+      "artist": "Oasis",
+      "album": "Definitely Maybe",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Take Me Away - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered) [Deluxe Edition Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Talk Tonight",
+      "artist": "Oasis",
+      "album": "The Masterplan",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Hindu Times",
+      "artist": "Oasis",
+      "album": "Heathen Chemistry",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Importance of Being Idle",
+      "artist": "Oasis",
+      "album": "Don't Believe The Truth",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Masterplan - Live At Knebworth Park",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Deluxe Edition Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Swamp Song - Version 1 - Remastered",
+      "artist": "Oasis",
+      "album": "(What's The Story) Morning Glory? [Remastered]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Up in the Sky - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Whatever - Remastered",
+      "artist": "Oasis",
+      "album": "Definitely Maybe (Remastered)",
+      "sources": [
+        "марян × talia"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Who Feels Love?",
+      "artist": "Oasis",
+      "album": "Standing On The Shoulder Of Giants",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Another Brick In The Wall, Pt. 1 - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Another Brick In The Wall, Pt. 2 - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Another Brick In The Wall, Pt. 3 - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Any Colour You Like - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Brain Damage",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side of the Moon",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Brain Damage - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Breathe (In the Air)",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side of the Moon",
+      "sources": [
+        "YO"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Bring The Boys Back Home - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Comfortably Numb",
+      "artist": "Pink Floyd",
+      "album": "The Wall",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Comfortably Numb - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Don't Leave Me Now - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Eclipse - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Empty Spaces - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Goodbye Blue Sky - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Goodbye Cruel World - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Have A Cigar - 2011 Remaster",
+      "artist": "Pink Floyd",
+      "album": "Wish You Were Here (Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hey You - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "In the Flesh",
+      "artist": "Pink Floyd",
+      "album": "The Wall",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    },
+    {
+      "title": "In The Flesh - 2011 Remaster",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "In The Flesh? - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Is There Anybody Out There? - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Money - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Mother - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Nobody Home - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "On The Run - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "One Of My Turns - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Outside The Wall - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Pigs On The Wing 1 - 2011 Remaster",
+      "artist": "Pink Floyd",
+      "album": "Animals (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Poles Apart",
+      "artist": "Pink Floyd",
+      "album": "The Division Bell",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Run Like Hell - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Stop - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Great Gig in the Sky",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side of the Moon",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Great Gig In The Sky - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Happiest Days Of Our Lives - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Show Must Go On - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Thin Ice - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Trial - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Time - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Us and Them",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side of the Moon",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Us And Them - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side Of The Moon (2011 Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Vera - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Welcome To The Machine - 2011 Remaster",
+      "artist": "Pink Floyd",
+      "album": "Wish You Were Here (Remastered Version)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Young Lust - 2011 Remastered Version",
+      "artist": "Pink Floyd",
+      "album": "The Wall (Remastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Oasis",
+      "artist": "SKRY",
+      "album": "Acid Pirate 02",
+      "sources": [
+        "Tekk"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Blue Sunday",
+      "artist": "The Doors",
+      "album": "Morrison Hotel",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Hello, I Love You",
+      "artist": "The Doors",
+      "album": "Waiting for the Sun",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "In the Eye of the Sun",
+      "artist": "The Doors",
+      "album": "Other Voices",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Indian Summer",
+      "artist": "The Doors",
+      "album": "Morrison Hotel",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Light My Fire",
+      "artist": "The Doors",
+      "album": "The Doors",
+      "sources": [
+        "%^*+"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Love Her Madly",
+      "artist": "The Doors",
+      "album": "L.A. Woman",
+      "sources": [
+        "%^*+"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Love Me Two Times - 2017 Remaster",
+      "artist": "The Doors",
+      "album": "Strange Days (50th Anniversary Expanded Edition) [2017 Remaster]",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "People Are Strange",
+      "artist": "The Doors",
+      "album": "Strange Days",
+      "sources": [
+        "%^*+"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Riders on the Storm",
+      "artist": "The Doors",
+      "album": "L.A. Woman",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Soul Kitchen",
+      "artist": "The Doors",
+      "album": "The Doors",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Tell All The People - 2019 Remaster",
+      "artist": "The Doors",
+      "album": "The Soft Parade (50th Anniversary Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The End - 2017 Remaster",
+      "artist": "The Doors",
+      "album": "The Doors (50th Anniversary Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Peking King and the New York Queen",
+      "artist": "The Doors",
+      "album": "Full Circle",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Touch Me",
+      "artist": "The Doors",
+      "album": "The Soft Parade",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Touch Me - 2019 Remaster",
+      "artist": "The Doors",
+      "album": "The Soft Parade (50th Anniversary Deluxe Edition)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "(I Can't Get No) Satisfaction - Mono",
+      "artist": "The Rolling Stones",
+      "album": "Out Of Our Heads",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Like A Rolling Stone - Live",
+      "artist": "The Rolling Stones",
+      "album": "Totally Stripped (Live)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Paint It, Black",
+      "artist": "The Rolling Stones",
+      "album": "Aftermath",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Paint It, Black - (Original Single Mono Version)",
+      "artist": "The Rolling Stones",
+      "album": "Singles 1965-1967",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Start Me Up - Remastered 2009",
+      "artist": "The Rolling Stones",
+      "album": "Tattoo You (2009 Re-Mastered)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Wild Horses - 2009 Mix",
+      "artist": "The Rolling Stones",
+      "album": "Sticky Fingers (Remastered)",
+      "sources": [
+        "%^*+"
+      ],
+      "count": 1
+    }
+  ]
+}

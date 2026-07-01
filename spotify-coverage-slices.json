@@ -1,0 +1,3831 @@
+{
+  "playlistsOnly": {
+    "unique": 3864,
+    "exact": 1804,
+    "titleOnly": 45,
+    "uncovered": 2015,
+    "pct": 47.851966873706004,
+    "top": [
+      {
+        "title": "Luna - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 7,
+        "count": 7,
+        "sources": [
+          "%^*+",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "YO",
+          "Г",
+          "fuck..",
+          "…"
+        ]
+      },
+      {
+        "title": "Every Breath You Take",
+        "artist": "The Police",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "%^*+",
+          "My playlist #80",
+          "SORRY SORRY SPRRYYY",
+          "Mmmmmm",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Today - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "(:)",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "na klar",
+          "fuck..",
+          "…"
+        ]
+      },
+      {
+        "title": "Scott Pilgrim vs. My GPA",
+        "artist": "Mom Jeans.",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Midwest",
+          "Bbbnnnllö",
+          "YO",
+          "Г",
+          "Calm Midwest"
+        ]
+      },
+      {
+        "title": "Femme Fatale",
+        "artist": "The Velvet Underground, Nico",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "%^*+",
+          "YO",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Mayonaise - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "(:)",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "Rockin n rollin",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Pennies - Remastered 2012",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "Г",
+          "Ґems",
+          "…"
+        ]
+      },
+      {
+        "title": "Uptown Girl",
+        "artist": "Billy Joel",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Fl",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Dirty Work",
+        "artist": "Steely Dan",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Whaaaa",
+          "na klar"
+        ]
+      },
+      {
+        "title": "99 Luftballons",
+        "artist": "Nena",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Rockin n rollin",
+          "less goo"
+        ]
+      },
+      {
+        "title": "Iris",
+        "artist": "The Goo Goo Dolls",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "fuck..",
+          "m's top tracks",
+          "…",
+          "Tunes",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Everlong",
+        "artist": "Foo Fighters",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "m's top tracks",
+          "…",
+          "Tunes",
+          "12",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Safe In Your Skin",
+        "artist": "Title Fight",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Midwest",
+          "Bbbnnnllö",
+          "YO",
+          "Г"
+        ]
+      },
+      {
+        "title": "Space Jam",
+        "artist": "Beds",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Midwest",
+          "Г",
+          "fuck..",
+          "Calm Midwest"
+        ]
+      },
+      {
+        "title": "Don't Stop Believin' (2022 Remaster)",
+        "artist": "Journey",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "%^*+",
+          "Fl",
+          "Rockin n rollin",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Food for the Soul",
+        "artist": "it's murph",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Holy house",
+          "Qwe",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "Chucks",
+        "artist": "Mi Casa",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Holy house",
+          "Chillout",
+          "Turn it up",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Sleepless",
+        "artist": "AVAION, PaulWetz, Nu Aspect, YUMA",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Holy house",
+          "Qwe",
+          "Gym",
+          "Chillout"
+        ]
+      },
+      {
+        "title": "Landslide - Remastered",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "(:)",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "1979 - Remastered 2012",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "(:)",
+          "Bbbnnnllö",
+          "fuck..",
+          "…"
+        ]
+      },
+      {
+        "title": "Disarm - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "(:)",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Agony",
+        "artist": "Yung Lean",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Bbbnnnllö",
+          "waves type playlist",
+          "m's top tracks",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Cupid De Locke - Remastered 2012",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "fuck..",
+          "…"
+        ]
+      },
+      {
+        "title": "9",
+        "artist": "Dean Blunt, Panda Bear",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Bbbnnnllö",
+          "YO",
+          "Г",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Fade Into You",
+        "artist": "Mazzy Star",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "SORRY SORRY SPRRYYY",
+          "CL",
+          "…",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "The Boy",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "SORRY SORRY SPRRYYY",
+          "Г",
+          "Mmmmmm",
+          "Ґems"
+        ]
+      },
+      {
+        "title": "Break",
+        "artist": "alex_g_offline",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "YO",
+          "Г",
+          "Calm Midwest",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Undercover Martyn",
+        "artist": "Two Door Cinema Club",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Fl",
+          "less goo",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "What You Know",
+        "artist": "Two Door Cinema Club",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Fl",
+          "less goo",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Brandy (You're a Fine Girl)",
+        "artist": "Looking Glass",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Fl",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "My Sweet Lord - 2014 Remaster",
+        "artist": "George Harrison",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "na klar"
+        ]
+      },
+      {
+        "title": "A Horse with No Name",
+        "artist": "America, George Martin",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Right Down the Line",
+        "artist": "Gerry Rafferty",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "na klar"
+        ]
+      },
+      {
+        "title": "Don't Dream It's Over",
+        "artist": "Crowded House",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "It Ain't Over 'Til It's Over",
+        "artist": "Lenny Kravitz",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "na klar"
+        ]
+      },
+      {
+        "title": "Lazy Lady",
+        "artist": "Charles Pasi",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Abend chillen"
+        ]
+      },
+      {
+        "title": "To Be Human",
+        "artist": "Leslie Clio",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Abend chillen"
+        ]
+      },
+      {
+        "title": "The Wishing Well",
+        "artist": "Ovlov",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Г"
+        ]
+      },
+      {
+        "title": "I Didn't Understand",
+        "artist": "Elliott Smith",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Г"
+        ]
+      },
+      {
+        "title": "Hummer - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "марян × talia",
+          "Г",
+          "Rockin n rollin",
+          "Ґems"
+        ]
+      }
+    ]
+  },
+  "likedOnly": {
+    "unique": 3679,
+    "exact": 1421,
+    "titleOnly": 63,
+    "uncovered": 2195,
+    "pct": 40.3370481108997,
+    "top": [
+      {
+        "title": "What Kind of Love",
+        "artist": "Childish Gambino",
+        "sourceCount": 1,
+        "count": 4,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Neon Kitchen",
+        "artist": "Devon Hendryx",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Drum and Bass and Waltz - Just Raw",
+        "artist": "Aloboi",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Black Hole Sun",
+        "artist": "Soundgarden",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Корень имбиря - Remastered",
+        "artist": "Buerak",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "This Could Be Us",
+        "artist": "Rune Bagge",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "In the Grass",
+        "artist": "The Flashbulb",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "A Real Hero",
+        "artist": "Electric Youth, College",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Incinerate",
+        "artist": "Sonic Youth",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Crazy Train",
+        "artist": "Ozzy Osbourne",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Do You Remember",
+        "artist": "More Than Life",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Sexy Bitch (feat. Akon)",
+        "artist": "David Guetta, Akon",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Don't You Worry About Me",
+        "artist": "Bad Boy Chiller Crew",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Rocket Man (I Think It's Going To Be A Long, Long Time)",
+        "artist": "Elton John",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Bullet With Butterfly Wings - Remastered 2012",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "white tee",
+        "artist": "Lil Peep, Lil Tracy",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "If I Had A Gun…",
+        "artist": "Noel Gallagher's High Flying Birds",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Baba Yaga",
+        "artist": "Slaughter to Prevail",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Pick Me up (On Your Way Down)",
+        "artist": "GG Allin",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Bliss",
+        "artist": "Klsr",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Oh My God",
+        "artist": "Fog Lake",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Geek U.S.A. - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Hummer - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Resonance",
+        "artist": "Home",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Halt die Fresse ich will saufen",
+        "artist": "Oidorno",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Ginseng Strip 2002",
+        "artist": "Yung Lean",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Please Please Please Let Me Get What I Want - 2005 Remaster",
+        "artist": "Deftones",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Спектакль окончен",
+        "artist": "Chernikovskaya Hata",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Leray",
+        "artist": "Trippie Redd",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Beach Baby",
+        "artist": "Bon Iver",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "town",
+        "artist": "mage tears",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Poison Tree",
+        "artist": "Grouper",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "J'adore",
+        "artist": "jamesjamesjames",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Instrumental 3",
+        "artist": "Florist",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Chandelier",
+        "artist": "Will Paquin",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Sunflower - Spider-Man: Into the Spider-Verse",
+        "artist": "Post Malone, Swae Lee",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Dream, Ivory",
+        "artist": "Dream, Ivory",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Stay",
+        "artist": "Rihanna, Mikky Ekko",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Never Meant",
+        "artist": "American Football",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      },
+      {
+        "title": "Telephones",
+        "artist": "Vacations",
+        "sourceCount": 1,
+        "count": 2,
+        "sources": [
+          "Liked Songs"
+        ]
+      }
+    ]
+  },
+  "all": {
+    "oldTotal": 9368,
+    "oldUnique": 5811,
+    "bucketEntries": 2607,
+    "bucketUnique": 2380,
+    "coveredExact": 2380,
+    "coveredTitleOnly": 85,
+    "uncoveredUnique": 3346,
+    "coveragePct": 42.41954913095853,
+    "overlapTracks": 218,
+    "topOverlapPairs": [
+      [
+        "Classic riff rock / guitar mythology (pattern) || Shower / warm / obvious replay (pattern)",
+        97
+      ],
+      [
+        "Rage / opium / gym / turn-up (pattern) || Rap canon / main-character hip-hop (pattern)",
+        44
+      ],
+      [
+        "Frank / Montell / wounded R&B (pattern) || Rap canon / main-character hip-hop (pattern)",
+        21
+      ],
+      [
+        "Ambient / liminal / sleepwalking (pattern) || IDM / braindance / clean-machine (pattern)",
+        19
+      ],
+      [
+        "Frank / Montell / wounded R&B (pattern) || Rage / opium / gym / turn-up (pattern)",
+        6
+      ],
+      [
+        "Rap canon / main-character hip-hop (pattern) || Shower / warm / obvious replay (pattern)",
+        6
+      ],
+      [
+        "Classic riff rock / guitar mythology (pattern) || Rap canon / main-character hip-hop (pattern)",
+        6
+      ],
+      [
+        "Post-Soviet melancholy rock (pattern) || Rap canon / main-character hip-hop (pattern)",
+        5
+      ],
+      [
+        "IDM / braindance / clean-machine (pattern) || Rap canon / main-character hip-hop (pattern)",
+        4
+      ],
+      [
+        "Jazz-house / soft groove (pattern) || Rap canon / main-character hip-hop (pattern)",
+        4
+      ],
+      [
+        "Midwest / slacker / bedroom guitar (pattern) || Rap canon / main-character hip-hop (pattern)",
+        3
+      ],
+      [
+        "Ambient / liminal / sleepwalking (pattern) || Sad art-rock / beautiful collapse (pattern)",
+        2
+      ],
+      [
+        "Jazz-house / soft groove (pattern) || Post-Soviet melancholy rock (pattern)",
+        2
+      ],
+      [
+        "Rap canon / main-character hip-hop (pattern) || Sad art-rock / beautiful collapse (pattern)",
+        2
+      ],
+      [
+        "Rage / opium / gym / turn-up (pattern) || Shower / warm / obvious replay (pattern)",
+        2
+      ],
+      [
+        "Hard tekno / tribe / freeparty (pattern) || Shower / warm / obvious replay (pattern)",
+        1
+      ],
+      [
+        "Hard tekno / tribe / freeparty (pattern) || Rage / opium / gym / turn-up (pattern)",
+        1
+      ],
+      [
+        "Hard tekno / tribe / freeparty (pattern) || Rap canon / main-character hip-hop (pattern)",
+        1
+      ],
+      [
+        "Jazz-house / soft groove (pattern) || Rage / opium / gym / turn-up (pattern)",
+        1
+      ],
+      [
+        "Frank / Montell / wounded R&B (pattern) || Post-Soviet melancholy rock (pattern)",
+        1
+      ],
+      [
+        "Midwest / slacker / bedroom guitar (pattern) || Shower / warm / obvious replay (pattern)",
+        1
+      ],
+      [
+        "Post-Soviet melancholy rock (pattern) || Rage / opium / gym / turn-up (pattern)",
+        1
+      ]
+    ],
+    "buckets": [
+      {
+        "name": "Hard tekno / tribe / freeparty (pattern)",
+        "count": 280
+      },
+      {
+        "name": "IDM / braindance / clean-machine (pattern)",
+        "count": 104
+      },
+      {
+        "name": "Ambient / liminal / sleepwalking (pattern)",
+        "count": 76
+      },
+      {
+        "name": "Jazz-house / soft groove (pattern)",
+        "count": 71
+      },
+      {
+        "name": "Frank / Montell / wounded R&B (pattern)",
+        "count": 159
+      },
+      {
+        "name": "Sad art-rock / beautiful collapse (pattern)",
+        "count": 137
+      },
+      {
+        "name": "Midwest / slacker / bedroom guitar (pattern)",
+        "count": 117
+      },
+      {
+        "name": "Classic riff rock / guitar mythology (pattern)",
+        "count": 362
+      },
+      {
+        "name": "Rap canon / main-character hip-hop (pattern)",
+        "count": 747
+      },
+      {
+        "name": "Rage / opium / gym / turn-up (pattern)",
+        "count": 256
+      },
+      {
+        "name": "Shower / warm / obvious replay (pattern)",
+        "count": 209
+      },
+      {
+        "name": "Post-Soviet melancholy rock (pattern)",
+        "count": 89
+      }
+    ],
+    "leastCoveredPlaylists": [
+      {
+        "name": "No enemies",
+        "total": 37,
+        "covered": 0,
+        "fuzzy": 0,
+        "uncovered": 37,
+        "coveredPct": 0,
+        "usedAsSource": 0,
+        "examples": [
+          "Jacob and the Stone — Emile Mosseri",
+          "Ocarina Of Time Theme (From \"The Legend Of Zelda\") — Gaming World",
+          "Gymnopédie No. 1 — Erik Satie, Philippe Entremont",
+          "Prelude 1 (Recomposed) — Sebastian Thomas",
+          "Mistral 1 — Sebastian Thomas",
+          "Mistral 2 — Sebastian Thomas",
+          "Carnival of the Animals: The Swan - Arranged for Cello and Harp by Miriam Keogh — Camille Saint-Saëns, None, Sebastian Comberti, Miriam Keogh",
+          "The Bug Collector — Haley Heynderickx"
+        ]
+      },
+      {
+        "name": "Abend chillen",
+        "total": 9,
+        "covered": 0,
+        "fuzzy": 0,
+        "uncovered": 9,
+        "coveredPct": 0,
+        "usedAsSource": 0,
+        "examples": [
+          "Life — Jehro",
+          "Just Like I Can't — Ayọ",
+          "Moonshine — Katie Melua",
+          "California Dreamin — Tiwayo",
+          "Lazy Lady — Charles Pasi",
+          "The One I Love Is Gone — Katie Melua",
+          "To Be Human — Leslie Clio",
+          "Voilà — Barbara Pravi"
+        ]
+      },
+      {
+        "name": "My playlist #73",
+        "total": 4,
+        "covered": 0,
+        "fuzzy": 0,
+        "uncovered": 4,
+        "coveredPct": 0,
+        "usedAsSource": 0,
+        "examples": [
+          "Do You Remember — More Than Life",
+          "Kneipenterroristen 2.0 — KneipenTerroristen",
+          "Permanent as Your Errors — Train Breaks Down",
+          "You Don't Know What You Did! (Dead Butterflies) — Dead Butterflies, Aorta"
+        ]
+      },
+      {
+        "name": "DT",
+        "total": 1,
+        "covered": 0,
+        "fuzzy": 0,
+        "uncovered": 1,
+        "coveredPct": 0,
+        "usedAsSource": 0,
+        "examples": [
+          "Intoxicated — Doruksen"
+        ]
+      },
+      {
+        "name": "isn't it crazy to think about",
+        "total": 1,
+        "covered": 0,
+        "fuzzy": 0,
+        "uncovered": 1,
+        "coveredPct": 0,
+        "usedAsSource": 0,
+        "examples": [
+          "isn't it crazy to think about — jxyytf.mp3"
+        ]
+      },
+      {
+        "name": "day in roma",
+        "total": 36,
+        "covered": 0,
+        "fuzzy": 1,
+        "uncovered": 35,
+        "coveredPct": 2.7777777777777777,
+        "usedAsSource": 0,
+        "examples": [
+          "On An Evening In Roma (Sott'er Celo De Roma) — Dean Martin",
+          "In The Mood — Glenn Miller",
+          "Beyond the Sea — Bobby Darin",
+          "Moonlight Serenade - 2005 Remastered Version — Glenn Miller",
+          "Dream A Little Dream Of Me - Single Version — Ella Fitzgerald, Louis Armstrong",
+          "Again (with The Mellomen) — Doris Day, The Mellomen",
+          "Ain't That A Kick In The Head — Dean Martin",
+          "I'm Confessin' (That I Love You) — Lady Luck Trio"
+        ]
+      },
+      {
+        "name": "springspringspring",
+        "total": 36,
+        "covered": 1,
+        "fuzzy": 1,
+        "uncovered": 34,
+        "coveredPct": 5.555555555555555,
+        "usedAsSource": 1,
+        "examples": [
+          "It's Only Right — Wallows",
+          "SANDUSKY — Noah Sties",
+          "Trust Fall — Wallows",
+          "Especially You — Wallows",
+          "Milk — The 1975",
+          "Just Like a Movie — Wallows",
+          "Hard to Believe — Wallows",
+          "Boy Friday — Rebounder"
+        ]
+      },
+      {
+        "name": "jazzombinator",
+        "total": 15,
+        "covered": 1,
+        "fuzzy": 0,
+        "uncovered": 14,
+        "coveredPct": 6.666666666666667,
+        "usedAsSource": 1,
+        "examples": [
+          "Nothing Personal — Michael Brecker",
+          "Doxy — Phil Woods",
+          "If I Had You — Kenny Burrell",
+          "Blues Stride — McCoy Tyner Trio",
+          "Summer Montage / Madeline — Justin Hurwitz",
+          "Blue Ballad — Phil Woods, Space Jazz Trio",
+          "Lazy Bird — John Coltrane",
+          "My One And Only Love — John Coltrane, Johnny Hartman"
+        ]
+      },
+      {
+        "name": "less goo",
+        "total": 50,
+        "covered": 6,
+        "fuzzy": 0,
+        "uncovered": 44,
+        "coveredPct": 12,
+        "usedAsSource": 6,
+        "examples": [
+          "Safe And Sound — Capital Cities",
+          "Dizzy — The Goo Goo Dolls",
+          "Brazil — Declan McKenna",
+          "Midnight City — M83",
+          "Clocks — Coldplay",
+          "Blame (feat. John Newman) — Calvin Harris, John Newman",
+          "Sweet but Psycho — Ava Max",
+          "Party In The U.S.A. — Miley Cyrus"
+        ]
+      },
+      {
+        "name": "Whaaaa",
+        "total": 25,
+        "covered": 2,
+        "fuzzy": 1,
+        "uncovered": 22,
+        "coveredPct": 12,
+        "usedAsSource": 3,
+        "examples": [
+          "Oceanic — Pulsar One",
+          "Poison — Asymmetric",
+          "Division — Nucleus, Paradox",
+          "Rain On Me - Original Mix — Theory",
+          "Juno Dawn — Ink, Gremlinz",
+          "Origins - Original Mix — B-Key, Smyla",
+          "Sun Stars - Instrumental Mix — Artemis",
+          "I Can't Stop — Lemon D"
+        ]
+      },
+      {
+        "name": "Jawoll junge",
+        "total": 32,
+        "covered": 4,
+        "fuzzy": 0,
+        "uncovered": 28,
+        "coveredPct": 12.5,
+        "usedAsSource": 6,
+        "examples": [
+          "When I Rock - Thomas Schumacher Remix — Thomas Schumacher",
+          "How You Want It — Rune Bagge",
+          "Don't Go — Puzique",
+          "A Love Story — FLUCC",
+          "Shooting Stars And Meteorites - PLEXØS Remix — FLUCC, PLEXØS",
+          "Digging For The World — Karashnikov",
+          "Arkhangelsk Nightmare — Clouds",
+          "This Could Be Us — Rune Bagge"
+        ]
+      },
+      {
+        "name": "Midwest",
+        "total": 46,
+        "covered": 6,
+        "fuzzy": 1,
+        "uncovered": 39,
+        "coveredPct": 15.217391304347828,
+        "usedAsSource": 6,
+        "examples": [
+          "Never Meant — American Football",
+          "The Title Track — Origami Angel",
+          "Green Call Her Sims — Marietta",
+          "You Are the Answer to My Security Question — Cloud District",
+          "Minnesota? Wild. — Tiny Voices",
+          "Gin Rickey — Raccoon Junior",
+          "Emotional Flatlining — Zero To Hero",
+          "Goodnight Dad I Love You — Wishing"
+        ]
+      },
+      {
+        "name": "Chillout",
+        "total": 355,
+        "covered": 53,
+        "fuzzy": 2,
+        "uncovered": 300,
+        "coveredPct": 15.492957746478872,
+        "usedAsSource": 58,
+        "examples": [
+          "Lost - Edit — Tinlicker, Run Rivers",
+          "CURE - Original Mix — Tube & Berger, Alegant",
+          "Summer & Wine — Vacay Club",
+          "Versailles (Hold) - Edit — Christian Löffler",
+          "Hold Me To The Light — KAS:ST, Be No Rain",
+          "Shooting Arrows - Matt Fax Remix — Lane 8, POLIÇA, Matt Fax",
+          "Hide U - Tinlicker Remix — Kosheen, Tinlicker",
+          "Infinity (feat. Marie Angerer) — Fejká, Marie Angerer"
+        ]
+      },
+      {
+        "name": "IVE BEEN MISSING OUT",
+        "total": 19,
+        "covered": 3,
+        "fuzzy": 0,
+        "uncovered": 16,
+        "coveredPct": 15.789473684210526,
+        "usedAsSource": 3,
+        "examples": [
+          "Freefall — Camel",
+          "Supertwister — Camel",
+          "Lady Fantasy - Medley — Camel",
+          "Desolation Valley / Waves — Nektar",
+          "Aspirations — Gentle Giant",
+          "The Advent Of Panurge — Gentle Giant",
+          "トーキョーレギー — Masayoshi Takanaka",
+          "Theme One - Original Mix — Van Der Graaf Generator"
+        ]
+      },
+      {
+        "name": "Qwe",
+        "total": 50,
+        "covered": 9,
+        "fuzzy": 1,
+        "uncovered": 40,
+        "coveredPct": 20,
+        "usedAsSource": 10,
+        "examples": [
+          "Paperplanes — BUNT.",
+          "Food for the Soul — it's murph",
+          "Heal Me - Biscits Remix — FARR, Biscits",
+          "Give It To Me - Full Vocal Mix — Matt Sassari",
+          "Weightless - jamesjamesjames Remix — Ben Böhmer, Panama, jamesjamesjames",
+          "J'adore — jamesjamesjames",
+          "Sleepless — AVAION, PaulWetz, Nu Aspect, YUMA",
+          "Let Go — Duskus"
+        ]
+      },
+      {
+        "name": "Fl",
+        "total": 50,
+        "covered": 11,
+        "fuzzy": 0,
+        "uncovered": 39,
+        "coveredPct": 22,
+        "usedAsSource": 12,
+        "examples": [
+          "Undercover Martyn — Two Door Cinema Club",
+          "The Thrill — Wiz Khalifa, Empire Of The Sun",
+          "Walking On A Dream — Empire Of The Sun",
+          "I'm Still Standing — Elton John",
+          "Babydoll — Dominic Fike",
+          "Ho Hey — The Lumineers",
+          "Kilby Girl — The Backseat Lovers",
+          "The Spins — Mac Miller, Empire Of The Sun"
+        ]
+      },
+      {
+        "name": "Afro house dump",
+        "total": 113,
+        "covered": 22,
+        "fuzzy": 4,
+        "uncovered": 87,
+        "coveredPct": 23.008849557522122,
+        "usedAsSource": 24,
+        "examples": [
+          "Orme — Jaska",
+          "Lately — Andrea Bianchini",
+          "Makalu — Jaska",
+          "Miss You — Andrea Bianchini",
+          "Mwaki - &friends Remix — Zerb, &friends, Sofiya Nzau",
+          "Beso (Fruta Fresca) — Wakyin, Carlos Vives",
+          "You & Me - Rivo Remix — Disclosure, Rivo, Eliza Doolittle",
+          "Famax — RAFFA GUIDO"
+        ]
+      },
+      {
+        "name": "Turn it up",
+        "total": 146,
+        "covered": 30,
+        "fuzzy": 4,
+        "uncovered": 112,
+        "coveredPct": 23.28767123287671,
+        "usedAsSource": 31,
+        "examples": [
+          "Music Sounds Better With You — Stardust, Benjamin Diamond, Alan Braxe, Thomas Bangalter",
+          "Don't You Worry Child - Radio Edit — Swedish House Mafia, John Martin",
+          "Levels - Radio Edit — Avicii",
+          "Dancin - Krono Remix — Aaron Smith, Luvli, Krono",
+          "Moth To A Flame (with The Weeknd) — Swedish House Mafia, The Weeknd",
+          "I'm in Love with You — Return Of The Jaded, MELLY OHH",
+          "Sweater Weather - Remix — Öwnboss, Double MZK",
+          "Pepas - David Guetta Remix - Radio Edit — Farruko, David Guetta"
+        ]
+      },
+      {
+        "name": "na klar",
+        "total": 84,
+        "covered": 24,
+        "fuzzy": 2,
+        "uncovered": 58,
+        "coveredPct": 30.952380952380953,
+        "usedAsSource": 32,
+        "examples": [
+          "Genesis — Grimes",
+          "A Ray of Sunshine — Wham!",
+          "Human Nature — Michael Jackson",
+          "Take It Easy - 2013 Remaster — Eagles",
+          "It Ain't Over 'Til It's Over — Lenny Kravitz",
+          "Easy Lover — Philip Bailey, Phil Collins",
+          "Do It Again — Steely Dan",
+          "Rock the Casbah - Remastered — The Clash"
+        ]
+      },
+      {
+        "name": "Lowercase",
+        "total": 6,
+        "covered": 2,
+        "fuzzy": 0,
+        "uncovered": 4,
+        "coveredPct": 33.33333333333333,
+        "usedAsSource": 3,
+        "examples": [
+          "stars of ice IV — Steve Roden",
+          "Enchanter — Glint",
+          "Dimensions — Arcade Fire, Owen Pallett",
+          "Agape — Nicholas Britell"
+        ]
+      },
+      {
+        "name": "Mmmmmm",
+        "total": 70,
+        "covered": 24,
+        "fuzzy": 0,
+        "uncovered": 46,
+        "coveredPct": 34.285714285714285,
+        "usedAsSource": 28,
+        "examples": [
+          "Jump - 2015 Remaster — Van Halen",
+          "Maneater — Daryl Hall & John Oates",
+          "Your Love — The Outfield",
+          "Dust in the Wind — Kansas",
+          "Time After Time — Cyndi Lauper",
+          "Every Breath You Take — The Police",
+          "Eruption - 2015 Remaster — Van Halen",
+          "Don't Dream It's Over — Crowded House"
+        ]
+      },
+      {
+        "name": "Calm Midwest",
+        "total": 40,
+        "covered": 13,
+        "fuzzy": 1,
+        "uncovered": 26,
+        "coveredPct": 35,
+        "usedAsSource": 13,
+        "examples": [
+          "Space Jam — Beds",
+          "Dunking on Patrick Ewing — Beds",
+          "letting go — i don't like mirrors",
+          "july — i don't like mirrors",
+          "night mom — i don't like mirrors",
+          "i miss your warm hands — i don't like mirrors",
+          "Goodnight Dad I Love You — Wishing",
+          "I Wait for You — alex_g_offline"
+        ]
+      },
+      {
+        "name": "Holy house",
+        "total": 84,
+        "covered": 28,
+        "fuzzy": 3,
+        "uncovered": 53,
+        "coveredPct": 36.904761904761905,
+        "usedAsSource": 30,
+        "examples": [
+          "Electricity — DubVision, Otto Knows, Alex Aris",
+          "FORMATIONS — Mild Minds",
+          "Restless Bones — Disco Lines",
+          "Amman — Emmit Fenn",
+          "Food for the Soul — it's murph",
+          "Let Go — Duskus",
+          "Chucks — Mi Casa",
+          "Howl — Elderbrook, Tourist"
+        ]
+      },
+      {
+        "name": "…",
+        "total": 82,
+        "covered": 30,
+        "fuzzy": 1,
+        "uncovered": 51,
+        "coveredPct": 37.80487804878049,
+        "usedAsSource": 31,
+        "examples": [
+          "Everlong — Foo Fighters",
+          "Every Breath You Take — The Police",
+          "Dakota — Stereophonics",
+          "TIMEZONE — Måneskin",
+          "THE LONELIEST — Måneskin",
+          "IL DONO DELLA VITA — Måneskin",
+          "Torna a casa — Måneskin",
+          "Sandy Kim — Acid Ghost"
+        ]
+      },
+      {
+        "name": "Rockin n rollin",
+        "total": 100,
+        "covered": 39,
+        "fuzzy": 1,
+        "uncovered": 60,
+        "coveredPct": 40,
+        "usedAsSource": 41,
+        "examples": [
+          "Das ist mein Leben — Böhse Onkelz",
+          "I Love Rock 'N Roll — Joan Jett & the Blackhearts",
+          "Don't Stop Believin' (2022 Remaster) — Journey",
+          "Welcome To The Jungle — Guns N' Roses",
+          "You Give Love A Bad Name — Bon Jovi",
+          "Paradise City — Guns N' Roses",
+          "I Wanna Rock — Twisted Sister",
+          "Live And Let Die — Guns N' Roses"
+        ]
+      }
+    ],
+    "mostCoveredPlaylists": [
+      {
+        "name": "SP",
+        "total": 1,
+        "covered": 0,
+        "fuzzy": 1,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 0,
+        "examples": []
+      },
+      {
+        "name": "Frank Ocean - nostalgia, ULTRA",
+        "total": 14,
+        "covered": 14,
+        "fuzzy": 0,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 15,
+        "examples": []
+      },
+      {
+        "name": "<2",
+        "total": 16,
+        "covered": 16,
+        "fuzzy": 0,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 16,
+        "examples": []
+      },
+      {
+        "name": "Frank Ocean - Endless",
+        "total": 19,
+        "covered": 19,
+        "fuzzy": 0,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 19,
+        "examples": []
+      },
+      {
+        "name": "CBC_00",
+        "total": 28,
+        "covered": 28,
+        "fuzzy": 0,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 31,
+        "examples": []
+      },
+      {
+        "name": "Montell",
+        "total": 39,
+        "covered": 39,
+        "fuzzy": 0,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 39,
+        "examples": []
+      },
+      {
+        "name": "radioh",
+        "total": 43,
+        "covered": 43,
+        "fuzzy": 0,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 43,
+        "examples": []
+      },
+      {
+        "name": "Tralalelo Tralala",
+        "total": 103,
+        "covered": 103,
+        "fuzzy": 0,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 128,
+        "examples": []
+      },
+      {
+        "name": "AC FUCKING DC",
+        "total": 105,
+        "covered": 105,
+        "fuzzy": 0,
+        "uncovered": 0,
+        "coveredPct": 100,
+        "usedAsSource": 105,
+        "examples": []
+      },
+      {
+        "name": "K¥_00",
+        "total": 133,
+        "covered": 131,
+        "fuzzy": 1,
+        "uncovered": 1,
+        "coveredPct": 99.24812030075188,
+        "usedAsSource": 136,
+        "examples": [
+          "OXYGEN — Sean Leon"
+        ]
+      },
+      {
+        "name": "Frank Montell",
+        "total": 67,
+        "covered": 66,
+        "fuzzy": 0,
+        "uncovered": 1,
+        "coveredPct": 98.50746268656717,
+        "usedAsSource": 67,
+        "examples": [
+          "Wiseman — unshackled"
+        ]
+      },
+      {
+        "name": "Kanye ye",
+        "total": 115,
+        "covered": 112,
+        "fuzzy": 1,
+        "uncovered": 2,
+        "coveredPct": 98.26086956521739,
+        "usedAsSource": 114,
+        "examples": [
+          "OXYGEN — Sean Leon",
+          "I Don't Like (Remix) — Chief Keef"
+        ]
+      },
+      {
+        "name": "frank and chill",
+        "total": 47,
+        "covered": 46,
+        "fuzzy": 0,
+        "uncovered": 1,
+        "coveredPct": 97.87234042553192,
+        "usedAsSource": 49,
+        "examples": [
+          "Ethereal Gaze — The Most Wanted"
+        ]
+      },
+      {
+        "name": "boB",
+        "total": 35,
+        "covered": 34,
+        "fuzzy": 0,
+        "uncovered": 1,
+        "coveredPct": 97.14285714285714,
+        "usedAsSource": 35,
+        "examples": [
+          "Folsom Prison Blues - Live at Folsom State Prison, Folsom, CA - January 1968 — Johnny Cash"
+        ]
+      },
+      {
+        "name": "Flaw",
+        "total": 32,
+        "covered": 31,
+        "fuzzy": 0,
+        "uncovered": 1,
+        "coveredPct": 96.875,
+        "usedAsSource": 31,
+        "examples": [
+          "foil — Passion Mango"
+        ]
+      },
+      {
+        "name": "!BERLIOZ!",
+        "total": 20,
+        "covered": 19,
+        "fuzzy": 0,
+        "uncovered": 1,
+        "coveredPct": 95,
+        "usedAsSource": 19,
+        "examples": [
+          "Southwood — Harrison"
+        ]
+      },
+      {
+        "name": "___",
+        "total": 27,
+        "covered": 25,
+        "fuzzy": 0,
+        "uncovered": 2,
+        "coveredPct": 92.5925925925926,
+        "usedAsSource": 25,
+        "examples": [
+          "ONE CALL — Rich Amiri",
+          "where's my head at _ — Basement Jaxx, 100 gecs"
+        ]
+      },
+      {
+        "name": "Opium",
+        "total": 39,
+        "covered": 36,
+        "fuzzy": 0,
+        "uncovered": 3,
+        "coveredPct": 92.3076923076923,
+        "usedAsSource": 36,
+        "examples": [
+          "Uh Uh Uhh — $mokey $tallone, 5$tAR$YNDICATE",
+          "ONE CALL — Rich Amiri",
+          "BLICK SUM — void"
+        ]
+      },
+      {
+        "name": "waves type playlist",
+        "total": 33,
+        "covered": 26,
+        "fuzzy": 0,
+        "uncovered": 7,
+        "coveredPct": 78.78787878787878,
+        "usedAsSource": 26,
+        "examples": [
+          "Be Above It - Live — Tame Impala",
+          "Linger — The Cranberries",
+          "Agony — Yung Lean",
+          "Dimensions — Arcade Fire, Owen Pallett",
+          "green to blue — daniel.mp3",
+          "With A Spirit — 009 Sound System",
+          "Boyfriend — Big Time Rush"
+        ]
+      },
+      {
+        "name": "12",
+        "total": 13,
+        "covered": 10,
+        "fuzzy": 0,
+        "uncovered": 3,
+        "coveredPct": 76.92307692307693,
+        "usedAsSource": 10,
+        "examples": [
+          "A Real Hero — Electric Youth, College",
+          "Everlong — Foo Fighters",
+          "Up In Arms — Foo Fighters"
+        ]
+      }
+    ],
+    "uncoveredTop": [
+      {
+        "title": "Luna - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 8,
+        "count": 8,
+        "sources": [
+          "Liked Songs",
+          "%^*+",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "YO",
+          "Г",
+          "fuck..",
+          "…"
+        ]
+      },
+      {
+        "title": "Every Breath You Take",
+        "artist": "The Police",
+        "sourceCount": 7,
+        "count": 7,
+        "sources": [
+          "Liked Songs",
+          "%^*+",
+          "My playlist #80",
+          "SORRY SORRY SPRRYYY",
+          "Mmmmmm",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Scott Pilgrim vs. My GPA",
+        "artist": "Mom Jeans.",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "Midwest",
+          "Bbbnnnllö",
+          "YO",
+          "Г",
+          "Calm Midwest"
+        ]
+      },
+      {
+        "title": "Femme Fatale",
+        "artist": "The Velvet Underground, Nico",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "%^*+",
+          "YO",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "99 Luftballons",
+        "artist": "Nena",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Rockin n rollin",
+          "less goo"
+        ]
+      },
+      {
+        "title": "Mayonaise - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "(:)",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "Rockin n rollin",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Uptown Girl",
+        "artist": "Billy Joel",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "Fl",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Pennies - Remastered 2012",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "Г",
+          "Ґems",
+          "…"
+        ]
+      },
+      {
+        "title": "Iris",
+        "artist": "The Goo Goo Dolls",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "fuck..",
+          "m's top tracks",
+          "…",
+          "Tunes",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Everlong",
+        "artist": "Foo Fighters",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "m's top tracks",
+          "…",
+          "Tunes",
+          "12",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Today - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 6,
+        "count": 6,
+        "sources": [
+          "(:)",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "na klar",
+          "fuck..",
+          "…"
+        ]
+      },
+      {
+        "title": "A Real Hero",
+        "artist": "Electric Youth, College",
+        "sourceCount": 5,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "m's top tracks",
+          "Tunes",
+          "12",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Hummer - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 5,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "марян × talia",
+          "Г",
+          "Rockin n rollin",
+          "Ґems"
+        ]
+      },
+      {
+        "title": "Agony",
+        "artist": "Yung Lean",
+        "sourceCount": 5,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "Bbbnnnllö",
+          "waves type playlist",
+          "m's top tracks",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Brandy (You're a Fine Girl)",
+        "artist": "Looking Glass",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Fl",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "9",
+        "artist": "Dean Blunt, Panda Bear",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Bbbnnnllö",
+          "YO",
+          "Г",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "I Didn't Understand",
+        "artist": "Elliott Smith",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Г"
+        ]
+      },
+      {
+        "title": "The Wishing Well",
+        "artist": "Ovlov",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Г"
+        ]
+      },
+      {
+        "title": "To Be Human",
+        "artist": "Leslie Clio",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Abend chillen"
+        ]
+      },
+      {
+        "title": "Lazy Lady",
+        "artist": "Charles Pasi",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Abend chillen"
+        ]
+      },
+      {
+        "title": "Don't Stop Believin' (2022 Remaster)",
+        "artist": "Journey",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "%^*+",
+          "Fl",
+          "Rockin n rollin",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Disarm - 2011 Remaster",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "(:)",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "The Boy",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "SORRY SORRY SPRRYYY",
+          "Г",
+          "Mmmmmm",
+          "Ґems"
+        ]
+      },
+      {
+        "title": "Landslide - Remastered",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "(:)",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "A Horse with No Name",
+        "artist": "America, George Martin",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Don't Dream It's Over",
+        "artist": "Crowded House",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Mmmmmm"
+        ]
+      },
+      {
+        "title": "Space Jam",
+        "artist": "Beds",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Midwest",
+          "Г",
+          "fuck..",
+          "Calm Midwest"
+        ]
+      },
+      {
+        "title": "Safe In Your Skin",
+        "artist": "Title Fight",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Midwest",
+          "Bbbnnnllö",
+          "YO",
+          "Г"
+        ]
+      },
+      {
+        "title": "Fade Into You",
+        "artist": "Mazzy Star",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "SORRY SORRY SPRRYYY",
+          "CL",
+          "…",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Cupid De Locke - Remastered 2012",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "fuck..",
+          "…"
+        ]
+      },
+      {
+        "title": "Break",
+        "artist": "alex_g_offline",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "YO",
+          "Г",
+          "Calm Midwest",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Undercover Martyn",
+        "artist": "Two Door Cinema Club",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Fl",
+          "less goo",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Sleepless",
+        "artist": "AVAION, PaulWetz, Nu Aspect, YUMA",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Qwe",
+          "Gym",
+          "Chillout"
+        ]
+      },
+      {
+        "title": "Food for the Soul",
+        "artist": "it's murph",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Qwe",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "What You Know",
+        "artist": "Two Door Cinema Club",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Fl",
+          "less goo",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Dirty Work",
+        "artist": "Steely Dan",
+        "sourceCount": 5,
+        "count": 5,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "Whaaaa",
+          "na klar"
+        ]
+      },
+      {
+        "title": "Bliss",
+        "artist": "Klsr",
+        "sourceCount": 4,
+        "count": 6,
+        "sources": [
+          "Liked Songs",
+          "GoDayumn",
+          "Jawoll junge",
+          "Holy house"
+        ]
+      },
+      {
+        "title": "J'adore",
+        "artist": "jamesjamesjames",
+        "sourceCount": 4,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Qwe",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "COULD BE WRONG",
+        "artist": "LOSTBOYJAY",
+        "sourceCount": 4,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Qwe",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "Riptide",
+        "artist": "Vance Joy",
+        "sourceCount": 4,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "m's top tracks",
+          "Chillout",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Piano Man",
+        "artist": "Billy Joel",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Baldwin Park",
+        "artist": "Sonder",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Where the Mountain Meets the Ocean",
+        "artist": "Brad Oberhofer, Oberhofer",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "As",
+        "artist": "Stevie Wonder",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Sometimes Always",
+        "artist": "The Jesus and Mary Chain",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Wouldn't It Be Nice",
+        "artist": "The Beach Boys",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "I Melt with You",
+        "artist": "Modern English",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "artist": "Arcade Fire, Owen Pallett",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Lowercase",
+          "waves type playlist",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Don't Have to Shop Around",
+        "artist": "The Mad Lads",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Crush on U",
+        "artist": "DJ Skulltrooper",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Losing My Religion",
+        "artist": "R.E.M.",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "%^*+",
+          "Г",
+          "Rockin n rollin"
+        ]
+      },
+      {
+        "title": "No More Like That",
+        "artist": "Eiafuawn",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Г",
+          "Calm Midwest",
+          "…"
+        ]
+      },
+      {
+        "title": "Again",
+        "artist": "Archive",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Sing",
+        "artist": "Travis",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "The Gold - Phoebe Bridgers Version",
+        "artist": "Manchester Orchestra, Phoebe Bridgers",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "November Rain",
+        "artist": "Guns N' Roses",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia"
+        ]
+      },
+      {
+        "title": "Think Of Me Once In A While, Take Care",
+        "artist": "Take Care",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "fuck..",
+          "Calm Midwest",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Halah",
+        "artist": "Mazzy Star",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Bbbnnnllö",
+          "SORRY SORRY SPRRYYY",
+          "fuck.."
+        ]
+      },
+      {
+        "title": "OXYGEN",
+        "artist": "Sean Leon",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Kanye ye",
+          "K¥_00",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Electricity",
+        "artist": "DubVision, Otto Knows, Alex Aris",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Qwe",
+          "Chillout"
+        ]
+      },
+      {
+        "title": "I Don't Need You",
+        "artist": "Nora Van Elken",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "less goo",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "Sugar (feat. Francesco Yates)",
+        "artist": "Robin Schulz, Francesco Yates",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "less goo",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "Club Can't Handle Me (feat. David Guetta)",
+        "artist": "Flo Rida, David Guetta",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "less goo",
+          "Turn it up",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "TIMEZONE",
+        "artist": "Måneskin",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "…",
+          "Tunes",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Torna a casa",
+        "artist": "Måneskin",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "…",
+          "Tunes",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Mamgobhozi",
+        "artist": "Major Lazer, Major League Djz, Brenda Fassie",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Chillout",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Midnight City",
+        "artist": "M83",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "CL",
+          "less goo",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "EL TONTO",
+        "artist": "Lola Indigo, Quevedo",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Chillout",
+          "Turn it up",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Goodnight Dad I Love You",
+        "artist": "Wishing",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Midwest",
+          "Calm Midwest",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Let Go",
+        "artist": "Duskus",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Qwe",
+          "Chillout"
+        ]
+      },
+      {
+        "title": "Lost - Edit",
+        "artist": "Tinlicker, Run Rivers",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Qwe",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "Numb - Joris Voorn Remix, Edit",
+        "artist": "Elderbrook, Joris Voorn",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Qwe",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "When Will I See You Again - Amtrac Remix",
+        "artist": "Shakka, Amtrac",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Chillout",
+          "Turn it up",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Bloodline feat. Tomas Høffding",
+        "artist": "Kölsch",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "Premier Gaou - Nitefreak Remix",
+        "artist": "Francis Mercier, Magic System, Nitefreak",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "Pompeii",
+        "artist": "Bastille",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Fl",
+          "less goo",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Something Good Can Work",
+        "artist": "Two Door Cinema Club",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "less goo",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Present",
+        "artist": "Lloyd Vaan",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Bbbnnnllö",
+          "ABT",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "How To Never Stop Being Sad",
+        "artist": "dandelion hands",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "YO",
+          "Calm Midwest",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "retire (final)",
+        "artist": "Alvedon",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Bbbnnnllö",
+          "ABT",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "When You Were Young",
+        "artist": "The Killers",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "less goo",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Scar Tissue",
+        "artist": "Red Hot Chili Peppers",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "%^*+",
+          "CL",
+          "…"
+        ]
+      },
+      {
+        "title": "Sparks",
+        "artist": "Coldplay",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "YO",
+          "m's top tracks",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Walking On A Dream",
+        "artist": "Empire Of The Sun",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Fl",
+          "CL",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Payphone",
+        "artist": "Maroon 5, Wiz Khalifa",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "m's top tracks",
+          "less goo",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "New Slang - 2021 Remaster",
+        "artist": "The Shins",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "%^*+",
+          "CL",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Brazil",
+        "artist": "Declan McKenna",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Fl",
+          "less goo",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Learn to Fly",
+        "artist": "Foo Fighters",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Mmmmmm",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Sofa Song",
+        "artist": "The Kooks",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "less goo",
+          "…",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Mr. Brightside",
+        "artist": "The Killers",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Fl",
+          "m's top tracks",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Chucks",
+        "artist": "Mi Casa",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Holy house",
+          "Chillout",
+          "Turn it up",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "1979 - Remastered 2012",
+        "artist": "The Smashing Pumpkins",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "(:)",
+          "Bbbnnnllö",
+          "fuck..",
+          "…"
+        ]
+      },
+      {
+        "title": "My Sweet Lord - 2014 Remaster",
+        "artist": "George Harrison",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "na klar"
+        ]
+      },
+      {
+        "title": "Right Down the Line",
+        "artist": "Gerry Rafferty",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "na klar"
+        ]
+      },
+      {
+        "title": "It Ain't Over 'Til It's Over",
+        "artist": "Lenny Kravitz",
+        "sourceCount": 4,
+        "count": 4,
+        "sources": [
+          "Here, There, and Everywhere... With You",
+          "for talia ordered by decreasing valence",
+          "for talia",
+          "na klar"
+        ]
+      },
+      {
+        "title": "Oh My God",
+        "artist": "Fog Lake",
+        "sourceCount": 3,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Calm Midwest",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Poison Tree",
+        "artist": "Grouper",
+        "sourceCount": 3,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "fuck..",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Instrumental 3",
+        "artist": "Florist",
+        "sourceCount": 3,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "ABT",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Never Meant",
+        "artist": "American Football",
+        "sourceCount": 3,
+        "count": 5,
+        "sources": [
+          "Liked Songs",
+          "Midwest",
+          "Bbbnnnllö"
+        ]
+      },
+      {
+        "title": "Do You Remember",
+        "artist": "More Than Life",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Midwest",
+          "My playlist #73"
+        ]
+      },
+      {
+        "title": "Sexy Bitch (feat. Akon)",
+        "artist": "David Guetta, Akon",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Chillout",
+          "Turn it up"
+        ]
+      },
+      {
+        "title": "town",
+        "artist": "mage tears",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Calm Midwest",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Stolen Moments",
+        "artist": "Oliver Nelson",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "day in roma",
+          "No enemies"
+        ]
+      },
+      {
+        "title": "I Can't Handle Change",
+        "artist": "Roar",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "…",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Breakfast In Soweto",
+        "artist": "Prince Kaybee, Ben September, Mandlin Beams",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Holy house",
+          "Chillout"
+        ]
+      },
+      {
+        "title": "Ballin' (with Roddy Ricch)",
+        "artist": "Mustard, Roddy Ricch",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Gym",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Sunflower - Spider-Man: Into the Spider-Verse",
+        "artist": "Post Malone, Swae Lee",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "less goo",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "No Role Modelz",
+        "artist": "J. Cole",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "Gym",
+          "Tunes"
+        ]
+      },
+      {
+        "title": "Something In The Way",
+        "artist": "Nirvana",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "m's top tracks",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Fourth of July",
+        "artist": "Sufjan Stevens",
+        "sourceCount": 3,
+        "count": 4,
+        "sources": [
+          "Liked Songs",
+          "YO",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Ce matin-là",
+        "artist": "Air",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "GoDayumn",
+          "(:)"
+        ]
+      },
+      {
+        "title": "All Things Must Pass - 2014 Remaster",
+        "artist": "George Harrison",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "Hell ya",
+          "(:)"
+        ]
+      },
+      {
+        "title": "Hear The Sound",
+        "artist": "Franck",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "GoDayumn",
+          "Jawoll junge"
+        ]
+      },
+      {
+        "title": "Freefall",
+        "artist": "Camel",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "IVE BEEN MISSING OUT",
+          "Joo"
+        ]
+      },
+      {
+        "title": "Alone in Kyoto",
+        "artist": "Air",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "GoDayumn",
+          "IVE BEEN MISSING OUT"
+        ]
+      },
+      {
+        "title": "Champagne Coast",
+        "artist": "Blood Orange",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "Bbbnnnllö",
+          "Ґems"
+        ]
+      },
+      {
+        "title": "Tears Of Clown",
+        "artist": "Gigi Masin",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "GoDayumn",
+          "ABT"
+        ]
+      },
+      {
+        "title": "isn't it crazy to think about",
+        "artist": "jxyytf.mp3",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "isn't it crazy to think about",
+          "Na ja.."
+        ]
+      },
+      {
+        "title": "Losing Game",
+        "artist": "Durante, SOHN",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "GoDayumn",
+          "Holy house"
+        ]
+      },
+      {
+        "title": "Interstate",
+        "artist": "Amtrac",
+        "sourceCount": 3,
+        "count": 3,
+        "sources": [
+          "Liked Songs",
+          "GoDayumn",
+          "Holy house"
+        ]
+      }
+    ],
+    "overlapExamples": [
+      {
+        "title": "Earthquake",
+        "artist": "Teksa",
+        "buckets": [
+          "Hard tekno / tribe / freeparty (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Future Retro",
+        "artist": "Jacidorex",
+        "buckets": [
+          "Hard tekno / tribe / freeparty (pattern)",
+          "Rage / opium / gym / turn-up (pattern)"
+        ]
+      },
+      {
+        "title": "Eye of the storm",
+        "artist": "Teksa",
+        "buckets": [
+          "Hard tekno / tribe / freeparty (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "#3",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "#19",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Xtal",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "#1",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Ageispolis",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Hedphelym",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Heliosphan",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "I",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "#13",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "#20",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Actium",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Delphium",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Pulsewidth",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Schottkey 7th Path",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Tha",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "We Are the Music Makers",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Yellow Calx",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Corner Of My Eye",
+        "artist": "Floating Points",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Betrayed in the Octagon",
+        "artist": "Oneohtrix Point Never",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Blue Sky And Yellow Sunflower",
+        "artist": "Susumu Yokota",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "#17",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Green Calx",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "Ptolemy",
+        "artist": "Aphex Twin",
+        "buckets": [
+          "IDM / braindance / clean-machine (pattern)",
+          "Ambient / liminal / sleepwalking (pattern)"
+        ]
+      },
+      {
+        "title": "She Will Destroy You",
+        "artist": "Cocteau Twins, Harold Budd",
+        "buckets": [
+          "Ambient / liminal / sleepwalking (pattern)",
+          "Sad art-rock / beautiful collapse (pattern)"
+        ]
+      },
+      {
+        "title": "Why Do You Love Me? - 2024 Remaster",
+        "artist": "Cocteau Twins, Harold Budd",
+        "buckets": [
+          "Ambient / liminal / sleepwalking (pattern)",
+          "Sad art-rock / beautiful collapse (pattern)"
+        ]
+      },
+      {
+        "title": "Dermot (see yourself in my eyes)",
+        "artist": "Fred again.., Dermot Kennedy",
+        "buckets": [
+          "Jazz-house / soft groove (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Danielle (smile on my face)",
+        "artist": "Fred again.., 070 Shake",
+        "buckets": [
+          "Jazz-house / soft groove (pattern)",
+          "Post-Soviet melancholy rock (pattern)"
+        ]
+      },
+      {
+        "title": "Discoteca",
+        "artist": "&ME, Rampa, Adam Port, Keinemusik, Sofie Royer",
+        "buckets": [
+          "Jazz-house / soft groove (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Turn On The Lights again.. (feat. Future)",
+        "artist": "Fred again.., Swedish House Mafia, Future",
+        "buckets": [
+          "Jazz-house / soft groove (pattern)",
+          "Rage / opium / gym / turn-up (pattern)"
+        ]
+      },
+      {
+        "title": "Danielle (smile on my face)",
+        "artist": "Fred again..",
+        "buckets": [
+          "Jazz-house / soft groove (pattern)",
+          "Post-Soviet melancholy rock (pattern)"
+        ]
+      },
+      {
+        "title": "NGWINO",
+        "artist": "Moojo, Caiiro, Starving Yet Full",
+        "buckets": [
+          "Jazz-house / soft groove (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Abantu - Da Africa Deep Remix",
+        "artist": "Zakes Bantwini, Karyendasoul, Da Africa Deep, Nana Atta",
+        "buckets": [
+          "Jazz-house / soft groove (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Never Let Me Down",
+        "artist": "Kanye West, JAŸ-Z, J. Ivy",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "She",
+        "artist": "Tyler, The Creator, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)",
+        "artist": "Tyler, The Creator, Frank Ocean, Steve Lacy",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Facebook Story",
+        "artist": "Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Post-Soviet melancholy rock (pattern)"
+        ]
+      },
+      {
+        "title": "Biking",
+        "artist": "Frank Ocean, JAŸ-Z, Tyler, The Creator",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Wildfire (feat. Frank Ocean)",
+        "artist": "John Mayer, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Purity (feat. Frank Ocean)",
+        "artist": "A$AP Rocky, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "goldeneye",
+        "artist": "frank ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Cayendo (Side A - Acoustic)",
+        "artist": "Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Oceans",
+        "artist": "JAŸ-Z, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "No Church In The Wild",
+        "artist": "JAŸ-Z, Kanye West, Frank Ocean, THE-DREAM",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Too Many Nights (feat. Don Toliver & with Future)",
+        "artist": "Metro Boomin, Future, Don Toliver",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)",
+          "Rage / opium / gym / turn-up (pattern)"
+        ]
+      },
+      {
+        "title": "White (feat. Frank Ocean)",
+        "artist": "Odd Future, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rage / opium / gym / turn-up (pattern)"
+        ]
+      },
+      {
+        "title": "Slater (feat. Frank Ocean)",
+        "artist": "Tyler, The Creator, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "RAF (feat. A$AP Rocky, Playboi Carti, Quavo, Lil Uzi Vert & Frank Ocean)",
+        "artist": "A$AP Mob, A$AP Rocky, Playboi Carti, Quavo, Lil Uzi Vert, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)",
+          "Rage / opium / gym / turn-up (pattern)"
+        ]
+      },
+      {
+        "title": "Steamroller (feat. Hodgy & Frank Ocean)",
+        "artist": "Domo Genesis, Hodgy, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rage / opium / gym / turn-up (pattern)"
+        ]
+      },
+      {
+        "title": "White",
+        "artist": "Frank Ocean, John Mayer",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Caught Their Eyes",
+        "artist": "JAŸ-Z, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Made In America",
+        "artist": "JAŸ-Z, Kanye West, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Bend Ya (feat. Frank Ocean, Kendrick Lamar, Shawn Chrys & Jah-Free)",
+        "artist": "Mann, Frank Ocean, Kendrick Lamar, Shawn Chrys, Jah-Free",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Snow White (feat. Hodgy & Frank Ocean)",
+        "artist": "Odd Future, Hodgy, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rage / opium / gym / turn-up (pattern)"
+        ]
+      },
+      {
+        "title": "Analog 2 (feat. Tyler, The Creator, Frank Ocean & Sydney Bennett)",
+        "artist": "Odd Future, Tyler, The Creator, Frank Ocean, Syd",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)",
+          "Rage / opium / gym / turn-up (pattern)"
+        ]
+      },
+      {
+        "title": "Window",
+        "artist": "Tyler, The Creator, Domo Genesis, Frank Ocean, Hodgy, Mike G",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Where This Flower Blooms (feat. Frank Ocean)",
+        "artist": "Tyler, The Creator, Frank Ocean",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "PartyIsntOver/Campfire/Bimmer (feat. Frank Ocean & Laetitia Sadier)",
+        "artist": "Tyler, The Creator, Frank Ocean, Laetitia Sadier",
+        "buckets": [
+          "Frank / Montell / wounded R&B (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "This Night Has Opened My Eyes - 2011 Remaster",
+        "artist": "The Smiths",
+        "buckets": [
+          "Sad art-rock / beautiful collapse (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Last Goodbye",
+        "artist": "Jeff Buckley",
+        "buckets": [
+          "Sad art-rock / beautiful collapse (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Destroyed By Hippie Powers",
+        "artist": "Car Seat Headrest",
+        "buckets": [
+          "Midwest / slacker / bedroom guitar (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Dreams from Yesterday",
+        "artist": "Mac DeMarco",
+        "buckets": [
+          "Midwest / slacker / bedroom guitar (pattern)",
+          "Rap canon / main-character hip-hop (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "The Eyes of Ibad_R>O>T",
+        "artist": "Panchiko",
+        "buckets": [
+          "Midwest / slacker / bedroom guitar (pattern)",
+          "Rap canon / main-character hip-hop (pattern)"
+        ]
+      },
+      {
+        "title": "Dreams - 2004 Remaster",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Everywhere - 2017 Remaster",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Landslide",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Listen Up - Remastered",
+        "artist": "Oasis",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Sad Song",
+        "artist": "Oasis",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Gypsy",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "The Chain - 2004 Remaster",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Live Forever",
+        "artist": "Oasis",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Hypnotized",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Never Going Back Again - 2004 Remaster",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Rhiannon",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Thrown Down",
+        "artist": "Fleetwood Mac",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Don't Look Back in Anger - Remastered",
+        "artist": "Oasis",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Slide Away - Remastered",
+        "artist": "Oasis",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      },
+      {
+        "title": "Wonderwall - Remastered",
+        "artist": "Oasis",
+        "buckets": [
+          "Classic riff rock / guitar mythology (pattern)",
+          "Shower / warm / obvious replay (pattern)"
+        ]
+      }
+    ]
+  }
+}

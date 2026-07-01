@@ -1,0 +1,902 @@
+{
+  "spotifyName": "Post-Soviet melancholy rock (pattern)",
+  "rules": [
+    "ssshhhiiittt",
+    "какая разница",
+    "скрябін",
+    "конец солнечных дней",
+    "автоспорт",
+    "где фантом",
+    "кино",
+    "молчат дома",
+    "face"
+  ],
+  "count": 89,
+  "tracks": [
+    {
+      "title": "айсберг",
+      "artist": "ssshhhiiittt!",
+      "album": "Третья жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "засыпай",
+      "artist": "ssshhhiiittt!",
+      "album": "Третья жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Самый грустный",
+      "artist": "ssshhhiiittt!",
+      "album": "Remastered",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Танцы",
+      "artist": "ssshhhiiittt!",
+      "album": "Последнее лето (Часть 2)",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Кто я",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "m's top tracks",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Ничего и никто",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "m's top tracks",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Причина не ложиться спать",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "m's top tracks",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Рассвет",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "m's top tracks",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Твой мир",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "m's top tracks",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "дети немой страны",
+      "artist": "конец солнечных дней",
+      "album": "осень",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "уеду далеко",
+      "artist": "конец солнечных дней",
+      "album": "осень",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 4
+    },
+    {
+      "title": "Смерть",
+      "artist": "FACE",
+      "album": "Hate Love",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Facebook Story",
+      "artist": "Frank Ocean",
+      "album": "Blonde",
+      "sources": [
+        "Liked Songs",
+        "frank and chill",
+        "Tralalelo Tralala"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Danielle (smile on my face)",
+      "artist": "Fred again.., 070 Shake",
+      "album": "Actual Life 3 (January 1 - September 9 2022)",
+      "sources": [
+        "Holy house",
+        "Qwe",
+        "Chillout"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Тебя нет",
+      "artist": "ssshhhiiittt!",
+      "album": "Зло",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Песня о привязанности",
+      "artist": "Автоспорт",
+      "album": "Береги себя",
+      "sources": [
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Собери",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "m's top tracks"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Утони",
+      "artist": "Какая Разница",
+      "album": "Утони",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "письмо",
+      "artist": "конец солнечных дней",
+      "album": "письмо",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Шмата",
+      "artist": "Скрябін",
+      "album": "Про любов?",
+      "sources": [
+        "Liked Songs",
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "Man in the Box",
+      "artist": "Alice In Chains",
+      "album": "Facelift",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Can't Feel My Face",
+      "artist": "Dance Fruits Music, Steve Void, Ember Island",
+      "album": "Can't Feel My Face",
+      "sources": [
+        "Liked Songs",
+        "Chillout"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Жизнь",
+      "artist": "FACE",
+      "album": "Hate Love",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Лиза",
+      "artist": "FACE, Squirrel Flower",
+      "album": "Hate Love",
+      "sources": [
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Flooded The Face",
+      "artist": "Lil Uzi Vert",
+      "album": "Pink Tape",
+      "sources": [
+        "Liked Songs",
+        "Tunes"
+      ],
+      "count": 2
+    },
+    {
+      "title": "19",
+      "artist": "ssshhhiiittt!",
+      "album": "Вторая жизнь",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Бездельник",
+      "artist": "ssshhhiiittt!",
+      "album": "Вторая жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Больше нет",
+      "artist": "ssshhhiiittt!",
+      "album": "Первая жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Горят",
+      "artist": "ssshhhiiittt!",
+      "album": "Первая жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Дворы",
+      "artist": "ssshhhiiittt!",
+      "album": "Зло",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Еще не взрослый",
+      "artist": "ssshhhiiittt!",
+      "album": "Первая жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "надежда",
+      "artist": "ssshhhiiittt!",
+      "album": "Третья жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Последнее лето",
+      "artist": "ssshhhiiittt!",
+      "album": "Последнее лето (Часть 2)",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Убегай",
+      "artist": "ssshhhiiittt!",
+      "album": "Вторая жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "цветы",
+      "artist": "ssshhhiiittt!",
+      "album": "Третья жизнь",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Your face",
+      "artist": "Wisp",
+      "album": "Your face",
+      "sources": [
+        "Liked Songs",
+        "Г"
+      ],
+      "count": 2
+    },
+    {
+      "title": "триггер",
+      "artist": "zhanulka, Какая Разница",
+      "album": "1749",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "тройка мечей",
+      "artist": "zhanulka, Какая Разница",
+      "album": "1749",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Я тебя люблю",
+      "artist": "Где Фантом?",
+      "album": "Я тебя люблю",
+      "sources": [
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Всё к лучшему",
+      "artist": "Какая Разница",
+      "album": "Всё к лучшему",
+      "sources": [
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Дайте подумать",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Кометы",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Ксанакс",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Куда идти?",
+      "artist": "Какая Разница",
+      "album": "Любовь (не) Мертва",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Мне лень",
+      "artist": "Какая Разница",
+      "album": "Мне лень",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Овощное ассорти",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Одноразка",
+      "artist": "Какая Разница",
+      "album": "Любовь (не) Мертва",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Отпускай",
+      "artist": "Какая Разница",
+      "album": "Отпускай",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Почти лето",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Слёзы",
+      "artist": "Какая Разница",
+      "album": "Любовь (не) Мертва",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Техно треп",
+      "artist": "Какая Разница",
+      "album": "Рассвет",
+      "sources": [
+        "Liked Songs",
+        "Qs"
+      ],
+      "count": 2
+    },
+    {
+      "title": "забыты",
+      "artist": "конец солнечных дней",
+      "album": "мне никогда не было весело с тобой",
+      "sources": [
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "куда катится моя голова?",
+      "artist": "конец солнечных дней",
+      "album": "осень",
+      "sources": [
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "осень",
+      "artist": "конец солнечных дней",
+      "album": "осень",
+      "sources": [
+        "Qs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Говорили і курили",
+      "artist": "Скрябін",
+      "album": "Радіо Любов (Deluxe Version)",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Кораблі",
+      "artist": "Скрябін",
+      "album": "25 Best Hits",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Лист до друга",
+      "artist": "Скрябін",
+      "album": "25 Best Hits",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Мам",
+      "artist": "Скрябін",
+      "album": "Радіо Любов (Deluxe Version)",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Спи собі сама",
+      "artist": "Скрябін",
+      "album": "25 Best Hits",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Старі фотографії",
+      "artist": "Скрябін",
+      "album": "Танго",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Ghostface Killers (feat. Travis Scott)",
+      "artist": "21 Savage, Offset, Metro Boomin, Travis Scott",
+      "album": "Without Warning",
+      "sources": [
+        "Gym"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Eleven",
+      "artist": "Avidus",
+      "album": "Facetten, Vol. 1",
+      "sources": [
+        "GoDayumn"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Eyes Without A Face",
+      "artist": "Billy Idol",
+      "album": "Rebel Yell",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Outside (Better Days)",
+      "artist": "Blueface, OG Bobby Billions",
+      "album": "Outside (Better Days)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "FACE",
+      "artist": "BROCKHAMPTON",
+      "album": "SATURATION",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "No Face",
+      "artist": "Drake",
+      "album": "No Face",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "От Земли",
+      "artist": "FACE",
+      "album": "От Земли",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Danielle (smile on my face)",
+      "artist": "Fred again..",
+      "album": "Danielle (smile on my face)",
+      "sources": [
+        "Chillout"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Acidcore in your Face",
+      "artist": "Guigoo",
+      "album": "Acid Pirate 17",
+      "sources": [
+        "Tekk"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Мовчати",
+      "artist": "Iryna Bilyk, Скрябін",
+      "album": "Країна",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Purple Hearts",
+      "artist": "Kendrick Lamar, Summer Walker, Ghostface Killah",
+      "album": "Mr. Morale & The Big Steppers",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "ANGELZ",
+      "artist": "MF DOOM, Ghostface Killah",
+      "album": "BORN LIKE THIS",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Старое кино",
+      "artist": "Peremotka",
+      "album": "Начало прекрасной дружбы",
+      "sources": [
+        "Qs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Вишенка",
+      "artist": "ssshhhiiittt!",
+      "album": "Зло",
+      "sources": [
+        "Qs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "домой",
+      "artist": "ssshhhiiittt!",
+      "album": "Третья жизнь",
+      "sources": [
+        "Qs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Не жалею",
+      "artist": "ssshhhiiittt!",
+      "album": "Remastered",
+      "sources": [
+        "Qs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Не скучай",
+      "artist": "ssshhhiiittt!",
+      "album": "Зло",
+      "sources": [
+        "Qs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Ночь",
+      "artist": "ssshhhiiittt!",
+      "album": "Первая жизнь",
+      "sources": [
+        "Qs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Sunny Afternoon",
+      "artist": "The Kinks",
+      "album": "Face to Face (Deluxe)",
+      "sources": [
+        "%^*+"
+      ],
+      "count": 1
+    },
+    {
+      "title": "SPIT IN MY FACE!",
+      "artist": "ThxSoMch",
+      "album": "SPIT IN MY FACE!",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Шмата",
+      "artist": "Xs, Скрябін",
+      "album": "Pesni Vysshei Proby",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Babyface Maniacs",
+      "artist": "Yung Lean",
+      "album": "Babyface Maniacs",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Рельсы",
+      "artist": "Где Фантом?",
+      "album": "До боли знакомое",
+      "sources": [
+        "Qs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "разъедаешь мне нутро",
+      "artist": "конец солнечных дней",
+      "album": "как дела у твоего друга в сером городе?",
+      "sources": [
+        "Qs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "А пам'ятаєш (Місця щасливих людей) - FDR & CJ Mars Edit",
+      "artist": "Скрябін",
+      "album": "ЛЮБИМЫЕ ГОРОДА",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Говорили і курили - Radio Edit",
+      "artist": "Скрябін",
+      "album": "Говорили і курили",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Дельфіни",
+      "artist": "Скрябін",
+      "album": "25 Best Hits",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Місця щасливих людей",
+      "artist": "Скрябін",
+      "album": "25 Best Hits",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Не треба",
+      "artist": "Скрябін",
+      "album": "Хробак",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    }
+  ]
+}

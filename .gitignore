@@ -5,6 +5,7 @@ dist/
 .env.local
 .env.*.local
 *.log
+tmp-*
 .DS_Store
 .claude/worktrees/
 .ratewatch.mts

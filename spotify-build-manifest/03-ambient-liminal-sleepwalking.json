@@ -1,0 +1,754 @@
+{
+  "spotifyName": "Ambient / liminal / sleepwalking (pattern)",
+  "rules": [
+    "flawed mangoes",
+    "øneheart",
+    "oneheart",
+    "c418",
+    "ambient",
+    "harold budd",
+    "tim hecker",
+    "william basinski",
+    "brian eno",
+    "liminal",
+    "tomcbumpz"
+  ],
+  "count": 76,
+  "tracks": [
+    {
+      "title": "Tunnel Vision",
+      "artist": "Flawed Mangoes",
+      "album": "Tunnel Vision",
+      "sources": [
+        "Liked Songs",
+        "Here, There, and Everywhere... With You",
+        "for talia ordered by decreasing valence",
+        "for talia",
+        "Flaw"
+      ],
+      "count": 6
+    },
+    {
+      "title": "#3",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works Volume II",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "ABT"
+      ],
+      "count": 5
+    },
+    {
+      "title": "#19",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works Volume II (Expanded Edition)",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Xtal",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "Jawoll junge",
+        "ABT"
+      ],
+      "count": 4
+    },
+    {
+      "title": "Riff 2",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Liked Songs",
+        "Flaw",
+        "Calm Midwest"
+      ],
+      "count": 4
+    },
+    {
+      "title": "#1",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works Volume II",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "Lowercase"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Ageispolis",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "ABT"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Hedphelym",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "Jawoll junge"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Heliosphan",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "ABT"
+      ],
+      "count": 3
+    },
+    {
+      "title": "I",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "ABT"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Absolution",
+      "artist": "Flawed Mangoes",
+      "album": "Anomaly I",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn",
+        "Flaw"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Killswitch Lullaby",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Lullaby",
+      "sources": [
+        "Liked Songs",
+        "Flaw"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Obsession",
+      "artist": "Flawed Mangoes",
+      "album": "Sunday Scaries",
+      "sources": [
+        "Liked Songs",
+        "Flaw"
+      ],
+      "count": 3
+    },
+    {
+      "title": "Swimming",
+      "artist": "Flawed Mangoes",
+      "album": "Swimming",
+      "sources": [
+        "Liked Songs",
+        "Flaw",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "The Beginning",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 3
+    },
+    {
+      "title": "snowfall",
+      "artist": "Øneheart, reidenshi",
+      "album": "snowfall",
+      "sources": [
+        "Liked Songs",
+        "m's top tracks",
+        "Na ja.."
+      ],
+      "count": 3
+    },
+    {
+      "title": "#13",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works Volume II",
+      "sources": [
+        "GoDayumn",
+        "ABT"
+      ],
+      "count": 2
+    },
+    {
+      "title": "#20",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works Volume II",
+      "sources": [
+        "GoDayumn",
+        "ABT"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Actium",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Delphium",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Pulsewidth",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Schottkey 7th Path",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Tha",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "We Are the Music Makers",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "An Ending (Ascent) - Remastered 2005",
+      "artist": "Brian Eno",
+      "album": "Apollo",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "She Will Destroy You",
+      "artist": "Cocteau Twins, Harold Budd",
+      "album": "The Moon and the Melodies",
+      "sources": [
+        "Liked Songs",
+        "fuck.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Birdsong",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Missing Pieces",
+      "artist": "Flawed Mangoes",
+      "album": "The Unwavering Hand",
+      "sources": [
+        "Liked Songs",
+        "Flaw"
+      ],
+      "count": 2
+    },
+    {
+      "title": "Sleepwalking",
+      "artist": "Flawed Mangoes",
+      "album": "Sleepwalking",
+      "sources": [
+        "Liked Songs",
+        "Flaw"
+      ],
+      "count": 2
+    },
+    {
+      "title": "An Arc Of Doves - Remastered 2004",
+      "artist": "Harold Budd, Brian Eno",
+      "album": "Ambient 2: The Plateaux Of Mirror (Remastered 2004)",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "this feeling",
+      "artist": "Øneheart",
+      "album": "this feeling",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "rain inside",
+      "artist": "Øneheart, Antent",
+      "album": "rain inside",
+      "sources": [
+        "Liked Songs",
+        "Na ja.."
+      ],
+      "count": 2
+    },
+    {
+      "title": "Duality",
+      "artist": "Slipknot",
+      "album": "Vol. 3: The Subliminal Verses (Special Edition)",
+      "sources": [
+        "Liked Songs",
+        "Rockin n rollin"
+      ],
+      "count": 2
+    },
+    {
+      "title": "braincells",
+      "artist": "tomcbumpz",
+      "album": "comfortable silence",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "into the night sky",
+      "artist": "tomcbumpz",
+      "album": "the warmth of a thousand flames",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "not hungry",
+      "artist": "tomcbumpz",
+      "album": "BAD LISTENER",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "spawn",
+      "artist": "tomcbumpz",
+      "album": "don't look down",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "staring contest",
+      "artist": "tomcbumpz",
+      "album": "don't look down",
+      "sources": [
+        "Liked Songs",
+        "GoDayumn"
+      ],
+      "count": 2
+    },
+    {
+      "title": "#17",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works Volume II",
+      "sources": [
+        "GoDayumn"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Green Calx",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "GoDayumn"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Ptolemy",
+      "artist": "Aphex Twin",
+      "album": "Selected Ambient Works 85-92",
+      "sources": [
+        "GoDayumn"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Always Returning - Remastered 2005",
+      "artist": "Brian Eno",
+      "album": "Apollo",
+      "sources": [
+        "GoDayumn"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Signals - Remastered 2005",
+      "artist": "Brian Eno",
+      "album": "Apollo",
+      "sources": [
+        "GoDayumn"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Aria Math",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Mice on Venus",
+      "artist": "C418",
+      "album": "Minecraft - Volume Alpha",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Moog City 2",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Mutation",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Ward",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Warmth",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Why Do You Love Me? - 2024 Remaster",
+      "artist": "Cocteau Twins, Harold Budd",
+      "album": "The Moon and the Melodies (2024 Remaster)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Addicted",
+      "artist": "Flawed Mangoes",
+      "album": "Anomaly II",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Circle of Death",
+      "artist": "Flawed Mangoes",
+      "album": "Anomaly II",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Cold",
+      "artist": "Flawed Mangoes",
+      "album": "Cold",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Cold - Acoustic",
+      "artist": "Flawed Mangoes",
+      "album": "Cold (Acoustic)",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Dawn Chorus",
+      "artist": "Flawed Mangoes",
+      "album": "Anomaly II",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Dramamine",
+      "artist": "Flawed Mangoes",
+      "album": "Dramamine / Fragility",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Event Horizon",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Fragility",
+      "artist": "Flawed Mangoes",
+      "album": "Dramamine / Fragility",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Immaterial",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Melody From A Dream",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Mindgame",
+      "artist": "Flawed Mangoes",
+      "album": "The Unwavering Hand",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "mk4",
+      "artist": "Flawed Mangoes",
+      "album": "Anomaly II",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Pattern Recognition",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Run On Sentence",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Run On Sentence - Acoustic",
+      "artist": "Flawed Mangoes",
+      "album": "Run On Sentence (Acoustic)",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Scattered",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Scattered (Instrumental)",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Signal Lost",
+      "artist": "Flawed Mangoes",
+      "album": "The Unwavering Hand",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "Somniferous",
+      "artist": "Flawed Mangoes",
+      "album": "Anomaly II",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Beginning (Acoustic)",
+      "artist": "Flawed Mangoes",
+      "album": "The Beginning (Acoustic)",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Edge Of Memory",
+      "artist": "Flawed Mangoes",
+      "album": "Killswitch Melodies",
+      "sources": [
+        "Flaw"
+      ],
+      "count": 1
+    },
+    {
+      "title": "A Stream With Bright Fish - 2005 Digital Remaster",
+      "artist": "Harold Budd, Brian Eno",
+      "album": "The Pearl",
+      "sources": [
+        "GoDayumn"
+      ],
+      "count": 1
+    },
+    {
+      "title": "The Plateaux Of Mirror - Remastered 2004",
+      "artist": "Harold Budd, Brian Eno",
+      "album": "Ambient 2: The Plateaux Of Mirror (Remastered 2004)",
+      "sources": [
+        "GoDayumn"
+      ],
+      "count": 1
+    },
+    {
+      "title": "apathy",
+      "artist": "Øneheart",
+      "album": "apathy",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "snowfall (Sped Up)",
+      "artist": "Øneheart, reidenshi",
+      "album": "snowfall (Sped Up)",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    },
+    {
+      "title": "tangled",
+      "artist": "tomcbumpz",
+      "album": "comfortable silence",
+      "sources": [
+        "Liked Songs"
+      ],
+      "count": 1
+    }
+  ]
+}

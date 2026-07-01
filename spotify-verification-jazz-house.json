@@ -1,0 +1,27 @@
+{
+  "playlist": "Jazz-house / soft groove (pattern)",
+  "manifest": 71,
+  "actual": 71,
+  "scrapedMin": 1,
+  "scrapedMax": 71,
+  "missing": [],
+  "extra": [],
+  "aliases": [
+    {
+      "manifestTitle": "The Dream (feat. Martina Camargo)",
+      "actualTitle": "The Dream"
+    },
+    {
+      "manifestTitle": "Aguila ft. Cumbiafrica",
+      "actualTitle": "Aguila (feat. Cumbiafrica)"
+    },
+    {
+      "manifestTitle": "Desperado feat. Eribertho Cruzado - Vocal Mix Edit",
+      "actualTitle": "Desperado (feat. Eribertho Cruz)",
+      "album": "Desperado"
+    }
+  ],
+  "notes": [
+    "Danielle and Bleu appear twice in the manifest with different credited artists; Spotify displays one of each with shortened credits."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "playlist": "Midwest / slacker / bedroom guitar (pattern)",
+  "targetUrl": "https://open.spotify.com/playlist/6n0nfdzy6CDENtrlVqbs0g",
+  "missing": [
+    {
+      "title": "Sandy",
+      "artist": "Alex G",
+      "album": "Rules",
+      "sources": [
+        "Liked Songs",
+        "YO"
+      ],
+      "count": 2
+    },
+    {
+      "title": "&",
+      "artist": "Pinegrove",
+      "album": "Everything So Far",
+      "sources": [
+        "Liked Songs",
+        "Bbbnnnllö"
+      ],
+      "count": 2
+    },
+    {
+      "title": "reprise",
+      "artist": "salvia palth",
+      "album": "melanchole",
+      "sources": [
+        "Liked Songs",
+        "Calm Midwest"
+      ],
+      "count": 2
+    }
+  ],
+  "duplicates": [
+    {
+      "k": "need 2|pinegrove",
+      "c": 2,
+      "rows": [
+        {
+          "pos": 1,
+          "title": "Need 2",
+          "artist": "Pinegrove",
+          "album": "Everything So Far",
+          "raw": "1\nNeed 2\nPinegrove\nEverything So Far\n9 minutes ago\n3:11"
+        },
+        {
+          "pos": 51,
+          "title": "Need 2",
+          "artist": "Pinegrove",
+          "album": "Everything So Far",
+          "raw": "51\nNeed 2\nPinegrove\nEverything So Far\n6 minutes ago\n3:11"
+        }
+      ]
+    }
+  ]
+}

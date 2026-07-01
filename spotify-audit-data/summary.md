@@ -1,0 +1,88 @@
+# Spotify Audit Summary
+
+- Owned playlists: 70
+- Owned playlist entries: 5553
+- Liked Songs: 3815
+- Total captured entries: 9368
+
+## Owned Playlist Counts
+- Qs: 125
+- GoDayumn: 208
+- Lowercase: 6
+- CBC_00: 28
+- Kanye ye: 118
+- frank and chill: 47
+- radioh: 51
+- Midwest: 47
+- Hell ya: 23
+- %^*+: 111
+- Jawoll junge: 32
+- boB: 35
+- Holy house: 85
+- (:): 38
+- My playlist #80: 4
+- IVE BEEN MISSING OUT: 19
+- Bbbnnnllö: 50
+- SORRY SORRY SPRRYYY: 50
+- DT: 1
+- My playlist #73: 4
+- YO: 61
+- <2: 16
+- ABT: 53
+- ___: 27
+- K¥_00: 136
+- Fl: 50
+- SP: 1
+- Tralalelo Tralala: 105
+- isn't it crazy to think about: 1
+- CL: 51
+- Here, There, and Everywhere... With You: 67
+- for talia ordered by decreasing valence: 64
+- for talia: 64
+- Whaaaa: 25
+- марян × talia: 40
+- Fashion killa: 53
+- Joo: 29
+- Tekk: 543
+- waves type playlist: 33
+- Frank Ocean - Endless: 19
+- Frank Ocean - nostalgia, ULTRA: 14
+- Г: 73
+- Abend chillen: 9
+- Rockin n rollin: 100
+- AC FUCKING DC: 105
+- !BERLIOZ!: 23
+- Mmmmmm: 70
+- na klar: 84
+- Afro house dump: 114
+- Ґems: 90
+- springspringspring: 36
+- fuck..: 79
+- Flaw: 39
+- Calm Midwest: 41
+- Frank Montell: 69
+- Opium: 39
+- jazzombinator: 15
+- m's top tracks: 50
+- day in roma: 36
+- less goo: 50
+- …: 82
+- No enemies: 38
+- Qwe: 50
+- Gym: 463
+- Chillout: 364
+- Turn it up: 146
+- Tunes: 442
+- 12: 13
+- Na ja..: 258
+- Montell: 41
+
+## Early Bucket Signals
+- Hip-hop / rap core: Kanye West, Drake, Playboi Carti, 21 Savage, Travis Scott, Kendrick Lamar, A$AP Rocky, Tyler/the Creator.
+- Frank / melancholic R&B: Frank Ocean, Montell Fish, Kanye softer tracks, repeated Seigfried/Ivy/Self Control/White Ferrari/Godspeed.
+- Alt/indie/sad rock: Radiohead, The Smiths, Smashing Pumpkins, Pixies, Pinegrove, David Bowie, Fleetwood Mac.
+- Classic/hard rock: AC/DC-heavy, Bob Dylan, rock classics, guitar-heavy playlists.
+- Electronic/IDM/techno: Aphex Twin, Boards of Canada, Vortek's, Gehlektek, Tekno Noise, Neurotribe, Tekk, GoDayumn.
+- Jazz/house/chill: berlioz, jazzombinator, Afro house dump, Abend chillen, Chillout.
+- Gym / high energy: Gym, Turn it up, Opium, trap/rage/techno overlap.
+- Personal/archive playlists: talia playlists, date/place/context playlists, artist archive playlists.

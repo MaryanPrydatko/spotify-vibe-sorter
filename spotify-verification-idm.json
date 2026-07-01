@@ -1,0 +1,59 @@
+{
+  "playlist": "IDM / braindance / clean-machine (pattern)",
+  "manifest": 104,
+  "actual": 107,
+  "scrapedMin": 1,
+  "scrapedMax": 107,
+  "missing": [],
+  "extra": [
+    {
+      "pos": 22,
+      "title": "Goodbye, Goodbye",
+      "artist": "µ-Ziq",
+      "album": "Royal Astronomy",
+      "raw": "22\nGoodbye, Goodbye\nµ-Ziq\nRoyal Astronomy\n2 days ago\n4:07"
+    }
+  ],
+  "duplicates": [
+    {
+      "k": "blue sky and yellow sunflower|susumu yokota",
+      "c": 2,
+      "rows": [
+        {
+          "pos": 23,
+          "title": "Blue Sky And Yellow Sunflower",
+          "artist": "Susumu Yokota",
+          "album": "Symbol",
+          "raw": "23\nBlue Sky And Yellow Sunflower\nSusumu Yokota\nSymbol\n2 days ago\n3:59"
+        },
+        {
+          "pos": 56,
+          "title": "Blue Sky And Yellow Sunflower",
+          "artist": "Susumu Yokota",
+          "album": "Symbol",
+          "raw": "56\nBlue Sky And Yellow Sunflower\nSusumu Yokota\nSymbol\n8 minutes ago\n3:59"
+        }
+      ]
+    },
+    {
+      "k": "wildlife analysis|boards of canada",
+      "c": 2,
+      "rows": [
+        {
+          "pos": 42,
+          "title": "Wildlife Analysis",
+          "artist": "Boards of Canada",
+          "album": "Music Has The Right To Children",
+          "raw": "42\nWildlife Analysis\nBoards of Canada\nMusic Has The Right To Children\n11 minutes ago\n1:15"
+        },
+        {
+          "pos": 43,
+          "title": "Wildlife Analysis",
+          "artist": "Boards of Canada",
+          "album": "Music Has The Right To Children",
+          "raw": "43\nWildlife Analysis\nBoards of Canada\nMusic Has The Right To Children\n9 minutes ago\n1:15"
+        }
+      ]
+    }
+  ]
+}

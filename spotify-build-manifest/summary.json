@@ -1,0 +1,182 @@
+[
+  {
+    "spotifyName": "Hard tekno / tribe / freeparty (pattern)",
+    "file": "01-hard-tekno-tribe-freeparty",
+    "count": 280,
+    "examples": [
+      "Shiko — Gehlektek, TakaTuka",
+      "Rushing Russian — Gehlektek",
+      "All Mad Here — Neurotribe",
+      "Nevrotique — Neurotribe",
+      "Skizzo Acid — Neurotribe",
+      "I'll Bifle Back — Shmirlap, Mikro",
+      "Night Warriors — Tekno Noise, Berio, Bery",
+      "Apocalisse — Tekno Noise, USER_D"
+    ]
+  },
+  {
+    "spotifyName": "IDM / braindance / clean-machine (pattern)",
+    "file": "02-idm-braindance-clean-machine",
+    "count": 104,
+    "examples": [
+      "#3 — Aphex Twin",
+      "aisatsana [102] — Aphex Twin",
+      "Avril 14th — Aphex Twin",
+      "Flim — Aphex Twin",
+      "#19 — Aphex Twin",
+      "On — Aphex Twin",
+      "Xtal — Aphex Twin",
+      "Moments - Ben Böhmer & Nils Hoffmann Remix — Kidnap, Leo Stannard, Ben Böhmer, Nils Hoffmann"
+    ]
+  },
+  {
+    "spotifyName": "Ambient / liminal / sleepwalking (pattern)",
+    "file": "03-ambient-liminal-sleepwalking",
+    "count": 76,
+    "examples": [
+      "Tunnel Vision — Flawed Mangoes",
+      "#3 — Aphex Twin",
+      "#19 — Aphex Twin",
+      "Xtal — Aphex Twin",
+      "Riff 2 — Flawed Mangoes",
+      "#1 — Aphex Twin",
+      "Ageispolis — Aphex Twin",
+      "Hedphelym — Aphex Twin"
+    ]
+  },
+  {
+    "spotifyName": "Jazz-house / soft groove (pattern)",
+    "file": "04-jazz-house-soft-groove",
+    "count": 71,
+    "examples": [
+      "You Were Right — RÜFÜS DU SOL",
+      "Delilah (pull me out of this) — Fred again.., Delilah Montagu",
+      "Innerbloom — RÜFÜS DU SOL",
+      "Anchor Point — Ahmed Spins, Stevo Atambire",
+      "Osama — Zakes Bantwini, Kasango",
+      "Dermot (see yourself in my eyes) — Fred again.., Dermot Kennedy",
+      "Les Gout — Rampa, chuala, Keinemusik",
+      "Sundream — RÜFÜS DU SOL"
+    ]
+  },
+  {
+    "spotifyName": "Frank / Montell / wounded R&B (pattern)",
+    "file": "05-frank-montell-wounded-rnb",
+    "count": 159,
+    "examples": [
+      "Seigfried — Frank Ocean",
+      "Ivy — Frank Ocean",
+      "Self Control — Frank Ocean",
+      "White Ferrari — Frank Ocean",
+      "Godspeed — Frank Ocean",
+      "Moon River — Frank Ocean",
+      "Nights — Frank Ocean",
+      "Talk 2 Me — Montell Fish"
+    ]
+  },
+  {
+    "spotifyName": "Sad art-rock / beautiful collapse (pattern)",
+    "file": "06-sad-art-rock-beautiful-collapse",
+    "count": 137,
+    "examples": [
+      "No Surprises — Radiohead",
+      "Nude — Radiohead",
+      "Where Is My Mind? - 2007 Remaster — Pixies",
+      "Creep — Radiohead",
+      "Let Down — Radiohead",
+      "Weird Fishes / Arpeggi — Radiohead",
+      "There Is a Light That Never Goes Out - 2011 Remaster — The Smiths",
+      "Fake Plastic Trees — Radiohead"
+    ]
+  },
+  {
+    "spotifyName": "Midwest / slacker / bedroom guitar (pattern)",
+    "file": "07-midwest-slacker-bedroom-guitar",
+    "count": 117,
+    "examples": [
+      "Need 2 — Pinegrove",
+      "Sarah — Alex G",
+      "16 Mirrors — Alex G",
+      "Gnaw — Alex G",
+      "Up Song - Live at Bush Hall — Black Country, New Road",
+      "Nervous Young Inhumans — Car Seat Headrest",
+      "Sober to Death — Car Seat Headrest",
+      "Gold Dust — Duster"
+    ]
+  },
+  {
+    "spotifyName": "Classic riff rock / guitar mythology (pattern)",
+    "file": "08-classic-riff-rock-guitar",
+    "count": 362,
+    "examples": [
+      "Dreams - 2004 Remaster — Fleetwood Mac",
+      "Everywhere - 2017 Remaster — Fleetwood Mac",
+      "Landslide — Fleetwood Mac",
+      "All Along the Watchtower — Jimi Hendrix",
+      "Listen Up - Remastered — Oasis",
+      "Sad Song — Oasis",
+      "Back In Black — AC/DC",
+      "Demon Fire — AC/DC"
+    ]
+  },
+  {
+    "spotifyName": "Rap canon / main-character hip-hop (pattern)",
+    "file": "09-rap-canon-main-character",
+    "count": 747,
+    "examples": [
+      "Everything I Am — Kanye West, DJ Premier",
+      "I Wonder — Kanye West",
+      "Through The Wire — Kanye West",
+      "Violent Crimes — Kanye West",
+      "Waves — Kanye West",
+      "Can't Tell Me Nothing — Kanye West",
+      "Come to Life — Kanye West",
+      "Father Stretch My Hands Pt. 1 — Kanye West"
+    ]
+  },
+  {
+    "spotifyName": "Rage / opium / gym / turn-up (pattern)",
+    "file": "10-rage-opium-gym-turn-up",
+    "count": 256,
+    "examples": [
+      "New Tank — Playboi Carti",
+      "OPM BABI — Playboi Carti",
+      "POP OUT — Playboi Carti",
+      "Rockstar Made — Playboi Carti",
+      "Stop Breathing — Playboi Carti",
+      "Vamp Anthem — Playboi Carti",
+      "gold — 2hollis",
+      "jeans — 2hollis"
+    ]
+  },
+  {
+    "spotifyName": "Shower / warm / obvious replay (pattern)",
+    "file": "11-shower-warm-obvious-replay",
+    "count": 209,
+    "examples": [
+      "Starman - 2012 Remaster — David Bowie",
+      "Space Oddity - 2015 Remaster — David Bowie",
+      "Dreams - 2004 Remaster — Fleetwood Mac",
+      "Everywhere - 2017 Remaster — Fleetwood Mac",
+      "Call It Fate, Call It Karma — The Strokes",
+      "September — Earth, Wind & Fire",
+      "Landslide — Fleetwood Mac",
+      "Listen Up - Remastered — Oasis"
+    ]
+  },
+  {
+    "spotifyName": "Post-Soviet melancholy rock (pattern)",
+    "file": "12-post-soviet-melancholy-rock",
+    "count": 89,
+    "examples": [
+      "айсберг — ssshhhiiittt!",
+      "засыпай — ssshhhiiittt!",
+      "Самый грустный — ssshhhiiittt!",
+      "Танцы — ssshhhiiittt!",
+      "Кто я — Какая Разница",
+      "Ничего и никто — Какая Разница",
+      "Причина не ложиться спать — Какая Разница",
+      "Рассвет — Какая Разница"
+    ]
+  }
+]

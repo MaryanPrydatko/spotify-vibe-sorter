@@ -1,0 +1,31 @@
+{
+  "playlist": "Sad art-rock / beautiful collapse (pattern)",
+  "manifest": 137,
+  "actual": 135,
+  "scrapedMin": 1,
+  "scrapedMax": 132,
+  "missing": [
+    {
+      "title": "Blow Out",
+      "artist": "Radiohead",
+      "album": "Pablo Honey",
+      "sources": [
+        "Liked Songs",
+        "radioh",
+        "Ґems"
+      ],
+      "count": 3
+    },
+    {
+      "title": "M",
+      "artist": "The Cure",
+      "album": "Seventeen Seconds",
+      "sources": [
+        "Ґems"
+      ],
+      "count": 1
+    }
+  ],
+  "extra": [],
+  "duplicates": []
+}

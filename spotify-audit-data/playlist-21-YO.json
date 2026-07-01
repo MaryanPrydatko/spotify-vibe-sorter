@@ -1,0 +1,558 @@
+{
+  "name": "YO",
+  "url": "https://open.spotify.com/playlist/2huNeuIByEjoKlAHum1IeS",
+  "count_header": "61",
+  "duration_header": "about 3 hr 30 min",
+  "extracted_count": 61,
+  "tracks": [
+    {
+      "position": 1,
+      "title": "True Love Waits",
+      "artist": "Radiohead",
+      "album": "A Moon Shaped Pool",
+      "date_added": "5 Jul 2025",
+      "duration": "4:43",
+      "raw": "1\nTrue Love Waits\nRadiohead\nA Moon Shaped Pool\n5 Jul 2025\n4:43"
+    },
+    {
+      "position": 2,
+      "title": "9",
+      "artist": "Dean Blunt, Panda Bear",
+      "album": "ZUSHI",
+      "date_added": "5 Jul 2025",
+      "duration": "1:27",
+      "raw": "2\n9\nDean Blunt, Panda Bear\nZUSHI\n5 Jul 2025\n1:27"
+    },
+    {
+      "position": 3,
+      "title": "Scott Pilgrim vs. My GPA",
+      "artist": "Mom Jeans.",
+      "album": "Best Buds",
+      "date_added": "5 Jul 2025",
+      "duration": "3:59",
+      "raw": "3\nScott Pilgrim vs. My GPA\nMom Jeans.\nBest Buds\n5 Jul 2025\n3:59"
+    },
+    {
+      "position": 4,
+      "title": "Sarah",
+      "artist": "Alex G",
+      "album": "Trick",
+      "date_added": "5 Jul 2025",
+      "duration": "2:56",
+      "raw": "4\nSarah\nAlex G\nTrick\n5 Jul 2025\n2:56"
+    },
+    {
+      "position": 5,
+      "title": "Head in the Ceiling Fan",
+      "artist": "Title Fight",
+      "album": "Floral Green",
+      "date_added": "5 Jul 2025",
+      "duration": "3:59",
+      "raw": "5\nHead in the Ceiling Fan\nTitle Fight\nFloral Green\n5 Jul 2025\n3:59"
+    },
+    {
+      "position": 6,
+      "title": "How to Disappear Completely",
+      "artist": "Radiohead",
+      "album": "Kid A",
+      "date_added": "5 Jul 2025",
+      "duration": "5:56",
+      "raw": "6\nHow to Disappear Completely\nRadiohead\nKid A\n5 Jul 2025\n5:56"
+    },
+    {
+      "position": 7,
+      "title": "Call It Fate, Call It Karma",
+      "artist": "The Strokes",
+      "album": "Comedown Machine",
+      "date_added": "5 Jul 2025",
+      "duration": "3:24",
+      "raw": "7\nCall It Fate, Call It Karma\nThe Strokes\nComedown Machine\n5 Jul 2025\n3:24"
+    },
+    {
+      "position": 8,
+      "title": "Rinsed",
+      "artist": "Dean Blunt, TYSON",
+      "album": "Rinsed",
+      "date_added": "5 Jul 2025",
+      "duration": "1:46",
+      "raw": "8\nRinsed\nDean Blunt, TYSON\nRinsed\n5 Jul 2025\n1:46"
+    },
+    {
+      "position": 9,
+      "title": "Futile Devices (Doveman Remix)",
+      "artist": "Sufjan Stevens",
+      "album": "Call Me By Your Name (Original Motion Picture Soundtrack)",
+      "date_added": "5 Jul 2025",
+      "duration": "2:15",
+      "raw": "9\nFutile Devices (Doveman Remix)\nSufjan Stevens\nCall Me By Your Name (Original Motion Picture Soundtrack)\n5 Jul 2025\n2:15"
+    },
+    {
+      "position": 10,
+      "title": "Setting Sun",
+      "artist": "You'll Never Get to Heaven",
+      "album": "Wave Your Moonlight Hat For The Snowfall Train",
+      "date_added": "5 Jul 2025",
+      "duration": "2:58",
+      "raw": "10\nSetting Sun\nYou'll Never Get to Heaven\nWave Your Moonlight Hat For The Snowfall Train\n5 Jul 2025\n2:58"
+    },
+    {
+      "position": 11,
+      "title": "Nude",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "date_added": "5 Jul 2025",
+      "duration": "4:15",
+      "raw": "11\nNude\nRadiohead\nIn Rainbows\n5 Jul 2025\n4:15"
+    },
+    {
+      "position": 12,
+      "title": "Safe In Your Skin",
+      "artist": "Title Fight",
+      "album": "Shed",
+      "date_added": "5 Jul 2025",
+      "duration": "2:34",
+      "raw": "12\nSafe In Your Skin\nTitle Fight\nShed\n5 Jul 2025\n2:34"
+    },
+    {
+      "position": 13,
+      "title": "Need 2",
+      "artist": "Pinegrove",
+      "album": "Everything So Far",
+      "date_added": "5 Jul 2025",
+      "duration": "3:11",
+      "raw": "13\nNeed 2\nPinegrove\nEverything So Far\n5 Jul 2025\n3:11"
+    },
+    {
+      "position": 14,
+      "title": "Sparks",
+      "artist": "Coldplay",
+      "album": "Parachutes",
+      "date_added": "5 Jul 2025",
+      "duration": "3:47",
+      "raw": "14\nSparks\nColdplay\nParachutes\n5 Jul 2025\n3:47"
+    },
+    {
+      "position": 15,
+      "title": "The Place Where He Inserted the Blade",
+      "artist": "Black Country, New Road",
+      "album": "Ants From Up There",
+      "date_added": "5 Jul 2025",
+      "duration": "7:13",
+      "raw": "15\nThe Place Where He Inserted the Blade\nBlack Country, New Road\nAnts From Up There\n5 Jul 2025\n7:13"
+    },
+    {
+      "position": 16,
+      "title": "Motion Picture Soundtrack",
+      "artist": "Radiohead",
+      "album": "Kid A",
+      "date_added": "5 Jul 2025",
+      "duration": "3:20",
+      "raw": "16\nMotion Picture Soundtrack\nRadiohead\nKid A\n5 Jul 2025\n3:20"
+    },
+    {
+      "position": 17,
+      "title": "the rot",
+      "artist": "Dean Blunt",
+      "album": "BLACK METAL 2",
+      "date_added": "5 Jul 2025",
+      "duration": "3:43",
+      "raw": "17\nthe rot\nE\nDean Blunt\nBLACK METAL 2\n5 Jul 2025\n3:43"
+    },
+    {
+      "position": 18,
+      "title": "Seigfried",
+      "artist": "Frank Ocean",
+      "album": "Blonde",
+      "date_added": "5 Jul 2025",
+      "duration": "5:34",
+      "raw": "18\nSeigfried\nFrank Ocean\nBlonde\n5 Jul 2025\n5:34"
+    },
+    {
+      "position": 19,
+      "title": "How To Never Stop Being Sad",
+      "artist": "dandelion hands",
+      "album": "It's All In Your Head",
+      "date_added": "5 Jul 2025",
+      "duration": "2:10",
+      "raw": "19\nHow To Never Stop Being Sad\ndandelion hands\nIt's All In Your Head\n5 Jul 2025\n2:10"
+    },
+    {
+      "position": 20,
+      "title": "Sandy",
+      "artist": "Alex G",
+      "album": "Rules",
+      "date_added": "5 Jul 2025",
+      "duration": "2:40",
+      "raw": "20\nSandy\nAlex G\nRules\n5 Jul 2025\n2:40"
+    },
+    {
+      "position": 21,
+      "title": "No Surprises",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "date_added": "5 Jul 2025",
+      "duration": "3:49",
+      "raw": "21\nNo Surprises\nMusic video\n•\nRadiohead\nOK Computer\n5 Jul 2025\n3:49"
+    },
+    {
+      "position": 22,
+      "title": "Yes I'm Changing",
+      "artist": "Tame Impala",
+      "album": "Currents",
+      "date_added": "5 Jul 2025",
+      "duration": "4:30",
+      "raw": "22\nYes I'm Changing\nE\nTame Impala\nCurrents\n5 Jul 2025\n4:30"
+    },
+    {
+      "position": 23,
+      "title": "Selfless",
+      "artist": "The Strokes",
+      "album": "The New Abnormal",
+      "date_added": "5 Jul 2025",
+      "duration": "3:42",
+      "raw": "23\nSelfless\nThe Strokes\nThe New Abnormal\n5 Jul 2025\n3:42"
+    },
+    {
+      "position": 24,
+      "title": "Murder Your Memory",
+      "artist": "Title Fight",
+      "album": "Hyperview",
+      "date_added": "5 Jul 2025",
+      "duration": "2:36",
+      "raw": "24\nMurder Your Memory\nTitle Fight\nHyperview\n5 Jul 2025\n2:36"
+    },
+    {
+      "position": 25,
+      "title": "Sextape",
+      "artist": "Deftones",
+      "album": "Diamond Eyes",
+      "date_added": "5 Jul 2025",
+      "duration": "4:01",
+      "raw": "25\nSextape\nMusic video\n•\nDeftones\nDiamond Eyes\n5 Jul 2025\n4:01"
+    },
+    {
+      "position": 26,
+      "title": "All I Need",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "date_added": "5 Jul 2025",
+      "duration": "3:48",
+      "raw": "26\nAll I Need\nRadiohead\nIn Rainbows\n5 Jul 2025\n3:48"
+    },
+    {
+      "position": 27,
+      "title": "Forever",
+      "artist": "Alex G",
+      "album": "Trick",
+      "date_added": "5 Jul 2025",
+      "duration": "2:29",
+      "raw": "27\nForever\nAlex G\nTrick\n5 Jul 2025\n2:29"
+    },
+    {
+      "position": 28,
+      "title": "aisatsana [102]",
+      "artist": "Aphex Twin",
+      "album": "Syro",
+      "date_added": "5 Jul 2025",
+      "duration": "5:21",
+      "raw": "28\naisatsana [102]\nAphex Twin\nSyro\n5 Jul 2025\n5:21"
+    },
+    {
+      "position": 29,
+      "title": "I'll Try Anything Once (\"You Only Live Once\" demo) - Heart In a Cage B-Side",
+      "artist": "The Strokes",
+      "album": "The Singles - Volume 01",
+      "date_added": "5 Jul 2025",
+      "duration": "3:14",
+      "raw": "29\nI'll Try Anything Once (\"You Only Live Once\" demo) - Heart In a Cage B-Side\nThe Strokes\nThe Singles - Volume 01\n5 Jul 2025\n3:14"
+    },
+    {
+      "position": 30,
+      "title": "Mystery of Love",
+      "artist": "Sufjan Stevens",
+      "album": "Mystery of Love",
+      "date_added": "5 Jul 2025",
+      "duration": "4:08",
+      "raw": "30\nMystery of Love\nMusic video\n•\nSufjan Stevens\nMystery of Love\n5 Jul 2025\n4:08"
+    },
+    {
+      "position": 31,
+      "title": "Bullet Proof ... I Wish I Was",
+      "artist": "Radiohead",
+      "album": "The Bends",
+      "date_added": "5 Jul 2025",
+      "duration": "3:28",
+      "raw": "31\nBullet Proof ... I Wish I Was\nRadiohead\nThe Bends\n5 Jul 2025\n3:28"
+    },
+    {
+      "position": 32,
+      "title": "Breathe (In the Air)",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side of the Moon",
+      "date_added": "5 Jul 2025",
+      "duration": "2:49",
+      "raw": "32\nBreathe (In the Air)\nPink Floyd\nThe Dark Side of the Moon\n5 Jul 2025\n2:49"
+    },
+    {
+      "position": 33,
+      "title": "Please, Please, Please, Let Me Get What I Want - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "date_added": "5 Jul 2025",
+      "duration": "1:52",
+      "raw": "33\nPlease, Please, Please, Let Me Get What I Want - 2011 Remaster\nThe Smiths\nHatful of Hollow\n5 Jul 2025\n1:52"
+    },
+    {
+      "position": 34,
+      "title": "Break",
+      "artist": "alex_g_offline",
+      "album": "1234",
+      "date_added": "5 Jul 2025",
+      "duration": "2:57",
+      "raw": "34\nBreak\nalex_g_offline\n1234\n5 Jul 2025\n2:57"
+    },
+    {
+      "position": 35,
+      "title": "Is This It",
+      "artist": "The Strokes",
+      "album": "Is This It",
+      "date_added": "5 Jul 2025",
+      "duration": "2:31",
+      "raw": "35\nIs This It\nThe Strokes\nIs This It\n5 Jul 2025\n2:31"
+    },
+    {
+      "position": 36,
+      "title": "Weird Fishes / Arpeggi",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "date_added": "5 Jul 2025",
+      "duration": "5:18",
+      "raw": "36\nWeird Fishes / Arpeggi\nRadiohead\nIn Rainbows\n5 Jul 2025\n5:18"
+    },
+    {
+      "position": 37,
+      "title": "To Be Alone With You",
+      "artist": "Sufjan Stevens",
+      "album": "Seven Swans",
+      "date_added": "5 Jul 2025",
+      "duration": "2:48",
+      "raw": "37\nTo Be Alone With You\nSufjan Stevens\nSeven Swans\n5 Jul 2025\n2:48"
+    },
+    {
+      "position": 38,
+      "title": "Sleep Walk",
+      "artist": "Deftones",
+      "album": "Covers",
+      "date_added": "5 Jul 2025",
+      "duration": "2:30",
+      "raw": "38\nSleep Walk\nDeftones\nCovers\n5 Jul 2025\n2:30"
+    },
+    {
+      "position": 39,
+      "title": "(dream)",
+      "artist": "salvia palth",
+      "album": "melanchole",
+      "date_added": "5 Jul 2025",
+      "duration": "1:24",
+      "raw": "39\n(dream)\nsalvia palth\nmelanchole\n5 Jul 2025\n1:24"
+    },
+    {
+      "position": 40,
+      "title": "Almost Fantasy",
+      "artist": "Fog Lake",
+      "album": "Almost Fantasy",
+      "date_added": "5 Jul 2025",
+      "duration": "2:12",
+      "raw": "40\nAlmost Fantasy\nFog Lake\nAlmost Fantasy\n5 Jul 2025\n2:12"
+    },
+    {
+      "position": 41,
+      "title": "Subterranean Homesick Alien",
+      "artist": "Radiohead",
+      "album": "OK Computer",
+      "date_added": "5 Jul 2025",
+      "duration": "4:27",
+      "raw": "41\nSubterranean Homesick Alien\nRadiohead\nOK Computer\n5 Jul 2025\n4:27"
+    },
+    {
+      "position": 42,
+      "title": "Hard To Explain",
+      "artist": "The Strokes",
+      "album": "Is This It",
+      "date_added": "5 Jul 2025",
+      "duration": "3:44",
+      "raw": "42\nHard To Explain\nMusic video\n•\nThe Strokes\nIs This It\n5 Jul 2025\n3:44"
+    },
+    {
+      "position": 43,
+      "title": "All of Me Wants All of You",
+      "artist": "Sufjan Stevens",
+      "album": "Carrie & Lowell",
+      "date_added": "5 Jul 2025",
+      "duration": "3:41",
+      "raw": "43\nAll of Me Wants All of You\nSufjan Stevens\nCarrie & Lowell\n5 Jul 2025\n3:41"
+    },
+    {
+      "position": 44,
+      "title": "Exquisite Tension",
+      "artist": "You'll Never Get to Heaven",
+      "album": "Images",
+      "date_added": "5 Jul 2025",
+      "duration": "4:08",
+      "raw": "44\nExquisite Tension\nYou'll Never Get to Heaven\nImages\n5 Jul 2025\n4:08"
+    },
+    {
+      "position": 45,
+      "title": "Femme Fatale",
+      "artist": "The Velvet Underground, Nico",
+      "album": "The Velvet Underground & Nico 45th Anniversary",
+      "date_added": "5 Jul 2025",
+      "duration": "2:39",
+      "raw": "45\nFemme Fatale\nThe Velvet Underground, Nico\nThe Velvet Underground & Nico 45th Anniversary\n5 Jul 2025\n2:39"
+    },
+    {
+      "position": 46,
+      "title": "Videotape",
+      "artist": "Radiohead",
+      "album": "In Rainbows",
+      "date_added": "5 Jul 2025",
+      "duration": "4:39",
+      "raw": "46\nVideotape\nRadiohead\nIn Rainbows\n5 Jul 2025\n4:39"
+    },
+    {
+      "position": 47,
+      "title": "Don't Panic",
+      "artist": "Coldplay",
+      "album": "Parachutes",
+      "date_added": "5 Jul 2025",
+      "duration": "2:16",
+      "raw": "47\nDon't Panic\nMusic video\n•\nColdplay\nParachutes\n5 Jul 2025\n2:16"
+    },
+    {
+      "position": 48,
+      "title": "Krystal",
+      "artist": "Matt Maltese",
+      "album": "Krystal",
+      "date_added": "5 Jul 2025",
+      "duration": "3:40",
+      "raw": "48\nKrystal\nMatt Maltese\nKrystal\n5 Jul 2025\n3:40"
+    },
+    {
+      "position": 49,
+      "title": "Fourth of July",
+      "artist": "Sufjan Stevens",
+      "album": "Carrie & Lowell",
+      "date_added": "5 Jul 2025",
+      "duration": "4:39",
+      "raw": "49\nFourth of July\nSufjan Stevens\nCarrie & Lowell\n5 Jul 2025\n4:39"
+    },
+    {
+      "position": 50,
+      "title": "There Is a Light That Never Goes Out - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Queen Is Dead",
+      "date_added": "5 Jul 2025",
+      "duration": "4:04",
+      "raw": "50\nThere Is a Light That Never Goes Out - 2011 Remaster\nThe Smiths\nThe Queen Is Dead\n5 Jul 2025\n4:04"
+    },
+    {
+      "position": 51,
+      "title": "So Real",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "date_added": "6 Jul 2025",
+      "duration": "4:43",
+      "raw": "51\nSo Real\nMusic video\n•\nJeff Buckley\nGrace\n6 Jul 2025\n4:43"
+    },
+    {
+      "position": 52,
+      "title": "I Know It's Over - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Queen Is Dead",
+      "date_added": "6 Jul 2025",
+      "duration": "5:49",
+      "raw": "52\nI Know It's Over - 2011 Remaster\nThe Smiths\nThe Queen Is Dead\n6 Jul 2025\n5:49"
+    },
+    {
+      "position": 53,
+      "title": "This Night Has Opened My Eyes - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "date_added": "6 Jul 2025",
+      "duration": "3:41",
+      "raw": "53\nThis Night Has Opened My Eyes - 2011 Remaster\nThe Smiths\nHatful of Hollow\n6 Jul 2025\n3:41"
+    },
+    {
+      "position": 54,
+      "title": "Luna - 2011 Remaster",
+      "artist": "The Smashing Pumpkins",
+      "album": "Siamese Dream (Deluxe Edition)",
+      "date_added": "6 Jul 2025",
+      "duration": "3:22",
+      "raw": "54\nLuna - 2011 Remaster\nThe Smashing Pumpkins\nSiamese Dream (Deluxe Edition)\n6 Jul 2025\n3:22"
+    },
+    {
+      "position": 55,
+      "title": "Lover, You Should've Come Over",
+      "artist": "Jeff Buckley",
+      "album": "Grace",
+      "date_added": "6 Jul 2025",
+      "duration": "6:44",
+      "raw": "55\nLover, You Should've Come Over\nMusic video\n•\nJeff Buckley\nGrace\n6 Jul 2025\n6:44"
+    },
+    {
+      "position": 56,
+      "title": "Fear",
+      "artist": "Current Joys",
+      "album": "A Different Age",
+      "date_added": "6 Jul 2025",
+      "duration": "3:36",
+      "raw": "56\nFear\nCurrent Joys\nA Different Age\n6 Jul 2025\n3:36"
+    },
+    {
+      "position": 57,
+      "title": "Heaven Knows I'm Miserable Now - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "Hatful of Hollow",
+      "date_added": "6 Jul 2025",
+      "duration": "3:35",
+      "raw": "57\nHeaven Knows I'm Miserable Now - 2011 Remaster\nThe Smiths\nHatful of Hollow\n6 Jul 2025\n3:35"
+    },
+    {
+      "position": 58,
+      "title": "There Is a Light That Never Goes Out - Take 1",
+      "artist": "The Smiths",
+      "album": "There Is a Light That Never Goes Out (Take 1)",
+      "date_added": "6 Jul 2025",
+      "duration": "4:25",
+      "raw": "58\nThere Is a Light That Never Goes Out - Take 1\nThe Smiths\nThere Is a Light That Never Goes Out (Take 1)\n6 Jul 2025\n4:25"
+    },
+    {
+      "position": 59,
+      "title": "This Charming Man - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Smiths",
+      "date_added": "6 Jul 2025",
+      "duration": "2:42",
+      "raw": "59\nThis Charming Man - 2011 Remaster\nThe Smiths\nThe Smiths\n6 Jul 2025\n2:42"
+    },
+    {
+      "position": 60,
+      "title": "You've Got Everything Now - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Smiths",
+      "date_added": "6 Jul 2025",
+      "duration": "3:59",
+      "raw": "60\nYou've Got Everything Now - 2011 Remaster\nThe Smiths\nThe Smiths\n6 Jul 2025\n3:59"
+    },
+    {
+      "position": 61,
+      "title": "Pretty Girls Make Graves - 2011 Remaster",
+      "artist": "The Smiths",
+      "album": "The Smiths",
+      "date_added": "6 Jul 2025",
+      "duration": "3:43",
+      "raw": "61\nPretty Girls Make Graves - 2011 Remaster\nThe Smiths\nThe Smiths\n6 Jul 2025\n3:43"
+    }
+  ]
+}

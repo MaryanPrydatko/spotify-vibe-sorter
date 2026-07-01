@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spotify Library Pattern Audit</title>
+  <style>
+    :root {
+      --bg: #101112;
+      --panel: #181a1d;
+      --panel-2: #202328;
+      --text: #f4f1ea;
+      --muted: #aaa7a0;
+      --line: #343840;
+      --accent: #8ecae6;
+      --accent-2: #e9c46a;
+      --bad: #e76f51;
+      --good: #98c379;
+      --radius: 8px;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(16,17,18,.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+    .top {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: end;
+    }
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    .sub { color: var(--muted); margin-top: 6px; }
+    .stats {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 8px;
+    }
+    .stat {
+      min-width: 120px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+    .stat strong { display: block; font-size: 18px; }
+    .stat span { color: var(--muted); font-size: 12px; }
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 20px;
+    }
+    nav {
+      position: sticky;
+      top: 98px;
+      align-self: start;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      overflow: hidden;
+    }
+    nav a {
+      display: block;
+      padding: 10px 12px;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.04);
+      font-size: 13px;
+    }
+    nav a:hover { color: var(--text); background: var(--panel-2); }
+    section { margin-bottom: 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      padding: 16px;
+      min-width: 0;
+    }
+    .card h2, .card h3 {
+      margin: 0 0 8px;
+      letter-spacing: 0;
+    }
+    .card h2 { font-size: 20px; }
+    .card h3 { font-size: 17px; }
+    .muted { color: var(--muted); }
+    .pillrow { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      color: var(--muted);
+      background: #141518;
+    }
+    .pill strong { color: var(--text); }
+    .pattern {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr);
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .tracklist {
+      display: grid;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .track {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: baseline;
+      padding: 8px 0;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .track b { font-weight: 620; }
+    .track small { color: var(--muted); }
+    .count {
+      color: var(--accent-2);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: table;
+    }
+    th, td {
+      padding: 9px 10px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--panel-2);
+    }
+    td:nth-child(2), th:nth-child(2) { text-align: right; font-variant-numeric: tabular-nums; }
+    .notice {
+      border-left: 3px solid var(--accent);
+      padding: 12px 14px;
+      background: #15191d;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-bottom: 18px;
+    }
+    .search {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+    @media (max-width: 980px) {
+      .top, main, .pattern { grid-template-columns: 1fr; }
+      nav { position: static; }
+      .grid { grid-template-columns: 1fr; }
+      .stats { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div>
+        <h1>Spotify Library Pattern Audit</h1>
+        <div class="sub">A readable map of the real subpatterns in your playlists and Liked Songs. No emoji bucket names, no deletion proposals.</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>70</strong><span>owned playlists</span></div>
+        <div class="stat"><strong>5,553</strong><span>playlist entries</span></div>
+        <div class="stat"><strong>3,815</strong><span>liked songs</span></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <nav>
+      <a href="#read">How to read this</a>
+      <a href="#hard-tekno">Hard tekno, tribe, freeparty pressure</a><a href="#idm-braindance">IDM, braindance, clean-machine weirdness</a><a href="#ambient-liminal">Ambient, liminal, sleepwalking electronic</a><a href="#jazz-house">Jazz-house, soft groove, warm rooms</a><a href="#frank-montell">Frank / Montell / wounded R&amp;B</a><a href="#sad-art-rock">Sad art-rock and beautiful collapse</a><a href="#midwest-slacker">Midwest, slacker, bedroom guitar sadness</a><a href="#classic-riff">Classic riff rock and guitar mythology</a><a href="#rap-canon">Rap canon and main-character hip-hop</a><a href="#rage-gym">Rage, opium, gym, turn-up</a><a href="#shower-warm">Shower songs, warm singing, obvious replay</a><a href="#post-soviet-melancholy">Post-Soviet / Ukrainian / Russian melancholy rock</a><a href="#personal-archive">Personal archive, gifts, places, time capsules</a>
+      <a href="#duplicates">Repeated songs</a>
+      <a href="#playlists">Playlist map</a>
+    </nav>
+    <div>
+      <section id="read" class="notice">
+        <b>What changed from the earlier proposal:</b> these are specific listening patterns, not generic vibe buckets. A song can belong to more than one pattern. The point is to design fewer daily playlists without losing the weird niche stuff.
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Most important correction</h2>
+          <p class="muted">The electronic side is not one bucket. It splits into hard tekno, IDM/braindance, ambient-liminal, and jazz-house. Your screenshot track, <b>FI3AC2265060</b> by Aleksi Perala, belongs with the IDM/braindance pattern.</p>
+        </div>
+        <div class="card">
+          <h2>Likely playlist strategy</h2>
+          <p class="muted">Keep personal/archive playlists separate. Build daily playlists from specific functional patterns: hard tekno, gym/rage, sad art-rock, Frank/Montell R&B, shower/warm songs, and chill/ambient.</p>
+        </div>
+      </section>
+
+      <section id="hard-tekno" class="pattern">
+    <div class="card">
+      <h2>Hard tekno, tribe, freeparty pressure</h2>
+      <p class="muted">This is not just electronic. It is fast, physical, repetitive, distorted, and built around warehouse/freeparty energy.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>253</strong> matched unique tracks</span>
+        <span class="pill">Tekk</span><span class="pill">Jawoll junge</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>Don't wanna go to this party</b><br><span class="muted">Vortek's</span><br><small>Acid Pirate 17</small></div>
+    <div class="count">2x</div>
+  </div><div class="track">
+    <div><b>Free Spirit</b><br><span class="muted">Vortek's</span><br><small>Acid Pirate 01</small></div>
+    <div class="count">2x</div>
+  </div><div class="track">
+    <div><b>Injection Acid</b><br><span class="muted">Vortek's</span><br><small>Acid Pirate 14</small></div>
+    <div class="count">2x</div>
+  </div><div class="track">
+    <div><b>Medusa</b><br><span class="muted">Vortek's</span><br><small>Acid Pirate 16</small></div>
+    <div class="count">2x</div>
+  </div><div class="track">
+    <div><b>Secret Services</b><br><span class="muted">Vortek's</span><br><small>Secret Services</small></div>
+    <div class="count">2x</div>
+  </div><div class="track">
+    <div><b>Among the Sleep</b><br><span class="muted">Vortek's</span><br><small>Un asile abandonné</small></div>
+    <div class="count">1x</div>
+  </div><div class="track">
+    <div><b>Arena</b><br><span class="muted">Vortek's, Teksa</span><br><small>Acid Pirate 09</small></div>
+    <div class="count">1x</div>
+  </div><div class="track">
+    <div><b>Ascenseur Emotionnel</b><br><span class="muted">Vortek's</span><br><small>Spiral</small></div>
+    <div class="count">1x</div>
+  </div><div class="track">
+    <div><b>Au bout du tunnel</b><br><span class="muted">Vortek's</span><br><small>Un asile abandonné</small></div>
+    <div class="count">1x</div>
+  </div><div class="track">
+    <div><b>Aura</b><br><span class="muted">Vortek's</span><br><small>Acid Pirate 20</small></div>
+    <div class="count">1x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Vortek's <strong>50</strong></span><span class="pill">Shmirlap <strong>44</strong></span><span class="pill">Tekno Noise <strong>37</strong></span><span class="pill">Gehlektek <strong>36</strong></span><span class="pill">Neurotribe <strong>31</strong></span><span class="pill">Teksa <strong>23</strong></span><span class="pill">93sovage <strong>22</strong></span><span class="pill">Protokseed <strong>6</strong></span><span class="pill">Spice Up! <strong>3</strong></span><span class="pill">Peter303 <strong>3</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Tekk <strong>253</strong></span><span class="pill">Liked Songs <strong>6</strong></span><span class="pill">Jawoll junge <strong>1</strong></span></div>
+    </div>
+  </section><section id="idm-braindance" class="pattern">
+    <div class="card">
+      <h2>IDM, braindance, clean-machine weirdness</h2>
+      <p class="muted">Precise, synthetic, sometimes pretty, sometimes alien. This is where Aleksi Perala / Aphex / Boards of Canada sit.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>83</strong> matched unique tracks</span>
+        <span class="pill">GoDayumn</span><span class="pill">Lowercase</span><span class="pill">ABT</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>FI3AC2265060</b><br><span class="muted">Aleksi Perälä</span><br><small>CYCLES 6 鳳凰</small></div>
+    <div class="count">2x</div>
+  </div><div class="track">
+    <div><b>#3</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works Volume II</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>aisatsana [102]</b><br><span class="muted">Aphex Twin</span><br><small>Syro</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Avril 14th</b><br><span class="muted">Aphex Twin</span><br><small>Drukqs</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Flim</b><br><span class="muted">Aphex Twin</span><br><small>Come To Daddy</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>#19</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works Volume II (Expanded Edition)</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Moments - Ben Böhmer &amp; Nils Hoffmann Remix</b><br><span class="muted">Kidnap, Leo Stannard, Ben Böhmer, Nils Hoffmann</span><br><small>Grow (The Remixes)</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>On</b><br><span class="muted">Aphex Twin</span><br><small>On</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Xtal</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works 85-92</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>#1</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works Volume II</small></div>
+    <div class="count">3x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Aphex Twin <strong>48</strong></span><span class="pill">Boards of Canada <strong>15</strong></span><span class="pill">Floating Points <strong>8</strong></span><span class="pill">Oneohtrix Point Never <strong>4</strong></span><span class="pill">Kidnap <strong>2</strong></span><span class="pill">Leo Stannard <strong>2</strong></span><span class="pill">Dorian Concept <strong>2</strong></span><span class="pill">Four Tet <strong>2</strong></span><span class="pill">Aleksi Perälä <strong>1</strong></span><span class="pill">Ben Böhmer <strong>1</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">GoDayumn <strong>72</strong></span><span class="pill">Liked Songs <strong>55</strong></span><span class="pill">ABT <strong>17</strong></span><span class="pill">Holy house <strong>2</strong></span><span class="pill">Jawoll junge <strong>2</strong></span><span class="pill">YO <strong>1</strong></span><span class="pill">Chillout <strong>1</strong></span><span class="pill">Lowercase <strong>1</strong></span></div>
+    </div>
+  </section><section id="ambient-liminal" class="pattern">
+    <div class="card">
+      <h2>Ambient, liminal, sleepwalking electronic</h2>
+      <p class="muted">Less dancefloor, more drifting. Good for walking, late night, reading, dissociation, or background focus.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>70</strong> matched unique tracks</span>
+        <span class="pill">Chillout</span><span class="pill">Na ja..</span><span class="pill">GoDayumn</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>Tunnel Vision</b><br><span class="muted">Flawed Mangoes</span><br><small>Tunnel Vision</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>#3</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works Volume II</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>#19</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works Volume II (Expanded Edition)</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Riff 2</b><br><span class="muted">Flawed Mangoes</span><br><small>Killswitch Melodies</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Xtal</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works 85-92</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>#1</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works Volume II</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>Absolution</b><br><span class="muted">Flawed Mangoes</span><br><small>Anomaly I</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>Ageispolis</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works 85-92</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>Hedphelym</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works 85-92</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>Heliosphan</b><br><span class="muted">Aphex Twin</span><br><small>Selected Ambient Works 85-92</small></div>
+    <div class="count">3x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Flawed Mangoes <strong>31</strong></span><span class="pill">Aphex Twin <strong>19</strong></span><span class="pill">Brian Eno <strong>6</strong></span><span class="pill">C418 <strong>6</strong></span><span class="pill">Øneheart <strong>5</strong></span><span class="pill">Harold Budd <strong>5</strong></span><span class="pill">reidenshi <strong>2</strong></span><span class="pill">Cocteau Twins <strong>2</strong></span><span class="pill">Slipknot <strong>1</strong></span><span class="pill">Antent <strong>1</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>38</strong></span><span class="pill">Flaw <strong>31</strong></span><span class="pill">GoDayumn <strong>26</strong></span><span class="pill">ABT <strong>7</strong></span><span class="pill">Na ja.. <strong>4</strong></span><span class="pill">Jawoll junge <strong>2</strong></span><span class="pill">Here, There, and Everywhere... With You <strong>1</strong></span><span class="pill">for talia ordered by decreasing valence <strong>1</strong></span></div>
+    </div>
+  </section><section id="jazz-house" class="pattern">
+    <div class="card">
+      <h2>Jazz-house, soft groove, warm rooms</h2>
+      <p class="muted">Berlioz, jazz-house, afro-house, loungey percussion. More tasteful and social than pure chill.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>46</strong> matched unique tracks</span>
+        <span class="pill">!BERLIOZ!</span><span class="pill">jazzombinator</span><span class="pill">Afro house dump</span><span class="pill">Holy house</span><span class="pill">Abend chillen</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>You Were Right</b><br><span class="muted">RÜFÜS DU SOL</span><br><small>Bloom</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Innerbloom</b><br><span class="muted">RÜFÜS DU SOL</span><br><small>Bloom</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>Sundream</b><br><span class="muted">RÜFÜS DU SOL</span><br><small>Atlas (Light / Dark Deluxe Edition)</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Treat You Better</b><br><span class="muted">RÜFÜS DU SOL</span><br><small>SOLACE</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>deep in it</b><br><span class="muted">berlioz, Ted Jasper</span><br><small>deep in it</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>jazz is for ordinary people</b><br><span class="muted">berlioz</span><br><small>jazz is for ordinary people</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>joycelyn's dance</b><br><span class="muted">berlioz</span><br><small>something will happen</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>Love Line (with Tinashe) - HUGEL Remix</b><br><span class="muted">Shift K3Y, Tinashe, HUGEL</span><br><small>Love Line (with Tinashe) [HUGEL Remix]</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>miro</b><br><span class="muted">berlioz, Ted Jasper</span><br><small>miro</small></div>
+    <div class="count">3x</div>
+  </div><div class="track">
+    <div><b>nyc in 1940</b><br><span class="muted">berlioz, Ted Jasper</span><br><small>nyc in 1940</small></div>
+    <div class="count">3x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">berlioz <strong>19</strong></span><span class="pill">RÜFÜS DU SOL <strong>7</strong></span><span class="pill">Ted Jasper <strong>4</strong></span><span class="pill">HUGEL <strong>4</strong></span><span class="pill">Cafe Music BGM channel <strong>3</strong></span><span class="pill">Jazzy <strong>2</strong></span><span class="pill">Shift K3Y <strong>1</strong></span><span class="pill">Tinashe <strong>1</strong></span><span class="pill">The Los Angeles Jazz Ensemble <strong>1</strong></span><span class="pill">Phil Woods <strong>1</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>29</strong></span><span class="pill">!BERLIOZ! <strong>19</strong></span><span class="pill">Chillout <strong>12</strong></span><span class="pill">Holy house <strong>7</strong></span><span class="pill">Turn it up <strong>5</strong></span><span class="pill">jazzombinator <strong>3</strong></span><span class="pill">day in roma <strong>2</strong></span><span class="pill">Qwe <strong>1</strong></span></div>
+    </div>
+  </section><section id="frank-montell" class="pattern">
+    <div class="card">
+      <h2>Frank / Montell / wounded R&amp;B</h2>
+      <p class="muted">Sparse, romantic, emotionally underwater. This deserves its own bucket because it repeats across many playlists.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>159</strong> matched unique tracks</span>
+        <span class="pill">frank and chill</span><span class="pill">Frank Montell</span><span class="pill">Montell</span><span class="pill">Frank Ocean - Endless</span><span class="pill">Frank Ocean - nostalgia, ULTRA</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>Seigfried</b><br><span class="muted">Frank Ocean</span><br><small>Blonde</small></div>
+    <div class="count">9x</div>
+  </div><div class="track">
+    <div><b>Ivy</b><br><span class="muted">Frank Ocean</span><br><small>Blonde</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Self Control</b><br><span class="muted">Frank Ocean</span><br><small>Blonde</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>White Ferrari</b><br><span class="muted">Frank Ocean</span><br><small>Blonde</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Godspeed</b><br><span class="muted">Frank Ocean</span><br><small>Blonde</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Moon River</b><br><span class="muted">Frank Ocean</span><br><small>Moon River</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Nights</b><br><span class="muted">Frank Ocean</span><br><small>Blonde</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Chanel</b><br><span class="muted">Frank Ocean</span><br><small>Chanel</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>Crack Rock</b><br><span class="muted">Frank Ocean</span><br><small>channel ORANGE</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>Lost</b><br><span class="muted">Frank Ocean</span><br><small>channel ORANGE (Explicit Version)</small></div>
+    <div class="count">6x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Frank Ocean <strong>87</strong></span><span class="pill">Montell Fish <strong>44</strong></span><span class="pill">frank ocean <strong>13</strong></span><span class="pill">Lord's Child <strong>9</strong></span><span class="pill">Tyler <strong>8</strong></span><span class="pill">The Creator <strong>8</strong></span><span class="pill">JAŸ-Z <strong>6</strong></span><span class="pill">Kanye West <strong>3</strong></span><span class="pill">Odd Future <strong>3</strong></span><span class="pill">Hodgy <strong>3</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Tralalelo Tralala <strong>100</strong></span><span class="pill">Liked Songs <strong>69</strong></span><span class="pill">Frank Montell <strong>66</strong></span><span class="pill">frank and chill <strong>46</strong></span><span class="pill">Montell <strong>39</strong></span><span class="pill">Na ja.. <strong>21</strong></span><span class="pill">Frank Ocean - Endless <strong>19</strong></span><span class="pill">Tunes <strong>16</strong></span></div>
+    </div>
+  </section><section id="sad-art-rock" class="pattern">
+    <div class="card">
+      <h2>Sad art-rock and beautiful collapse</h2>
+      <p class="muted">Radiohead, Smiths, Jeff Buckley, Cocteau Twins, Slowdive. Melodic but heavy emotionally.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>137</strong> matched unique tracks</span>
+        <span class="pill">radioh</span><span class="pill">%^*+</span><span class="pill">Bbbnnnllö</span><span class="pill">YO</span><span class="pill">fuck..</span><span class="pill">Na ja..</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>No Surprises</b><br><span class="muted">Radiohead</span><br><small>OK Computer</small></div>
+    <div class="count">10x</div>
+  </div><div class="track">
+    <div><b>Nude</b><br><span class="muted">Radiohead</span><br><small>In Rainbows</small></div>
+    <div class="count">10x</div>
+  </div><div class="track">
+    <div><b>Creep</b><br><span class="muted">Radiohead</span><br><small>Pablo Honey</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Let Down</b><br><span class="muted">Radiohead</span><br><small>OK Computer</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Weird Fishes / Arpeggi</b><br><span class="muted">Radiohead</span><br><small>In Rainbows</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Fake Plastic Trees</b><br><span class="muted">Radiohead</span><br><small>The Bends</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>How To Disappear Completely</b><br><span class="muted">Radiohead</span><br><small>Kid A</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>True Love Waits</b><br><span class="muted">Radiohead</span><br><small>A Moon Shaped Pool</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Videotape</b><br><span class="muted">Radiohead</span><br><small>In Rainbows</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>All I Need</b><br><span class="muted">Radiohead</span><br><small>In Rainbows</small></div>
+    <div class="count">6x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Radiohead <strong>52</strong></span><span class="pill">The Smiths <strong>20</strong></span><span class="pill">The Cure <strong>18</strong></span><span class="pill">Jeff Buckley <strong>18</strong></span><span class="pill">Pixies <strong>15</strong></span><span class="pill">Cocteau Twins <strong>7</strong></span><span class="pill">Slowdive <strong>6</strong></span><span class="pill">Harold Budd <strong>2</strong></span><span class="pill">The Crying Nudes <strong>1</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>102</strong></span><span class="pill">radioh <strong>43</strong></span><span class="pill">fuck.. <strong>30</strong></span><span class="pill">… <strong>23</strong></span><span class="pill">Ґems <strong>23</strong></span><span class="pill">YO <strong>21</strong></span><span class="pill">SORRY SORRY SPRRYYY <strong>16</strong></span><span class="pill">%^*+ <strong>12</strong></span></div>
+    </div>
+  </section><section id="midwest-slacker" class="pattern">
+    <div class="card">
+      <h2>Midwest, slacker, bedroom guitar sadness</h2>
+      <p class="muted">Pinegrove / Duster / Alex G / Car Seat Headrest type sadness. More dusty and young than Radiohead.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>117</strong> matched unique tracks</span>
+        <span class="pill">Midwest</span><span class="pill">Calm Midwest</span><span class="pill">Г</span><span class="pill">fuck..</span><span class="pill">…</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>Need 2</b><br><span class="muted">Pinegrove</span><br><small>Everything So Far</small></div>
+    <div class="count">9x</div>
+  </div><div class="track">
+    <div><b>Sarah</b><br><span class="muted">Alex G</span><br><small>Trick</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>16 Mirrors</b><br><span class="muted">Alex G</span><br><small>Trick</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>(dream)</b><br><span class="muted">salvia palth</span><br><small>melanchole</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Gnaw</b><br><span class="muted">Alex G</span><br><small>Race</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Gold Dust</b><br><span class="muted">Duster</span><br><small>Stratosphere</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Nervous Young Inhumans</b><br><span class="muted">Car Seat Headrest</span><br><small>Twin Fantasy</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Sober to Death</b><br><span class="muted">Car Seat Headrest</span><br><small>Twin Fantasy</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Up Song - Live at Bush Hall</b><br><span class="muted">Black Country, New Road</span><br><small>Live at Bush Hall</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Advice</b><br><span class="muted">Alex G</span><br><small>Trick</small></div>
+    <div class="count">4x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Mac DeMarco <strong>18</strong></span><span class="pill">Pinegrove <strong>14</strong></span><span class="pill">Car Seat Headrest <strong>14</strong></span><span class="pill">salvia palth <strong>13</strong></span><span class="pill">Black Country <strong>13</strong></span><span class="pill">New Road <strong>13</strong></span><span class="pill">Alex G <strong>11</strong></span><span class="pill">Current Joys <strong>11</strong></span><span class="pill">Neutral Milk Hotel <strong>11</strong></span><span class="pill">Duster <strong>7</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>92</strong></span><span class="pill">Г <strong>30</strong></span><span class="pill">Na ja.. <strong>22</strong></span><span class="pill">Bbbnnnllö <strong>19</strong></span><span class="pill">fuck.. <strong>15</strong></span><span class="pill">Calm Midwest <strong>12</strong></span><span class="pill">YO <strong>7</strong></span><span class="pill">Midwest <strong>5</strong></span></div>
+    </div>
+  </section><section id="classic-riff" class="pattern">
+    <div class="card">
+      <h2>Classic riff rock and guitar mythology</h2>
+      <p class="muted">AC/DC, Zeppelin, Floyd, Sabbath, Hendrix, Dylan. Less sad, more guitar identity.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>362</strong> matched unique tracks</span>
+        <span class="pill">Rockin n rollin</span><span class="pill">AC FUCKING DC</span><span class="pill">Mmmmmm</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>Dreams - 2004 Remaster</b><br><span class="muted">Fleetwood Mac</span><br><small>Rumours (Super Deluxe)</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Everywhere - 2017 Remaster</b><br><span class="muted">Fleetwood Mac</span><br><small>Tango In the Night (Deluxe Edition)</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>All Along the Watchtower</b><br><span class="muted">Jimi Hendrix</span><br><small>Electric Ladyland</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Landslide</b><br><span class="muted">Fleetwood Mac</span><br><small>Fleetwood Mac</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Listen Up - Remastered</b><br><span class="muted">Oasis</span><br><small>Definitely Maybe (Remastered)</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Sad Song</b><br><span class="muted">Oasis</span><br><small>Definitely Maybe</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Back In Black</b><br><span class="muted">AC/DC</span><br><small>Back In Black</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Demon Fire</b><br><span class="muted">AC/DC</span><br><small>POWER UP</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Girl from the North Country</b><br><span class="muted">Bob Dylan</span><br><small>The Freewheelin' Bob Dylan</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Gypsy</b><br><span class="muted">Fleetwood Mac</span><br><small>Greatest Hits</small></div>
+    <div class="count">4x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">AC/DC <strong>105</strong></span><span class="pill">Oasis <strong>78</strong></span><span class="pill">Pink Floyd <strong>49</strong></span><span class="pill">Bob Dylan <strong>34</strong></span><span class="pill">Led Zeppelin <strong>28</strong></span><span class="pill">Fleetwood Mac <strong>18</strong></span><span class="pill">The Doors <strong>15</strong></span><span class="pill">Black Sabbath <strong>12</strong></span><span class="pill">Jimi Hendrix <strong>11</strong></span><span class="pill">The Rolling Stones <strong>10</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>249</strong></span><span class="pill">AC FUCKING DC <strong>105</strong></span><span class="pill">boB <strong>34</strong></span><span class="pill">Rockin n rollin <strong>33</strong></span><span class="pill">%^*+ <strong>26</strong></span><span class="pill">Mmmmmm <strong>16</strong></span><span class="pill">Hell ya <strong>15</strong></span><span class="pill">Here, There, and Everywhere... With You <strong>12</strong></span></div>
+    </div>
+  </section><section id="rap-canon" class="pattern">
+    <div class="card">
+      <h2>Rap canon and main-character hip-hop</h2>
+      <p class="muted">Kanye, Drake, Kendrick, Tyler, Travis, A$AP. Big songs, strong identity, often replayable.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>747</strong> matched unique tracks</span>
+        <span class="pill">Kanye ye</span><span class="pill">K¥_00</span><span class="pill">Fashion killa</span><span class="pill">m's top tracks</span><span class="pill">Tunes</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>Everything I Am</b><br><span class="muted">Kanye West, DJ Premier</span><br><small>Graduation</small></div>
+    <div class="count">10x</div>
+  </div><div class="track">
+    <div><b>I Wonder</b><br><span class="muted">Kanye West</span><br><small>Graduation</small></div>
+    <div class="count">9x</div>
+  </div><div class="track">
+    <div><b>Through The Wire</b><br><span class="muted">Kanye West</span><br><small>The College Dropout</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Violent Crimes</b><br><span class="muted">Kanye West</span><br><small>ye</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Waves</b><br><span class="muted">Kanye West</span><br><small>The Life Of Pablo</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Can't Tell Me Nothing</b><br><span class="muted">Kanye West</span><br><small>Graduation</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>Come to Life</b><br><span class="muted">Kanye West</span><br><small>Donda</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>Father Stretch My Hands Pt. 1</b><br><span class="muted">Kanye West</span><br><small>The Life Of Pablo</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>Follow God</b><br><span class="muted">Kanye West</span><br><small>JESUS IS KING</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>Big Brother</b><br><span class="muted">Kanye West</span><br><small>Graduation</small></div>
+    <div class="count">5x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Kanye West <strong>194</strong></span><span class="pill">Drake <strong>123</strong></span><span class="pill">Tyler <strong>76</strong></span><span class="pill">The Creator <strong>76</strong></span><span class="pill">Kendrick Lamar <strong>54</strong></span><span class="pill">A$AP Rocky <strong>46</strong></span><span class="pill">Travis Scott <strong>46</strong></span><span class="pill">21 Savage <strong>33</strong></span><span class="pill">Metro Boomin <strong>30</strong></span><span class="pill">Ye <strong>29</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>520</strong></span><span class="pill">Tunes <strong>187</strong></span><span class="pill">Gym <strong>147</strong></span><span class="pill">Kanye ye <strong>111</strong></span><span class="pill">K¥_00 <strong>106</strong></span><span class="pill">Fashion killa <strong>34</strong></span><span class="pill">Joo <strong>22</strong></span><span class="pill">марян × talia <strong>21</strong></span></div>
+    </div>
+  </section><section id="rage-gym" class="pattern">
+    <div class="card">
+      <h2>Rage, opium, gym, turn-up</h2>
+      <p class="muted">Carti/Ken/2hollis/Opium/trap energy. More aggressive and synthetic than rap canon.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>256</strong> matched unique tracks</span>
+        <span class="pill">Gym</span><span class="pill">Turn it up</span><span class="pill">Opium</span><span class="pill">less goo</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>New Tank</b><br><span class="muted">Playboi Carti</span><br><small>Whole Lotta Red</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>OPM BABI</b><br><span class="muted">Playboi Carti</span><br><small>MUSIC - SORRY 4 DA WAIT</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>POP OUT</b><br><span class="muted">Playboi Carti</span><br><small>MUSIC - SORRY 4 DA WAIT</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Rockstar Made</b><br><span class="muted">Playboi Carti</span><br><small>Whole Lotta Red</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Stop Breathing</b><br><span class="muted">Playboi Carti</span><br><small>Whole Lotta Red</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Vamp Anthem</b><br><span class="muted">Playboi Carti</span><br><small>Whole Lotta Red</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>COCAINE NOSE</b><br><span class="muted">Playboi Carti</span><br><small>MUSIC - SORRY 4 DA WAIT</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>CRUSH (with Travis Scott)</b><br><span class="muted">Playboi Carti, Travis Scott</span><br><small>MUSIC - SORRY 4 DA WAIT</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Die4Guy</b><br><span class="muted">Playboi Carti</span><br><small>Whole Lotta Red</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>EVIL J0RDAN</b><br><span class="muted">Playboi Carti</span><br><small>MUSIC - SORRY 4 DA WAIT</small></div>
+    <div class="count">4x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Playboi Carti <strong>96</strong></span><span class="pill">Future <strong>30</strong></span><span class="pill">Lil Uzi Vert <strong>30</strong></span><span class="pill">2hollis <strong>29</strong></span><span class="pill">Juice WRLD <strong>22</strong></span><span class="pill">Ken Carson <strong>19</strong></span><span class="pill">fakemink <strong>16</strong></span><span class="pill">Yeat <strong>12</strong></span><span class="pill">Travis Scott <strong>9</strong></span><span class="pill">Drake <strong>6</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>191</strong></span><span class="pill">Gym <strong>45</strong></span><span class="pill">Opium <strong>36</strong></span><span class="pill">Tunes <strong>36</strong></span><span class="pill">K¥_00 <strong>29</strong></span><span class="pill">CBC_00 <strong>28</strong></span><span class="pill">___ <strong>25</strong></span><span class="pill">&lt;2 <strong>16</strong></span></div>
+    </div>
+  </section><section id="shower-warm" class="pattern">
+    <div class="card">
+      <h2>Shower songs, warm singing, obvious replay</h2>
+      <p class="muted">The stuff you can actually sing, clean, or move around to. Not too niche, not too dark.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>209</strong> matched unique tracks</span>
+        <span class="pill">No enemies</span><span class="pill">Tunes</span><span class="pill">12</span><span class="pill">CL</span><span class="pill">springspringspring</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>Starman - 2012 Remaster</b><br><span class="muted">David Bowie</span><br><small>The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Call It Fate, Call It Karma</b><br><span class="muted">The Strokes</span><br><small>Comedown Machine</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Dreams - 2004 Remaster</b><br><span class="muted">Fleetwood Mac</span><br><small>Rumours (Super Deluxe)</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Everywhere - 2017 Remaster</b><br><span class="muted">Fleetwood Mac</span><br><small>Tango In the Night (Deluxe Edition)</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Space Oddity - 2015 Remaster</b><br><span class="muted">David Bowie</span><br><small>David Bowie (aka Space Oddity) [2015 Remaster]</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Apocalypse Dreams</b><br><span class="muted">Tame Impala</span><br><small>Lonerism</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Here, There And Everywhere - Remastered 2009</b><br><span class="muted">The Beatles</span><br><small>Revolver (Remastered)</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Landslide</b><br><span class="muted">Fleetwood Mac</span><br><small>Fleetwood Mac</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Listen Up - Remastered</b><br><span class="muted">Oasis</span><br><small>Definitely Maybe (Remastered)</small></div>
+    <div class="count">5x</div>
+  </div><div class="track">
+    <div><b>Sad Song</b><br><span class="muted">Oasis</span><br><small>Definitely Maybe</small></div>
+    <div class="count">5x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Oasis <strong>78</strong></span><span class="pill">The Beatles <strong>20</strong></span><span class="pill">David Bowie <strong>18</strong></span><span class="pill">Fleetwood Mac <strong>18</strong></span><span class="pill">The Strokes <strong>17</strong></span><span class="pill">Peter Bjorn and John <strong>10</strong></span><span class="pill">Steve Miller Band <strong>5</strong></span><span class="pill">Brecc <strong>4</strong></span><span class="pill">Green Day <strong>2</strong></span><span class="pill">Meek Mill <strong>2</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>138</strong></span><span class="pill">%^*+ <strong>36</strong></span><span class="pill">Here, There, and Everywhere... With You <strong>20</strong></span><span class="pill">for talia ordered by decreasing valence <strong>20</strong></span><span class="pill">for talia <strong>20</strong></span><span class="pill">CL <strong>20</strong></span><span class="pill">SORRY SORRY SPRRYYY <strong>14</strong></span><span class="pill">na klar <strong>11</strong></span></div>
+    </div>
+  </section><section id="post-soviet-melancholy" class="pattern">
+    <div class="card">
+      <h2>Post-Soviet / Ukrainian / Russian melancholy rock</h2>
+      <p class="muted">A real separate thread from Qs: Cyrillic artists, cold guitar, breakup/post-punk energy.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>89</strong> matched unique tracks</span>
+        <span class="pill">Qs</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>айсберг</b><br><span class="muted">ssshhhiiittt!</span><br><small>Третья жизнь</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>дети немой страны</b><br><span class="muted">конец солнечных дней</span><br><small>осень</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>засыпай</b><br><span class="muted">ssshhhiiittt!</span><br><small>Третья жизнь</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Кто я</b><br><span class="muted">Какая Разница</span><br><small>Рассвет</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Ничего и никто</b><br><span class="muted">Какая Разница</span><br><small>Рассвет</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Причина не ложиться спать</b><br><span class="muted">Какая Разница</span><br><small>Рассвет</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Рассвет</b><br><span class="muted">Какая Разница</span><br><small>Рассвет</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Самый грустный</b><br><span class="muted">ssshhhiiittt!</span><br><small>Remastered</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Танцы</b><br><span class="muted">ssshhhiiittt!</span><br><small>Последнее лето (Часть 2)</small></div>
+    <div class="count">4x</div>
+  </div><div class="track">
+    <div><b>Твой мир</b><br><span class="muted">Какая Разница</span><br><small>Рассвет</small></div>
+    <div class="count">4x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Какая Разница <strong>21</strong></span><span class="pill">ssshhhiiittt! <strong>20</strong></span><span class="pill">Скрябін <strong>14</strong></span><span class="pill">конец солнечных дней <strong>7</strong></span><span class="pill">FACE <strong>4</strong></span><span class="pill">Fred again.. <strong>2</strong></span><span class="pill">zhanulka <strong>2</strong></span><span class="pill">Где Фантом? <strong>2</strong></span><span class="pill">Ghostface Killah <strong>2</strong></span><span class="pill">070 Shake <strong>1</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>68</strong></span><span class="pill">Qs <strong>55</strong></span><span class="pill">Na ja.. <strong>30</strong></span><span class="pill">m's top tracks <strong>6</strong></span><span class="pill">Chillout <strong>3</strong></span><span class="pill">Holy house <strong>1</strong></span><span class="pill">Qwe <strong>1</strong></span><span class="pill">frank and chill <strong>1</strong></span></div>
+    </div>
+  </section><section id="personal-archive" class="pattern">
+    <div class="card">
+      <h2>Personal archive, gifts, places, time capsules</h2>
+      <p class="muted">These may be emotionally important but not necessarily daily listening buckets. Keep or archive before deleting anything.</p>
+      <div class="pillrow">
+        <span class="pill"><strong>141</strong> matched unique tracks</span>
+        <span class="pill">for talia</span><span class="pill">for talia ordered by decreasing valence</span><span class="pill">марян × talia</span><span class="pill">day in roma</span><span class="pill">Here, There, and Everywhere... With You</span>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+    <div><b>Starman - 2012 Remaster</b><br><span class="muted">David Bowie</span><br><small>The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Weird Fishes / Arpeggi</b><br><span class="muted">Radiohead</span><br><small>In Rainbows</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Call It Fate, Call It Karma</b><br><span class="muted">The Strokes</span><br><small>Comedown Machine</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Dreams - 2004 Remaster</b><br><span class="muted">Fleetwood Mac</span><br><small>Rumours (Super Deluxe)</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Everywhere - 2017 Remaster</b><br><span class="muted">Fleetwood Mac</span><br><small>Tango In the Night (Deluxe Edition)</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Friday I'm In Love</b><br><span class="muted">The Cure</span><br><small>Wish</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Space Oddity - 2015 Remaster</b><br><span class="muted">David Bowie</span><br><small>David Bowie (aka Space Oddity) [2015 Remaster]</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Waves</b><br><span class="muted">Kanye West</span><br><small>The Life Of Pablo</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>99 Luftballons</b><br><span class="muted">Nena</span><br><small>Nena</small></div>
+    <div class="count">6x</div>
+  </div><div class="track">
+    <div><b>Femme Fatale</b><br><span class="muted">The Velvet Underground, Nico</span><br><small>The Velvet Underground &amp; Nico 45th Anniversary</small></div>
+    <div class="count">6x</div>
+  </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Signals</h3>
+      <p class="muted">Top artists</p>
+      <div class="pillrow"><span class="pill">Fleetwood Mac <strong>9</strong></span><span class="pill">Oasis <strong>5</strong></span><span class="pill">Kendrick Lamar <strong>5</strong></span><span class="pill">Kanye West <strong>4</strong></span><span class="pill">The Beatles <strong>4</strong></span><span class="pill">Frank Sinatra <strong>4</strong></span><span class="pill">David Bowie <strong>3</strong></span><span class="pill">The Smashing Pumpkins <strong>3</strong></span><span class="pill">Tyler <strong>3</strong></span><span class="pill">The Creator <strong>3</strong></span></div>
+      <p class="muted">Source playlists</p>
+      <div class="pillrow"><span class="pill">Liked Songs <strong>92</strong></span><span class="pill">Here, There, and Everywhere... With You <strong>65</strong></span><span class="pill">for talia ordered by decreasing valence <strong>64</strong></span><span class="pill">for talia <strong>64</strong></span><span class="pill">марян × talia <strong>40</strong></span><span class="pill">day in roma <strong>36</strong></span><span class="pill">%^*+ <strong>11</strong></span><span class="pill">Mmmmmm <strong>7</strong></span></div>
+    </div>
+  </section>
+
+      <section id="duplicates" class="card">
+        <h2>Repeated songs that probably define your taste</h2>
+        <p class="muted">These appear across many owned playlists, so they are stronger taste signals than one-off saves.</p>
+        <div class="tracklist">
+          <div class="track">
+    <div><b>Nude</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, (:), Bbbnnnllö, YO +2</small></div>
+    <div class="count">10x</div>
+  </div><div class="track">
+    <div><b>No Surprises</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, (:), Bbbnnnllö, YO +3</small></div>
+    <div class="count">10x</div>
+  </div><div class="track">
+    <div><b>Everything I Am</b><br><span class="muted">Kanye West, DJ Premier</span><br><small>Liked Songs, Kanye ye, K¥_00, m's top tracks, Tunes</small></div>
+    <div class="count">10x</div>
+  </div><div class="track">
+    <div><b>Need 2</b><br><span class="muted">Pinegrove</span><br><small>Liked Songs, Midwest, Bbbnnnllö, YO, waves type playlist +4</small></div>
+    <div class="count">9x</div>
+  </div><div class="track">
+    <div><b>Seigfried</b><br><span class="muted">Frank Ocean</span><br><small>Liked Songs, frank and chill, (:), YO, Tralalelo Tralala +4</small></div>
+    <div class="count">9x</div>
+  </div><div class="track">
+    <div><b>I Wonder</b><br><span class="muted">Kanye West</span><br><small>Liked Songs, Kanye ye, K¥_00, m's top tracks, Tunes</small></div>
+    <div class="count">9x</div>
+  </div><div class="track">
+    <div><b>Starman - 2012 Remaster</b><br><span class="muted">David Bowie</span><br><small>Liked Songs, %^*+, (:), My playlist #80, Here, There, and Everywhere... With You +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Let Down</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, Ґems, fuck.., … +1</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Luna - 2011 Remaster</b><br><span class="muted">The Smashing Pumpkins</span><br><small>Liked Songs, %^*+, Bbbnnnllö, SORRY SORRY SPRRYYY, YO +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Weird Fishes / Arpeggi</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, (:), YO, марян × talia +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>White Ferrari</b><br><span class="muted">Frank Ocean</span><br><small>Liked Songs, frank and chill, Tralalelo Tralala, waves type playlist, Frank Montell +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Where Is My Mind? - 2007 Remaster</b><br><span class="muted">Pixies</span><br><small>Liked Songs, Bbbnnnllö, CL, Г, m's top tracks +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>There Is a Light That Never Goes Out - 2011 Remaster</b><br><span class="muted">The Smiths</span><br><small>Liked Songs, %^*+, Bbbnnnllö, SORRY SORRY SPRRYYY, YO +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Creep</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, fuck.., m's top tracks, … +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Ivy</b><br><span class="muted">Frank Ocean</span><br><small>Liked Songs, frank and chill, Tralalelo Tralala, Fashion killa, waves type playlist +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Self Control</b><br><span class="muted">Frank Ocean</span><br><small>Liked Songs, frank and chill, Tralalelo Tralala, waves type playlist, Frank Montell +3</small></div>
+    <div class="count">8x</div>
+  </div><div class="track">
+    <div><b>Call It Fate, Call It Karma</b><br><span class="muted">The Strokes</span><br><small>Liked Songs, YO, Here, There, and Everywhere... With You, for talia ordered by decreasing valence, for talia +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Space Oddity - 2015 Remaster</b><br><span class="muted">David Bowie</span><br><small>Liked Songs, %^*+, (:), My playlist #80, Here, There, and Everywhere... With You +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Fake Plastic Trees</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, (:), SORRY SORRY SPRRYYY, fuck..</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>How To Disappear Completely</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, (:), YO, …</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>True Love Waits</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, (:), YO, fuck..</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Sarah</b><br><span class="muted">Alex G</span><br><small>Liked Songs, Bbbnnnllö, YO, Г, Calm Midwest +1</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Dreams - 2004 Remaster</b><br><span class="muted">Fleetwood Mac</span><br><small>Liked Songs, %^*+, SORRY SORRY SPRRYYY, Fl, Here, There, and Everywhere... With You +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Everywhere - 2017 Remaster</b><br><span class="muted">Fleetwood Mac</span><br><small>Liked Songs, %^*+, Here, There, and Everywhere... With You, for talia ordered by decreasing valence, for talia +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Friday I'm In Love</b><br><span class="muted">The Cure</span><br><small>Liked Songs, SORRY SORRY SPRRYYY, Fl, Here, There, and Everywhere... With You, for talia ordered by decreasing valence +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Videotape</b><br><span class="muted">Radiohead</span><br><small>Liked Songs, radioh, YO, Г, fuck..</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Violent Crimes</b><br><span class="muted">Kanye West</span><br><small>Liked Songs, Kanye ye, K¥_00, m's top tracks, Tunes +1</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Every Breath You Take</b><br><span class="muted">The Police</span><br><small>Liked Songs, %^*+, My playlist #80, SORRY SORRY SPRRYYY, Mmmmmm +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>You Were Right</b><br><span class="muted">RÜFÜS DU SOL</span><br><small>Liked Songs, Holy house, Qwe, Chillout, Turn it up</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Talk 2 Me</b><br><span class="muted">Montell Fish</span><br><small>Liked Songs, Frank Montell, Na ja.., Montell</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Moon River</b><br><span class="muted">Frank Ocean</span><br><small>Liked Songs, frank and chill, Tralalelo Tralala, waves type playlist, Frank Montell +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Godspeed</b><br><span class="muted">Frank Ocean</span><br><small>Liked Songs, frank and chill, Tralalelo Tralala, waves type playlist, m's top tracks +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Nights</b><br><span class="muted">Frank Ocean</span><br><small>Liked Songs, frank and chill, (:), Tralalelo Tralala, waves type playlist +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Through The Wire</b><br><span class="muted">Kanye West</span><br><small>Liked Songs, Kanye ye, K¥_00, Joo, Gym +1</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>Waves</b><br><span class="muted">Kanye West</span><br><small>Liked Songs, Kanye ye, K¥_00, марян × talia, Fashion killa +2</small></div>
+    <div class="count">7x</div>
+  </div><div class="track">
+    <div><b>A Real Hero</b><br><span class="muted">Electric Youth, College</span><br><small>Liked Songs, m's top tracks, Tunes, 12, Na ja..</small></div>
+    <div class="count">6x</div>
+  </div>
+        </div>
+      </section>
+
+      <section id="playlists" class="card">
+        <h2>Owned playlist map</h2>
+        <input class="search" id="playlistSearch" placeholder="Filter playlists..." />
+        <table id="playlistTable">
+          <thead><tr><th>Playlist</th><th>Tracks</th><th>Best matching patterns</th></tr></thead>
+          <tbody>
+            
+              <tr>
+                <td>Tekk</td>
+                <td>543</td>
+                <td>Hard tekno, tribe, freeparty pressure <span class="muted">(264)</span><br>Rap canon and main-character hip-hop <span class="muted">(14)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(10)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Gym</td>
+                <td>463</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(153)</span><br>Rage, opium, gym, turn-up <span class="muted">(51)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(7)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Tunes</td>
+                <td>442</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(190)</span><br>Rage, opium, gym, turn-up <span class="muted">(36)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(16)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Chillout</td>
+                <td>364</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(22)</span><br>Jazz-house, soft groove, warm rooms <span class="muted">(15)</span><br>Post-Soviet / Ukrainian / Russian melancholy rock <span class="muted">(3)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Na ja..</td>
+                <td>258</td>
+                <td>Post-Soviet / Ukrainian / Russian melancholy rock <span class="muted">(37)</span><br>Midwest, slacker, bedroom guitar sadness <span class="muted">(24)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(23)</span></td>
+              </tr>
+            
+              <tr>
+                <td>GoDayumn</td>
+                <td>208</td>
+                <td>IDM, braindance, clean-machine weirdness <span class="muted">(79)</span><br>Ambient, liminal, sleepwalking electronic <span class="muted">(26)</span><br>Rap canon and main-character hip-hop <span class="muted">(8)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Turn it up</td>
+                <td>146</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(17)</span><br>Jazz-house, soft groove, warm rooms <span class="muted">(5)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(3)</span></td>
+              </tr>
+            
+              <tr>
+                <td>K¥_00</td>
+                <td>136</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(108)</span><br>Rage, opium, gym, turn-up <span class="muted">(29)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Qs</td>
+                <td>125</td>
+                <td>Post-Soviet / Ukrainian / Russian melancholy rock <span class="muted">(55)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Kanye ye</td>
+                <td>118</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(113)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(1)</span><br>Rage, opium, gym, turn-up <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Afro house dump</td>
+                <td>114</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(11)</span><br>Jazz-house, soft groove, warm rooms <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>%^*+</td>
+                <td>111</td>
+                <td>Shower songs, warm singing, obvious replay <span class="muted">(36)</span><br>Classic riff rock and guitar mythology <span class="muted">(26)</span><br>Rap canon and main-character hip-hop <span class="muted">(19)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Tralalelo Tralala</td>
+                <td>105</td>
+                <td>Frank / Montell / wounded R&amp;B <span class="muted">(102)</span><br>Rap canon and main-character hip-hop <span class="muted">(21)</span><br>Rage, opium, gym, turn-up <span class="muted">(6)</span></td>
+              </tr>
+            
+              <tr>
+                <td>AC FUCKING DC</td>
+                <td>105</td>
+                <td>Classic riff rock and guitar mythology <span class="muted">(105)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Rockin n rollin</td>
+                <td>100</td>
+                <td>Classic riff rock and guitar mythology <span class="muted">(33)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(4)</span><br>Rap canon and main-character hip-hop <span class="muted">(2)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Ґems</td>
+                <td>90</td>
+                <td>Sad art-rock and beautiful collapse <span class="muted">(23)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(10)</span><br>Midwest, slacker, bedroom guitar sadness <span class="muted">(5)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Holy house</td>
+                <td>85</td>
+                <td>Jazz-house, soft groove, warm rooms <span class="muted">(8)</span><br>Rap canon and main-character hip-hop <span class="muted">(5)</span><br>IDM, braindance, clean-machine weirdness <span class="muted">(2)</span></td>
+              </tr>
+            
+              <tr>
+                <td>na klar</td>
+                <td>84</td>
+                <td>Shower songs, warm singing, obvious replay <span class="muted">(11)</span><br>Classic riff rock and guitar mythology <span class="muted">(7)</span><br>Rap canon and main-character hip-hop <span class="muted">(6)</span></td>
+              </tr>
+            
+              <tr>
+                <td>…</td>
+                <td>82</td>
+                <td>Sad art-rock and beautiful collapse <span class="muted">(23)</span><br>Midwest, slacker, bedroom guitar sadness <span class="muted">(3)</span><br>Classic riff rock and guitar mythology <span class="muted">(2)</span></td>
+              </tr>
+            
+              <tr>
+                <td>fuck..</td>
+                <td>79</td>
+                <td>Sad art-rock and beautiful collapse <span class="muted">(34)</span><br>Midwest, slacker, bedroom guitar sadness <span class="muted">(15)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(3)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Г</td>
+                <td>73</td>
+                <td>Midwest, slacker, bedroom guitar sadness <span class="muted">(30)</span><br>Sad art-rock and beautiful collapse <span class="muted">(7)</span><br>Rap canon and main-character hip-hop <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Mmmmmm</td>
+                <td>70</td>
+                <td>Classic riff rock and guitar mythology <span class="muted">(16)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(7)</span><br>Rap canon and main-character hip-hop <span class="muted">(4)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Frank Montell</td>
+                <td>69</td>
+                <td>Frank / Montell / wounded R&amp;B <span class="muted">(68)</span><br>Rap canon and main-character hip-hop <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Here, There, and Everywhere... With You</td>
+                <td>67</td>
+                <td>Personal archive, gifts, places, time capsules <span class="muted">(67)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(20)</span><br>Classic riff rock and guitar mythology <span class="muted">(12)</span></td>
+              </tr>
+            
+              <tr>
+                <td>for talia ordered by decreasing valence</td>
+                <td>64</td>
+                <td>Personal archive, gifts, places, time capsules <span class="muted">(64)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(20)</span><br>Classic riff rock and guitar mythology <span class="muted">(12)</span></td>
+              </tr>
+            
+              <tr>
+                <td>for talia</td>
+                <td>64</td>
+                <td>Personal archive, gifts, places, time capsules <span class="muted">(64)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(20)</span><br>Classic riff rock and guitar mythology <span class="muted">(12)</span></td>
+              </tr>
+            
+              <tr>
+                <td>YO</td>
+                <td>61</td>
+                <td>Sad art-rock and beautiful collapse <span class="muted">(21)</span><br>Midwest, slacker, bedroom guitar sadness <span class="muted">(7)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(5)</span></td>
+              </tr>
+            
+              <tr>
+                <td>ABT</td>
+                <td>53</td>
+                <td>IDM, braindance, clean-machine weirdness <span class="muted">(19)</span><br>Ambient, liminal, sleepwalking electronic <span class="muted">(8)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Fashion killa</td>
+                <td>53</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(35)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(3)</span><br>Rage, opium, gym, turn-up <span class="muted">(3)</span></td>
+              </tr>
+            
+              <tr>
+                <td>radioh</td>
+                <td>51</td>
+                <td>Sad art-rock and beautiful collapse <span class="muted">(51)</span></td>
+              </tr>
+            
+              <tr>
+                <td>CL</td>
+                <td>51</td>
+                <td>Shower songs, warm singing, obvious replay <span class="muted">(20)</span><br>Sad art-rock and beautiful collapse <span class="muted">(2)</span><br>Midwest, slacker, bedroom guitar sadness <span class="muted">(2)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Bbbnnnllö</td>
+                <td>50</td>
+                <td>Midwest, slacker, bedroom guitar sadness <span class="muted">(19)</span><br>Sad art-rock and beautiful collapse <span class="muted">(10)</span><br>Rap canon and main-character hip-hop <span class="muted">(2)</span></td>
+              </tr>
+            
+              <tr>
+                <td>SORRY SORRY SPRRYYY</td>
+                <td>50</td>
+                <td>Sad art-rock and beautiful collapse <span class="muted">(16)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(14)</span><br>Classic riff rock and guitar mythology <span class="muted">(10)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Fl</td>
+                <td>50</td>
+                <td>Shower songs, warm singing, obvious replay <span class="muted">(6)</span><br>Rap canon and main-character hip-hop <span class="muted">(3)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>m's top tracks</td>
+                <td>50</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(13)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(7)</span><br>Post-Soviet / Ukrainian / Russian melancholy rock <span class="muted">(6)</span></td>
+              </tr>
+            
+              <tr>
+                <td>less goo</td>
+                <td>50</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(4)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(1)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Qwe</td>
+                <td>50</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(2)</span><br>Jazz-house, soft groove, warm rooms <span class="muted">(1)</span><br>Post-Soviet / Ukrainian / Russian melancholy rock <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>frank and chill</td>
+                <td>47</td>
+                <td>Frank / Montell / wounded R&amp;B <span class="muted">(46)</span><br>Rap canon and main-character hip-hop <span class="muted">(2)</span><br>Post-Soviet / Ukrainian / Russian melancholy rock <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Midwest</td>
+                <td>47</td>
+                <td>Midwest, slacker, bedroom guitar sadness <span class="muted">(5)</span><br>Rap canon and main-character hip-hop <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Calm Midwest</td>
+                <td>41</td>
+                <td>Midwest, slacker, bedroom guitar sadness <span class="muted">(13)</span><br>Ambient, liminal, sleepwalking electronic <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Montell</td>
+                <td>41</td>
+                <td>Frank / Montell / wounded R&amp;B <span class="muted">(41)</span></td>
+              </tr>
+            
+              <tr>
+                <td>марян × talia</td>
+                <td>40</td>
+                <td>Personal archive, gifts, places, time capsules <span class="muted">(40)</span><br>Rap canon and main-character hip-hop <span class="muted">(21)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(4)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Flaw</td>
+                <td>39</td>
+                <td>Ambient, liminal, sleepwalking electronic <span class="muted">(38)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Opium</td>
+                <td>39</td>
+                <td>Rage, opium, gym, turn-up <span class="muted">(36)</span></td>
+              </tr>
+            
+              <tr>
+                <td>(:)</td>
+                <td>38</td>
+                <td>Sad art-rock and beautiful collapse <span class="muted">(11)</span><br>Classic riff rock and guitar mythology <span class="muted">(9)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(5)</span></td>
+              </tr>
+            
+              <tr>
+                <td>No enemies</td>
+                <td>38</td>
+                <td><span class="muted">archive / unclear from rules</span></td>
+              </tr>
+            
+              <tr>
+                <td>springspringspring</td>
+                <td>36</td>
+                <td>Frank / Montell / wounded R&amp;B <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>day in roma</td>
+                <td>36</td>
+                <td>Personal archive, gifts, places, time capsules <span class="muted">(36)</span><br>Jazz-house, soft groove, warm rooms <span class="muted">(2)</span></td>
+              </tr>
+            
+              <tr>
+                <td>boB</td>
+                <td>35</td>
+                <td>Classic riff rock and guitar mythology <span class="muted">(34)</span><br>Rap canon and main-character hip-hop <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>waves type playlist</td>
+                <td>33</td>
+                <td>Frank / Montell / wounded R&amp;B <span class="muted">(14)</span><br>Rap canon and main-character hip-hop <span class="muted">(9)</span><br>Midwest, slacker, bedroom guitar sadness <span class="muted">(2)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Jawoll junge</td>
+                <td>32</td>
+                <td>IDM, braindance, clean-machine weirdness <span class="muted">(2)</span><br>Ambient, liminal, sleepwalking electronic <span class="muted">(2)</span><br>Hard tekno, tribe, freeparty pressure <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Joo</td>
+                <td>29</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(22)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>CBC_00</td>
+                <td>28</td>
+                <td>Rage, opium, gym, turn-up <span class="muted">(28)</span><br>Rap canon and main-character hip-hop <span class="muted">(3)</span></td>
+              </tr>
+            
+              <tr>
+                <td>___</td>
+                <td>27</td>
+                <td>Rage, opium, gym, turn-up <span class="muted">(25)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Whaaaa</td>
+                <td>25</td>
+                <td>Shower songs, warm singing, obvious replay <span class="muted">(2)</span><br>Classic riff rock and guitar mythology <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Hell ya</td>
+                <td>23</td>
+                <td>Classic riff rock and guitar mythology <span class="muted">(15)</span></td>
+              </tr>
+            
+              <tr>
+                <td>!BERLIOZ!</td>
+                <td>23</td>
+                <td>Jazz-house, soft groove, warm rooms <span class="muted">(22)</span></td>
+              </tr>
+            
+              <tr>
+                <td>IVE BEEN MISSING OUT</td>
+                <td>19</td>
+                <td>Rap canon and main-character hip-hop <span class="muted">(2)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Frank Ocean - Endless</td>
+                <td>19</td>
+                <td>Frank / Montell / wounded R&amp;B <span class="muted">(19)</span></td>
+              </tr>
+            
+              <tr>
+                <td>&lt;2</td>
+                <td>16</td>
+                <td>Rage, opium, gym, turn-up <span class="muted">(16)</span></td>
+              </tr>
+            
+              <tr>
+                <td>jazzombinator</td>
+                <td>15</td>
+                <td>Jazz-house, soft groove, warm rooms <span class="muted">(3)</span><br>Rap canon and main-character hip-hop <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Frank Ocean - nostalgia, ULTRA</td>
+                <td>14</td>
+                <td>Frank / Montell / wounded R&amp;B <span class="muted">(14)</span><br>Rap canon and main-character hip-hop <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>12</td>
+                <td>13</td>
+                <td>Sad art-rock and beautiful collapse <span class="muted">(9)</span><br>Frank / Montell / wounded R&amp;B <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>Abend chillen</td>
+                <td>9</td>
+                <td><span class="muted">archive / unclear from rules</span></td>
+              </tr>
+            
+              <tr>
+                <td>Lowercase</td>
+                <td>6</td>
+                <td>IDM, braindance, clean-machine weirdness <span class="muted">(1)</span><br>Ambient, liminal, sleepwalking electronic <span class="muted">(1)</span><br>Shower songs, warm singing, obvious replay <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>My playlist #80</td>
+                <td>4</td>
+                <td>Shower songs, warm singing, obvious replay <span class="muted">(2)</span><br>Classic riff rock and guitar mythology <span class="muted">(1)</span></td>
+              </tr>
+            
+              <tr>
+                <td>My playlist #73</td>
+                <td>4</td>
+                <td><span class="muted">archive / unclear from rules</span></td>
+              </tr>
+            
+              <tr>
+                <td>DT</td>
+                <td>1</td>
+                <td><span class="muted">archive / unclear from rules</span></td>
+              </tr>
+            
+              <tr>
+                <td>SP</td>
+                <td>1</td>
+                <td><span class="muted">archive / unclear from rules</span></td>
+              </tr>
+            
+              <tr>
+                <td>isn't it crazy to think about</td>
+                <td>1</td>
+                <td><span class="muted">archive / unclear from rules</span></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+  <script>
+    const input = document.getElementById("playlistSearch");
+    const rows = [...document.querySelectorAll("#playlistTable tbody tr")];
+    input.addEventListener("input", () => {
+      const q = input.value.toLowerCase();
+      for (const row of rows) row.style.display = row.innerText.toLowerCase().includes(q) ? "" : "none";
+    });
+  </script>
+</body>
+</html>
